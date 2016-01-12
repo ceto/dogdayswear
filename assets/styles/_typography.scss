@@ -1,0 +1,57 @@
+html, body {
+
+  // @include breakpoint(medium) {
+  //   font-size: 87.5%;
+  // }
+  // @include breakpoint(large) {
+  //   font-size: 100%;
+  // }
+
+  @include breakpoint(xxlarge) {
+    font-size: 112.5%;
+  }
+}
+
+
+.button {
+  text-transform: uppercase;
+  font-weight: $global-weight-bold;
+}
+
+blockquote {
+  p {
+    font-size: 1.5rem;
+    font-family: 'Georgia', serif;
+    font-weight: 700;
+  }
+}
+
+.inverseblock {
+  a {
+    color:inherit;
+    &:hover, &:focus {
+      color:#fff;
+    }
+  }
+  h1, h2, h3, h4, h5, h6 {
+    color:inherit;
+    opacity:.75;
+  }
+}
+
+* + {
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: $header-margin-top;
+  }
+}
+
+h4, h5, h6 {
+  color: inherit;
+  opacity:.75;
+}
+
+.blocktitle {
+  @include breakpoint(medium) {
+    font-size: 3rem;
+  }
+}

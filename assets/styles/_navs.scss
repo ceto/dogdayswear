@@ -1,0 +1,23 @@
+.sitenav {
+}
+
+.menu--sitemenu {
+  text-align: right;
+  @include breakpoint(medium){
+    float:right;
+    font-size: 112.5%;
+  }
+}
+
+.menu {
+  > li {
+    > a {
+      //text-transform: lowercase;
+      font-weight: $global-weight-bold;
+      color:$white;
+      &:hover, &:focus {
+        color:$primary-color;
+      }
+    }
+  }
+}

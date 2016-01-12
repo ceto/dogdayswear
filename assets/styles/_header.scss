@@ -1,0 +1,40 @@
+.siteheader {
+  position: absolute;
+  left:0;
+  top:0;
+  width:100%;
+  z-index: 1;
+  padding:.5rem 0;
+  @include breakpoint(medium) {
+  }
+}
+
+.sitelogo {
+  overflow: hidden;
+  text-indent: 200%;
+  white-space: nowrap;
+
+  display: block;
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-image: url('../images/logo_2line.svg');
+  background-size: auto 100%;
+  width:9rem;
+  height:2.5rem;
+  margin:1rem 1rem;
+  //background-color: rgba($primary-color,.5);
+  @include breakpoint(medium) {
+    background-image: url('../images/logo_2line.svg');
+    margin:1.5rem 5% 0;
+    height:3.5rem;
+    width:13rem;
+  }
+}
+
+.sitenav {
+
+  @include clearfix();
+  @include breakpoint(medium) {
+    margin:1.25rem 2% 0;
+  }
+}

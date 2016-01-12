@@ -7,8 +7,22 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "foundation-sites": "~6.1.1"
+    "foundation-sites": "~6.1.1",
+    "isotope": "~2.2.2",
+    "magnific-popup": "~1.0.1"
   },
   "overrides": {
+    "foundation-sites": {
+      "main" : [
+        "./scss/foundation.scss",
+        "./dist/foundation.js"
+      ]
+    },
+    "magnific-popup": {
+      "main": [
+        "./dist/jquery.magnific-popup.js"
+      ]
+    }
+
   }
 }

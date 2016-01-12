@@ -1,5 +1,9 @@
 <?php use Roots\Sage\Titles; ?>
 
-<div class="page-header">
-  <h1><?= Titles\title(); ?></h1>
-</div>
+<header class="pagehead grayblock">
+  <div class="row container">
+    <div class="columns">
+      <h1><?= Titles\title(); ?></h1>
+    </div>
+  </div>
+</header>

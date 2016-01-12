@@ -1,0 +1,65 @@
+.hero {
+  position: relative;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  //min-height: 30rem;
+
+  @include breakpoint(medium) {
+    height: 100vh;
+    min-height: 35rem;
+    max-height: 49rem;
+  }
+}
+
+
+.hero__content {
+  text-align: center;
+  margin: 8rem auto 2rem;
+  padding: 1rem 1rem;
+
+  //background-color: rgba($white,.66);
+
+  @include breakpoint(medium) {
+    margin:2rem auto 0;
+    padding: 2rem 1rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width:80%;
+    max-width: 55rem;
+    transform: translate(-50%, -50%);
+  }
+  @include breakpoint(large) {
+    padding: 2rem 2rem;
+    //max-width: 75%;
+  }
+}
+
+.hero--home {
+  background-image: url('../images/hero.jpg');
+}
+
+.hero__more {
+  margin-top: 2rem;
+  margin-bottom: 0;
+}
+
+.hero__title {
+  color:$white;
+  //font-weight: $global-weight-bold;
+  margin-top: 0;
+  //text-transform: uppercase;
+  @include breakpoint(medium) {
+    font-size: 2.5rem;
+  }
+}
+
+.hero__text {
+  color:$white;
+  font-size: 1.25rem;
+  @include breakpoint(medium) {
+    font-size: 1.5rem;
+  }
+}

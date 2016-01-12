@@ -1,6 +1,21 @@
-@import "common/variables";
-
 // Automatically injected Bower dependencies via wiredep (never manually edit this block)
 // bower:scss
-@import "../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
+
+
+@import "../../bower_components/foundation-sites/scss/foundation.scss";
+
+@import "settings";
+@include foundation-everything;
+
+@import "fonts";
+@import "icons";
+@import "typography";
+@import "layout";
+@import "header";
+@import "footer";
+@import "hero";
+@import "navs";
+@import "modules";
+@import "page";
+@import "magnific";
