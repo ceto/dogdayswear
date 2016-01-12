@@ -9,10 +9,7 @@
  *
  * @link https://github.com/roots/sage/pull/1042
  */
-add_action( 'after_setup_theme', 'woocommerce_support' );
-function woocommerce_support() {
-    add_theme_support( 'woocommerce' );
-}
+
 
 $sage_includes = [
   'lib/assets.php',    // Scripts and stylesheets
@@ -20,7 +17,10 @@ $sage_includes = [
   'lib/setup.php',     // Theme setup
   'lib/titles.php',    // Page titles
   'lib/wrapper.php',   // Theme wrapper class
-  'lib/customizer.php' // Theme customizer
+  'lib/customizer.php', // Theme customizer
+  'lib/soil/soil.php',
+  'lib/custom.php',
+  'lib/woocommerce.php'
 ];
 
 foreach ($sage_includes as $file) {
