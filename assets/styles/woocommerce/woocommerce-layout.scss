@@ -6,7 +6,7 @@
 /**
  * Imports
  */
-@import "bourbon";
+//@import "bourbon";
 @import "mixins";
 @import "variables";
 
@@ -32,20 +32,14 @@
 		}
 	}
 
-	img {
-		height: auto;
-		max-width: 100%;
-	}
+
 
 	/**
 	 * Product page
 	 */
 	div.product,
 	#content div.product {
-		div.images {
-			float: left;
-			width: 48%;
-		}
+
 
 		div.thumbnails {
 			@include clearfix();
@@ -92,10 +86,7 @@
 			}
 		}
 
-		div.summary {
-			float: right;
-			width: 48%;
-		}
+
 
 		.woocommerce-tabs {
 			clear: both;
@@ -462,10 +453,7 @@
 #content {
 	.twentysixteen {
 		div.product {
-			div.images,
-			div.summary {
-				width: 46.42857%;
-			}
+
 		}
 	}
 }
