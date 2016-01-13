@@ -21,11 +21,11 @@
   background-size: auto 100%;
   width:9rem;
   height:2.5rem;
-  margin:1rem 1rem;
+  margin:1rem 0;
   //background-color: rgba($primary-color,.5);
   @include breakpoint(medium) {
     background-image: url('../images/logo_2line.svg');
-    margin:1.5rem 5% 0;
+    margin:1.5rem 0 0;
     height:3.5rem;
     width:13rem;
   }
@@ -35,6 +35,6 @@
 
   @include clearfix();
   @include breakpoint(medium) {
-    margin:1.25rem 2% 0;
+    margin:1.25rem 0 0;
   }
 }

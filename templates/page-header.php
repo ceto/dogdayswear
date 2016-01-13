@@ -1,6 +1,6 @@
 <?php use Roots\Sage\Titles; ?>
 
-<header class="pagehead grayblock">
+<header class="pagehead">
   <div class="row container">
     <div class="columns">
       <h1><?= Titles\title(); ?></h1>

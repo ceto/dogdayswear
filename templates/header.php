@@ -1,5 +1,5 @@
 <header class="siteheader">
-  <div class="row container fullwidth">
+  <div class="row container">
     <div class="columns medium-4">
       <a class="sitelogo" href="<?= esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
     </div>

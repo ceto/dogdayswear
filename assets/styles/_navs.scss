@@ -14,7 +14,10 @@
     > a {
       //text-transform: lowercase;
       font-weight: $global-weight-bold;
-      color:$white;
+      color:$body-font-color;
+      .home & {
+        color:$white;
+      }
       &:hover, &:focus {
         color:$primary-color;
       }
