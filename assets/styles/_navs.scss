@@ -1,16 +1,18 @@
 .sitenav {
+
 }
 
 .menu--sitemenu {
   text-align: right;
   @include breakpoint(medium){
     float:right;
+    clear:right;
     font-size: 112.5%;
   }
 }
 
 .menu {
-  > li {
+  > li:not(.menu-text) {
     > a {
       //text-transform: lowercase;
       font-weight: $global-weight-bold;
@@ -20,6 +22,32 @@
       }
       &:hover, &:focus {
         color:$primary-color;
+      }
+    }
+  }
+}
+
+.shopnav {
+
+}
+
+.menu--shopmenu {
+  text-align: right;
+  font-size: 87.5%;
+  margin-right: .5rem;
+  @include breakpoint(medium){
+    float:right;
+  }
+}
+
+
+.menu--shopmenu {
+  > li:not(.menu-text) {
+    > a {
+      padding: 0.7rem .5rem;
+      .home & {
+      }
+      &:hover, &:focus {
       }
     }
   }

@@ -68,7 +68,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 		</div>
 	</div>
 
-
 	<?php woocommerce_product_loop_start(); ?>
 		<?php woocommerce_product_subcategories(); ?>
 		<?php while ( have_posts() ) : the_post(); ?>

@@ -1,8 +1,18 @@
 .row.container {
   @include breakpoint(medium) {
+    padding-left: 2%;
+    padding-right: 2%;
+    &  & {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  @include breakpoint(large) {
     padding-left: 7%;
     padding-right: 7%;
   }
+
 }
 
 .row.container.fullwidth {
@@ -32,6 +42,8 @@
 
 .ps {
   @include clearfix();
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 
 }
 .ps--kispad {

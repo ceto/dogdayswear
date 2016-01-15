@@ -93,33 +93,49 @@
 
 $('document').ready(function(){
 
-  // $('.lookbookgrid').magnificPopup({
-  //   delegate: 'a',
-  //   type: 'image',
-  //   tLoading: 'Loading image #%curr%...',
-  //   mainClass: 'mfp-img-mobile',
-  //   gallery: {
-  //     enabled: true,
-  //     navigateByImgClick: true,
-  //     preload: [0,1] // Will preload 0 - before current, and 1 after the current image
-  //   },
-  //   image: {
-  //     tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-  //     titleSrc: function(item) {
-  //       return /*item.el.children().attr('alt') + */'<small>&copy DogDays Yoga Wear</small>';
-  //     }
-  //   }
-  // });
 
 
-  // $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
-  //   disableOn: 700,
-  //   type: 'iframe',
-  //   mainClass: 'mfp-fade',
-  //   removalDelay: 160,
-  //   preloader: false,
+  var featOwl = $('.featprod');
 
-  //   fixedContentPos: false
-  // });
+  featOwl.owlCarousel({
+    pagination:false,
+    navigation : false,
+
+    items : 5, //10 items above 1000px browser width
+    itemsDesktop : [1280,4], //5 items between 1000px and 901px
+    itemsDesktopSmall : [768,3], // betweem 900px and 601px
+    itemsTablet: [480,2], //2 items between 480 and 0
+    itemsMobile : false // itemsMobile disabled - inherit from itemsTablet option
+  });
+
+
+  $('.lookbookgrid').magnificPopup({
+    delegate: 'a',
+    type: 'image',
+    tLoading: 'Loading image #%curr%...',
+    mainClass: 'mfp-img-mobile',
+    gallery: {
+      enabled: true,
+      navigateByImgClick: true,
+      preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+    },
+    image: {
+      tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+      titleSrc: function(item) {
+        return /*item.el.children().attr('alt') + */'<small>&copy DogDays Yoga Wear</small>';
+      }
+    }
+  });
+
+
+  $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
+    disableOn: 700,
+    type: 'iframe',
+    mainClass: 'mfp-fade',
+    removalDelay: 160,
+    preloader: false,
+
+    fixedContentPos: false
+  });
 
 });

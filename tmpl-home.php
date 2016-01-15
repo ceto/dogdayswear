@@ -15,8 +15,28 @@
 </header>
 
 <main class="main" role="main">
-  <a name="miert-dogdays" id="miert-dogdays"></a>
-  <section class="ps ps--kispad inverseblock">
+
+  <section class="home__featprodsblock">
+    <div class="row container fullwidth">
+      <div class="columns">
+        <div class="featprod owl-carousel">
+          <?php
+            $args = array(
+              'before_widget' => '',
+              'after_widget' => '',
+            );
+            $wcargs =array (
+              'show' => '',
+              'number' => '6'
+            );
+            the_widget('WC_Widget_Products', $wcargs, $args);
+           ?>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ps inverseblock">
     <div class="row container">
       <div class="columns medium-4 large-4">
         <img class="slog2" src="<?= get_stylesheet_directory_uri(); ?>/dist/images/slogan_2line.svg" alt="Don't fear the sweat">
@@ -53,7 +73,6 @@
   </section>
 
 
-  <a name="galeria" id="galeria"></a>
   <section class="ps grayblock looksec">
     <div class="row container">
       <div class="columns medium-6 medium-centered text-center">
@@ -139,8 +158,6 @@
 
 
 
-
-  <a name="vasarlas" id="vasarlas"></a>
   <section class="featblock featblock--taska ainverseblock">
     <div class="row container">
       <div class="columns medium-4 large-6">
