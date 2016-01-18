@@ -8,7 +8,7 @@
     <div class="columns medium-10 medium-centered large-centered large-10 xlarge-8 xxlarge-6">
       <div class="hero__content">
           <h1 class="hero__title">Jóga és sportruházat a legizzasztóbb mozgásformákhoz.</h1>
-          <a href="#miert-dogdays" class="hero__more button">Felfedezés indul</a>
+          <a href="<?= get_permalink( woocommerce_get_page_id( 'shop' ) ) ?>" class="hero__more button">Ugrok a kollekcióra</a>
       </div>
     </div>
   </div>

@@ -76,22 +76,26 @@
 
 })(jQuery); // Fully reference jQuery after this point.
 
-// var $grid = $('.lookbookgrid').isotope({
-//   itemSelector: '.grid-item',
-//   percentPosition: true,
-//   masonry: {
-//     columnWidth: '.grid-sizer',
-//     gutter: 0
-//   }
-// });
+
+  var $grid = $('.lookbookgrid').isotope({
+    itemSelector: '.grid-item',
+    percentPosition: true,
+    masonry: {
+      columnWidth: '.grid-sizer',
+      gutter: 0
+    }
+  });
+
+  $grid.imagesLoaded().progress( function() {
+    $grid.isotope('layout');
+  });
 
 
-// $grid.imagesLoaded().progress( function() {
-//   $grid.isotope('layout');
-// });
+
 
 
 $('document').ready(function(){
+
 
 
 
