@@ -1,9 +1,9 @@
 <?php use Roots\Sage\Titles; ?>
 
-<header class="pagehead">
-  <div class="row container">
-    <div class="columns">
-      <h1><?= Titles\title(); ?></h1>
+<header class="pageheader">
+  <div class="row container text-center">
+    <div class="columns large-8 large-centered">
+      <h1 class="pagetitle"><?= Titles\title(); ?></h1>
     </div>
   </div>
 </header>

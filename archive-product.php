@@ -30,29 +30,27 @@ if ( ! defined( 'ABSPATH' ) ) {
 		</div>
 	</div>
 
-	<div class="row container">
-		<div class="columns">
-			<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
-				<h1 class="page-title"><?php woocommerce_page_title(); ?></h1>
-			<?php endif; ?>
-		</div>
-	</div>
+	<header class="pageheader">
+		<div class="row container text-center">
+			<div class="columns large-8 large-centered">
+				<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
+					<h1 class="pagetitle"><?php woocommerce_page_title(); ?></h1>
+				<?php endif; ?>
+				<?php
+					/**
+					 * woocommerce_archive_description hook
+					 *
+					 * @hooked woocommerce_taxonomy_archive_description - 10
+					 * @hooked woocommerce_product_archive_description - 10
+					 */
+					do_action( 'woocommerce_archive_description' )
+				?>
 
-	<div class="row container">
-		<div class="columns">
-			<?php
-				/**
-				 * woocommerce_archive_description hook
-				 *
-				 * @hooked woocommerce_taxonomy_archive_description - 10
-				 * @hooked woocommerce_product_archive_description - 10
-				 */
-				do_action( 'woocommerce_archive_description' )
-			?>
+			</div>
 		</div>
-	</div>
+	</header>
 
-			<?php if ( have_posts() ) : ?>
+	<?php if ( have_posts() ) : ?>
 
 	<div class="row container">
 		<div class="columns">

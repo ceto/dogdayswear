@@ -21,19 +21,23 @@ $tabs = apply_filters( 'woocommerce_product_tabs', array() );
 
 if ( ! empty( $tabs ) ) : ?>
 
-	<div class="woocommerce-tabs wc-tabs-wrapper">
-		<ul class="tabs wc-tabs">
+	<div class="product__tabswrapper">
+		<ul class="tabs product__tabs" data-tabs id="product__tabs">
+			<?php $firstab=true; ?>
 			<?php foreach ( $tabs as $key => $tab ) : ?>
-				<li class="<?php echo esc_attr( $key ); ?>_tab">
-					<a href="#tab-<?php echo esc_attr( $key ); ?>"><?php echo apply_filters( 'woocommerce_product_' . $key . '_tab_title', esc_html( $tab['title'] ), $key ); ?></a>
+				<li class="<?php echo esc_attr( $key ); ?>_tab tabs-title <?= $firstab?'is-active':''; ?>">
+					<a href="#tab--<?php echo esc_attr( $key ); ?>" <?php echo $firstab?'aria-selected="true"':''; $firstab=false; ?>><?php echo apply_filters( 'woocommerce_product_' . $key . '_tab_title', esc_html( $tab['title'] ), $key ); ?></a>
 				</li>
 			<?php endforeach; ?>
 		</ul>
-		<?php foreach ( $tabs as $key => $tab ) : ?>
-			<div class="panel entry-content wc-tab" id="tab-<?php echo esc_attr( $key ); ?>">
-				<?php call_user_func( $tab['callback'], $key, $tab ); ?>
-			</div>
-		<?php endforeach; ?>
+		<div class="tabs-content product__tabs-content" data-tabs-content="product__tabs">
+			<?php $firstab=true; ?>
+			<?php foreach ( $tabs as $key => $tab ) : ?>
+				<div class="tabs-panel <?php echo $firstab?'is-active':''; $firstab=false; ?>" id="tab--<?php echo esc_attr( $key ); ?>">
+					<?php call_user_func( $tab['callback'], $key, $tab ); ?>
+				</div>
+			<?php endforeach; ?>
+		</div>
 	</div>
 
 <?php endif; ?>

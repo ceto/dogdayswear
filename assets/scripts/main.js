@@ -76,6 +76,7 @@
 
 })(jQuery); // Fully reference jQuery after this point.
 
+  $(document).foundation();
 
   var $grid = $('.lookbookgrid').isotope({
     itemSelector: '.grid-item',
@@ -97,6 +98,19 @@
 $('document').ready(function(){
 
 
+  /*** Thumbnail Carousel on Single product Page ***/
+  var prodthumbsOwl = $('.prodthumbs');
+
+  prodthumbsOwl.owlCarousel({
+    pagination:false,
+    navigation : false,
+
+    items : 4, //10 items above 1000px browser width
+    itemsDesktop : [1024,3], //5 items between 1000px and 901px
+    itemsDesktopSmall : [768,3], // betweem 900px and 601px
+    itemsTablet: [480,3], //2 items between 480 and 0
+    itemsMobile : false // itemsMobile disabled - inherit from itemsTablet option
+  });
 
 
   var featOwl = $('.featprod');

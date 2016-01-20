@@ -35,10 +35,6 @@
         "./dist/isotope.pkgd.js"
       ],
       "dependencies": {}
-    },
-    "imagesloaded": {
-      "dependencies": {}
     }
-
   }
 }
