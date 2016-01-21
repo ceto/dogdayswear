@@ -34,6 +34,10 @@ function setup() {
     'shop_navigation' => __('Shop Related Navigation', 'sage')
   ]);
 
+  register_nav_menus([
+    'side_navigation' => __('Sidebar Navigation on Pages', 'sage')
+  ]);
+
   // Enable post thumbnails
   // http://codex.wordpress.org/Post_Thumbnails
   // http://codex.wordpress.org/Function_Reference/set_post_thumbnail_size
@@ -61,7 +65,7 @@ function widgets_init() {
   register_sidebar([
     'name'          => __('Primary', 'sage'),
     'id'            => 'sidebar-primary',
-    'before_widget' => '<section class="widget %1$s %2$s">',
+    'before_widget' => '<section class="column widget %1$s %2$s">',
     'after_widget'  => '</section>',
     'before_title'  => '<h3>',
     'after_title'   => '</h3>'
@@ -70,11 +74,21 @@ function widgets_init() {
   register_sidebar([
     'name'          => __('Footer', 'sage'),
     'id'            => 'sidebar-footer',
-    'before_widget' => '<div class="column"><section class="widget %1$s %2$s">',
-    'after_widget'  => '</section></div>',
+    'before_widget' => '<section class="column widget %1$s %2$s">',
+    'after_widget'  => '</section>',
     'before_title'  => '<h3 class="widget__title">',
     'after_title'   => '</h3>'
   ]);
+
+  register_sidebar([
+    'name'          => __('Page aside', 'sage'),
+    'id'            => 'sidebar-page',
+    'before_widget' => '<section class="column widget %1$s %2$s">',
+    'after_widget'  => '</section>',
+    'before_title'  => '<h3 class="widget__title">',
+    'after_title'   => '</h3>'
+  ]);
+
 }
 add_action('widgets_init', __NAMESPACE__ . '\\widgets_init');
 

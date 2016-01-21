@@ -31,6 +31,8 @@
 
 }
 
+
+
 .menu--shopmenu {
   text-align: right;
   font-size: 87.5%;
@@ -38,13 +40,27 @@
   @include breakpoint(medium){
     float:right;
   }
-}
-
-
-.menu--shopmenu {
   > li:not(.menu-text) {
     > a {
       padding: 0.7rem .5rem;
+      .home & {
+      }
+      &:hover, &:focus {
+      }
+    }
+  }
+}
+
+.sidenav {
+}
+
+
+
+.menu--sidemenu {
+  > li:not(.menu-text) {
+    display: block;
+    > a {
+      padding: 0.7rem 0;
       .home & {
       }
       &:hover, &:focus {

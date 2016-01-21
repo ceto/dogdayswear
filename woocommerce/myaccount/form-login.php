@@ -19,14 +19,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <?php if ( get_option( 'woocommerce_enable_myaccount_registration' ) === 'yes' ) : ?>
 
-<div class="col2-set" id="customer_login">
+<div class="row" id="customer_login">
 
-	<div class="col-1">
+	<div class="columns medium-6">
 
 <?php endif; ?>
 
 		<h2><?php _e( 'Login', 'woocommerce' ); ?></h2>
-
 		<form method="post" class="login">
 
 			<?php do_action( 'woocommerce_login_form_start' ); ?>
@@ -61,7 +60,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	</div>
 
-	<div class="col-2">
+	<div class="columns medium-6">
 
 		<h2><?php _e( 'Register', 'woocommerce' ); ?></h2>
 
