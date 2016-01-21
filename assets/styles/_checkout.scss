@@ -1,0 +1,27 @@
+  /**
+   * Forms
+   */
+
+.form-row {
+  @include clearfix();
+}
+
+.form-row-first,
+.form-row-last {
+  float: left;
+  width: 48.5%;
+  overflow: visible;
+}
+
+.form-row-last {
+  float: right;
+}
+
+.form-row-wide {
+  clear: both;
+}
+
+ul.payment_methods {
+  list-style-type: none;
+  margin:0;
+}

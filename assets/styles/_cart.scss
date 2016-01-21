@@ -1,0 +1,42 @@
+/**
+ * Cart page
+ */
+
+ .shop_table {
+  width: 100%;
+ }
+.woocommerce-cart {
+  table.cart {
+    .product-thumbnail {
+      width:6rem;
+    }
+    .product-quantity {
+      width: 3rem;
+    }
+  }
+}
+
+dl.variation {
+  dt {
+    display: inline;
+  }
+  dd {
+    display: inline;
+    p {
+      display: inline;
+    }
+  }
+}
+.actions {
+  .coupon {
+    float:left;
+  }
+  .update_cart {
+    //float:right;
+  }
+}
+ul.shipping_method {
+  list-style-type: none;
+  margin: 0;
+}
+
