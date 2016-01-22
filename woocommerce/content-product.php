@@ -42,15 +42,13 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] ) {
 	$classes[] = 'last';
 }
 
-$classes[] = 'column'
+$classes[] = 'column';
+$classes[] = 'productsquare';
+
 ?>
 
 <div <?php post_class( $classes ); ?>>
-
-	<?php do_action( 'woocommerce_before_shop_loop_item' ); ?>
-
-	<a href="<?php the_permalink(); ?>">
-
+	<a class="productsquare__imagelink" href="<?php the_permalink(); ?>">
 		<?php
 			/**
 			 * woocommerce_before_shop_loop_item_title hook
@@ -59,34 +57,31 @@ $classes[] = 'column'
 			 * @hooked woocommerce_template_loop_product_thumbnail - 10
 			 */
 			do_action( 'woocommerce_before_shop_loop_item_title' );
-
-			/**
-			 * woocommerce_shop_loop_item_title hook
-			 *
-			 * @hooked woocommerce_template_loop_product_title - 10
-			 */
-			do_action( 'woocommerce_shop_loop_item_title' );
-
-			/**
-			 * woocommerce_after_shop_loop_item_title hook
-			 *
-			 * @hooked woocommerce_template_loop_rating - 5
-			 * @hooked woocommerce_template_loop_price - 10
-			 */
-			do_action( 'woocommerce_after_shop_loop_item_title' );
 		?>
-
 	</a>
+	<div class="productsquare__infolayer">
+		<div class="productsquare__infolayer__data">
+			<?php
+				/**
+				 * woocommerce_shop_loop_item_title hook
+				 *
+				 * @hooked woocommerce_template_loop_product_title - 10
+				 */
+				do_action( 'woocommerce_shop_loop_item_title' );
 
-	<?php
+				/**
+				 * woocommerce_after_shop_loop_item_title hook
+				 *
+				 * @hooked woocommerce_template_loop_rating - 5
+				 * @hooked woocommerce_template_loop_price - 10
+				 */
+				do_action( 'woocommerce_after_shop_loop_item_title' );
+			?>
 
-		/**
-		 * woocommerce_after_shop_loop_item hook
-		 *
-		 * @hooked woocommerce_template_loop_add_to_cart - 10
-		 */
-		do_action( 'woocommerce_after_shop_loop_item' );
+			<?php wc_get_template_part( 'loop/add-to-cart'); ?>
+		</div>
+	</div>
 
-	?>
+
 
 </div>

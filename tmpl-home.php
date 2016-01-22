@@ -27,7 +27,7 @@
             );
             $wcargs =array (
               'show' => '',
-              'number' => '6'
+              'number' => '6',
             );
             the_widget('WC_Widget_Products', $wcargs, $args);
            ?>
