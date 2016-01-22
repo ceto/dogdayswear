@@ -36,6 +36,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
 					<h1 class="pagetitle"><?php woocommerce_page_title(); ?></h1>
 				<?php endif; ?>
+        <?php get_template_part('templates/listersubnav' ); ?>
+
 				<?php
 					/**
 					 * woocommerce_archive_description hook
@@ -68,9 +70,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<?php woocommerce_product_loop_start(); ?>
 		<?php woocommerce_product_subcategories(); ?>
+
 		<?php while ( have_posts() ) : the_post(); ?>
 			<?php wc_get_template_part( 'content', 'product' ); ?>
 		<?php endwhile; // end of the loop. ?>
+
+
 	<?php woocommerce_product_loop_end(); ?>
 
 

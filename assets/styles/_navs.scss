@@ -68,3 +68,22 @@
     }
   }
 }
+
+
+.listersubnav {
+
+}
+
+.menu--sub {
+  text-align: center;
+  font-size: 87.5%;
+  > li:not(.menu-text) {
+    display: inline-block;
+    > a {
+      display: inline-block;
+      padding: 0.7rem .5rem;
+      &:hover, &:focus {
+      }
+    }
+  }
+}

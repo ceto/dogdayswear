@@ -21,9 +21,9 @@ use Roots\Sage\Wrapper;
     <div class="document" role="document">
       <?php include Wrapper\template_path(); ?>
 
-      <?php if (Setup\display_sidebar()) : ?>
+      <?php /*if (Setup\display_sidebar()) : ?>
         <?php include Wrapper\sidebar_path(); ?>
-      <?php endif; ?>
+      <?php endif; */ ?>
     </div><!-- /.document -->
     <?php
       do_action('get_footer');
