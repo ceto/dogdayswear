@@ -1,48 +1,64 @@
 .sitenav {
 
+  @include clearfix();
+  @include breakpoint(tablet) {
+    margin:.25rem 0 0;
+  }
 }
 
 .menu--sitemenu {
   text-align: right;
-  @include breakpoint(medium){
+  font-size: 125%;
+  text-transform: uppercase;
+  @include breakpoint(tablet){
     float:right;
     clear:right;
-    font-size: 112.5%;
+    font-size: 100%;
   }
 }
 
 .menu {
   > li:not(.menu-text) {
+    display: block;
+    @include breakpoint(tablet) {
+      display: table-cell;
+    }
     > a {
       //text-transform: lowercase;
       font-weight: $global-weight-bold;
       color:$body-font-color;
       .home & {
-        color:$white;
+        @include breakpoint(tablet) {
+          color:$white;
+        }
       }
       &:hover, &:focus {
         color:$primary-color;
       }
     }
+
   }
 }
 
 .shopnav {
-
+  @include clearfix();
+  margin-top: 1.25rem;
 }
 
 
 
 .menu--shopmenu {
   text-align: right;
-  font-size: 87.5%;
-  margin-right: .5rem;
-  @include breakpoint(medium){
+  font-size: 100%;
+  margin-right: .333rem;
+  @include breakpoint(tablet){
+    font-size: 87.5%;
     float:right;
+
   }
   > li:not(.menu-text) {
     > a {
-      padding: 0.7rem .5rem;
+      padding: 0.5rem .333rem;
       .home & {
       }
       &:hover, &:focus {

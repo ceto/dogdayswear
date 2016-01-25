@@ -13,8 +13,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 <div class="row">
-	<div class="columns tablet-10 large-8 tablet-centered">
-
+	<div class="columns tablet-10 tablet-push-1 xlarge-7 xlarge-push-0 xxlarge-8">
+		<h2><?php _e("Cart Items",'dd') ?></h2>
 		<?php wc_print_notices(); ?>
 
 		<?php do_action( 'woocommerce_before_cart' ); ?>
@@ -152,10 +152,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		</form>
 	</div>
-</div>
 
-<div class="row">
-	<div class="columns tablet-10 large-8 tablet-centered">
+
+	<div class="columns tablet-10 tablet-pull-1 xlarge-5 xlarge-pull-0 xxlarge-4">
 		<div class="cart-collaterals">
 			<?php do_action( 'woocommerce_cart_collaterals' ); ?>
 		</div>

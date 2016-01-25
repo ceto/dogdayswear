@@ -1,20 +1,44 @@
-.siteheader {
+.off-canvas.position-left.off-canvas-left {
+  height:100vh;
+  @include breakpoint(tablet) {
+    left:0;
+    width:100%;
+    height:7.5rem;
+    z-index:1;
+    background-color: transparent;
+  }
+}
+
+.mobileheader {
   position: absolute;
   left:0;
   top:0;
   width:100%;
+  height:3.5rem;
   z-index: 1;
   padding:.5rem 0;
-  @include breakpoint(medium) {
+  //background-color: red;
+}
+.sitelogo.sitelogo--mobil {
+  margin-top: 0;
+}
+.menu-icon {
+  color:$primary-color;
+}
+.siteheader {
+  padding:.5rem 0;
+  @include breakpoint(tablet) {
   }
 }
+
+
 
 .sitelogo {
   overflow: hidden;
   text-indent: 200%;
   white-space: nowrap;
 
-  display: block;
+  display: inline-block;
   background-position: left center;
   background-repeat: no-repeat;
   background-image: url('../images/logo_2line.svg');
@@ -23,7 +47,7 @@
   height:2.5rem;
   margin:1rem 0;
   //background-color: rgba($primary-color,.5);
-  @include breakpoint(medium) {
+  @include breakpoint(tablet) {
     background-image: url('../images/logo_2line.svg');
     margin:1.5rem 0 0;
     height:3.5rem;
@@ -31,13 +55,7 @@
   }
 }
 
-.sitenav {
 
-  @include clearfix();
-  @include breakpoint(medium) {
-    margin:1.25rem 0 0;
-  }
-}
 
 .pageheader {
   padding:1rem 0;

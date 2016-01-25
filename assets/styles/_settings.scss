@@ -217,13 +217,13 @@ $badge-font-size: 0.6rem;
 // 10. Breadcrumbs
 // ---------------
 
-$breadcrumbs-margin: 0 0 $global-margin 0;
-$breadcrumbs-item-font-size: rem-calc(11);
+$breadcrumbs-margin: $global-margin 0 $global-margin 0;
+$breadcrumbs-item-font-size: rem-calc(14);
 $breadcrumbs-item-color: $primary-color;
 $breadcrumbs-item-color-current: $black;
 $breadcrumbs-item-color-disabled: $medium-gray;
-$breadcrumbs-item-margin: 0.75rem;
-$breadcrumbs-item-uppercase: true;
+$breadcrumbs-item-margin: 0.333rem;
+$breadcrumbs-item-uppercase: false;
 $breadcrumbs-item-slash: true;
 
 // 11. Button
@@ -372,20 +372,20 @@ $mediaobject-image-width-stacked: 100%;
 
 $menu-margin: 0;
 $menu-margin-nested: 1rem;
-$menu-item-padding: 0.7rem 1rem;
+$menu-item-padding: .5rem .75rem;
 $menu-icon-spacing: 0.25rem;
 $menu-expand-max: 6;
 
 // 23. Off-canvas
 // --------------
 
-$offcanvas-size: 250px;
-$offcanvas-background: $light-gray;
+$offcanvas-size: 280px;
+$offcanvas-background: $white;
 $offcanvas-zindex: -1;
 $offcanvas-transition-length: 0.5s;
 $offcanvas-transition-timing: ease;
-$offcanvas-fixed-reveal: true;
-$offcanvas-exit-background: rgba($white, 0.25);
+$offcanvas-fixed-reveal: false;
+$offcanvas-exit-background: rgba($black, 0.85);
 $maincontent-class: 'off-canvas-content';
 $maincontent-shadow: 0 0 10px rgba($black, 0.5);
 
@@ -523,8 +523,8 @@ $titlebar-background: $black;
 $titlebar-color: $white;
 $titlebar-padding: 0.5rem;
 $titlebar-text-font-weight: bold;
-$titlebar-icon-color: $white;
-$titlebar-icon-color-hover: $medium-gray;
+$titlebar-icon-color: $primary-color;
+$titlebar-icon-color-hover: $anchor-color-hover;
 $titlebar-icon-spacing: 0.25rem;
 
 // 34. Tooltip

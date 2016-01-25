@@ -31,8 +31,13 @@
 }
 
 .document {
-  margin-top: 7.5rem;
+  position: relative;
+  padding-top: 5rem;
   //border-top: 1px solid $medium-gray;
+  @include breakpoint(tablet) {
+    padding-top: 7.5rem;
+  }
+
 }
 
 .pagehead {

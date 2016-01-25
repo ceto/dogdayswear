@@ -1,9 +1,9 @@
 <header class="siteheader">
   <div class="row container">
-    <div class="columns medium-4">
+    <div class="columns text-right tablet-text-left tablet-4">
       <a class="sitelogo" href="<?= esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
     </div>
-    <div class="columns medium-8">
+    <div class="columns tablet-8">
       <?php if (has_nav_menu('shop_navigation')) :?>
         <nav class="shopnav">
             <?php wp_nav_menu(['theme_location' => 'shop_navigation', 'menu_class' => 'menu menu--shopmenu']); ?>

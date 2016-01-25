@@ -1,5 +1,5 @@
 .hero {
-  margin-top:-7.5rem;
+  margin-top:-5rem;
   position: relative;
 
   background-repeat: no-repeat;
@@ -11,6 +11,10 @@
     height: 100vh;
     min-height: 35rem;
     max-height: 49rem;
+  }
+
+  @include breakpoint(tablet) {
+    margin-top:-7.5rem;
   }
 }
 

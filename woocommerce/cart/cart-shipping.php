@@ -24,7 +24,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<th><?php echo wp_kses_post( $package_name ); ?></th>
 	<td data-title="<?php echo esc_attr( $package_name ); ?>">
 		<?php if ( 1 < count( $available_methods ) ) : ?>
-			<ul id="shipping_method">
+			<ul id="shipping_method" class="shipping_method">
 				<?php foreach ( $available_methods as $method ) : ?>
 					<li>
 						<?php
