@@ -9,7 +9,7 @@
 
   <div class="row container">
     <div class="columns tablet-9 tablet-push-3">
-      <header class="">
+      <header class="sidedhead">
         <h1 class="pagetitle"><?= Titles\title(); ?></h1>
       </header>
       <div class="pagecontent">

@@ -26,7 +26,7 @@
               'after_widget' => '',
             );
             $wcargs =array (
-              'show' => '',
+              'show' => 'featured',
               'number' => '6',
             );
             the_widget('WC_Widget_Products', $wcargs, $args);

@@ -104,10 +104,10 @@ var cssTasks = function(filename) {
         'opera 12'
       ]
     })
-    // .pipe(minifyCss, {
-    //   advanced: false,
-    //   rebase: false
-    // })
+    .pipe(minifyCss, {
+      advanced: false,
+      rebase: false
+    })
     .pipe(function() {
       return gulpif(enabled.rev, rev());
     })
@@ -247,6 +247,7 @@ gulp.task('watch', function() {
   browserSync.init({
     files: ['{lib,templates,woocommerce}/**/*.php', '*.php'],
     proxy: config.devUrl,
+    open: "external",
     snippetOptions: {
       whitelist: ['/wp-admin/admin-ajax.php'],
       blacklist: ['/wp-admin/**']

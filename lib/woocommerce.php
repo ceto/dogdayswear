@@ -1,5 +1,48 @@
 <?php
 
+// add related products selector to product edit screen
+function dd_select_colvariants_products() {
+  global $post, $woocommerce;
+  $product_ids = array_filter( array_map( 'absint', (array) get_post_meta( $post->ID, '_colvariants_ids', true ) ) );
+  ?>
+  <div class="options_group">
+    <p class="form-field">
+      <label for="colvariants_ids"><?php _e( 'Color Variants', 'woocommerce' ); ?></label>
+      <input type="hidden" class="wc-product-search" style="width: 50%;" id="colvariants_ids" name="colvariants_ids" data-placeholder="<?php _e( 'Search for a product&hellip;', 'woocommerce' ); ?>" data-action="woocommerce_json_search_products" data-multiple="true" data-selected="<?php
+        $json_ids = array();
+        foreach ( $product_ids as $product_id ) {
+          $product = wc_get_product( $product_id );
+          if ( is_object( $product ) ) {
+            $json_ids[ $product_id ] = wp_kses_post( html_entity_decode( $product->get_formatted_name(), ENT_QUOTES, get_bloginfo( 'charset' ) ) );
+          }
+        }
+
+        echo esc_attr( json_encode( $json_ids ) );
+      ?>" value="<?php echo implode( ',', array_keys( $json_ids ) ); ?>" /> <?php echo wc_help_tip( __( 'Color variants are products which are diplayed and linked on product page as a color selector field. Please included current color variant also.', 'dd' ) ); ?>
+    </p>
+  </div>
+  <?php
+}
+add_action('woocommerce_product_options_related', 'dd_select_colvariants_products');
+
+// save related products selector on product edit screen
+function dd_save_colvariants_products( $post_id, $post ) {
+  global $woocommerce;
+  if ( isset( $_POST['colvariants_ids'] ) ) {
+    $colvariant = isset( $_POST['colvariants_ids'] ) ? array_filter( array_map( 'intval', explode( ',', $_POST['colvariants_ids'] ) ) ) : array();
+    update_post_meta( $post_id, '_colvariants_ids', $colvariant );
+  } else {
+    delete_post_meta( $post_id, '_colvariants_ids' );
+  }
+}
+add_action( 'woocommerce_process_product_meta', 'dd_save_colvariants_products', 10, 2 );
+
+
+
+
+/****** Number of Products on lists *******/
+add_filter( 'loop_shop_per_page', create_function( '$cols', 'return 9999;' ), 20 );
+
 add_action( 'after_setup_theme', 'woocommerce_support' );
 function woocommerce_support() {
     add_theme_support( 'woocommerce' );

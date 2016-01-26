@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<header class="productheader pageheader">
 
 		<div class="row container text-center">
-			<div class="columns large-8 large-centered">
+			<div class="columns">
 				<?php
 					/**
 					 * woocommerce_before_single_product hook
