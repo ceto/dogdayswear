@@ -93,7 +93,7 @@ $grid-row-width: $global-width;
 $grid-column-count: 12;
 $grid-column-gutter: 60px;
 $grid-column-align-edge: true;
-$block-grid-max: 8;
+$block-grid-max: 6;
 
 // 4. Base Typography
 // ------------------
@@ -217,7 +217,7 @@ $badge-font-size: 0.6rem;
 // 10. Breadcrumbs
 // ---------------
 
-$breadcrumbs-margin: $global-margin 0 $global-margin 0;
+$breadcrumbs-margin: 0 0 $global-margin 0;
 $breadcrumbs-item-font-size: rem-calc(14);
 $breadcrumbs-item-color: $primary-color;
 $breadcrumbs-item-color-current: $black;

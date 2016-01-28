@@ -44,7 +44,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<section class="productessence">
 
 			<div class="row container">
-				<div class="columns medium-7 large-6">
+				<div class="columns medium-7 large-6 alarge-push-6">
 					<?php
 						/**
 						 * woocommerce_before_single_product_summary hook
@@ -56,7 +56,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 					?>
 				</div>
-				<div class="columns medium-5 large-6">
+				<div class="columns medium-5 large-6 alarge-pull-6">
 					<div class="productsummary">
 						<?php
 							/**

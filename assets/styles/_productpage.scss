@@ -1,4 +1,6 @@
-
+.productheader {
+  padding:0;
+}
 .productessence {
   padding:2rem 0;
 }
@@ -8,8 +10,8 @@
 }
 
 .productsummary {
-  border-top: 1px solid $medium-gray;
-  padding-top: 2rem;
+  //border-top: 1px solid $medium-gray;
+  //padding-top: 2rem;
   .price {
     font-size: 1.5rem;
     @include breakpoint(tablet) {
