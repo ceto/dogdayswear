@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 <div class="row">
-	<div class="columns tablet-10 tablet-centered large-8">
+	<div class="columns xlarge-10 xlarge-centered">
 		<?php
 			wc_print_notices();
 
@@ -29,31 +29,40 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			<form name="checkout" method="post" class="checkout woocommerce-checkout" action="<?php echo esc_url( $get_checkout_url ); ?>" enctype="multipart/form-data">
 
-				<?php if ( sizeof( $checkout->checkout_fields ) > 0 ) : ?>
+				<div class="row">
+					<div class="columns tablet-6 large-7">
+						<?php if ( sizeof( $checkout->checkout_fields ) > 0 ) : ?>
 
-					<?php do_action( 'woocommerce_checkout_before_customer_details' ); ?>
+							<?php do_action( 'woocommerce_checkout_before_customer_details' ); ?>
 
-					<div  id="customer_details">
-							<?php do_action( 'woocommerce_checkout_billing' ); ?>
+							<div  id="customer_details">
+									<?php do_action( 'woocommerce_checkout_billing' ); ?>
 
-							<?php do_action( 'woocommerce_checkout_shipping' ); ?>
+									<?php do_action( 'woocommerce_checkout_shipping' ); ?>
+							</div>
+
+
+							<?php do_action( 'woocommerce_checkout_after_customer_details' ); ?>
+
+						<?php endif; ?>
 					</div>
+					<div class="columns tablet-6 large-5">
+							<h3 id="order_review_heading"><?php _e( 'Your order', 'woocommerce' ); ?></h3>
 
-					<?php do_action( 'woocommerce_checkout_after_customer_details' ); ?>
+							<?php do_action( 'woocommerce_checkout_before_order_review' ); ?>
 
-					<h3 id="order_review_heading"><?php _e( 'Your order', 'woocommerce' ); ?></h3>
+							<div id="order_review" class="woocommerce-checkout-review-order">
+								<?php do_action( 'woocommerce_checkout_order_review' ); ?>
+							</div>
 
-				<?php endif; ?>
-
-				<?php do_action( 'woocommerce_checkout_before_order_review' ); ?>
-
-				<div id="order_review" class="woocommerce-checkout-review-order">
-					<?php do_action( 'woocommerce_checkout_order_review' ); ?>
+							<?php do_action( 'woocommerce_checkout_after_order_review' ); ?>
+					</div>
 				</div>
 
-				<?php do_action( 'woocommerce_checkout_after_order_review' ); ?>
+
 
 			</form>
+
 
 			<?php do_action( 'woocommerce_after_checkout_form', $checkout ); ?>
 

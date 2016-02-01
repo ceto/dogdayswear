@@ -90,3 +90,98 @@ add_action( 'woocommerce_after_single_product', 'woocommerce_upsell_display', 15
 
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20);
 add_action( 'woocommerce_after_single_product', 'woocommerce_output_related_products', 20);
+
+
+
+
+
+
+
+
+/* Remove Woocommerce User Fields */
+add_filter( 'woocommerce_checkout_fields' , 'dd_override_checkout_fields' );
+add_filter( 'woocommerce_billing_fields' , 'dd_override_billing_fields' );
+add_filter( 'woocommerce_shipping_fields' , 'dd_override_shipping_fields' );
+
+function dd_override_checkout_fields( $fields ) {
+  unset($fields['billing']['billing_state']);
+  unset($fields['billing']['billing_country']);
+  unset($fields['billing']['billing_company']);
+  // unset($fields['billing']['billing_address_1']);
+  unset($fields['billing']['billing_address_2']);
+  // unset($fields['billing']['billing_postcode']);
+  // unset($fields['billing']['billing_city']);
+  unset($fields['shipping']['shipping_state']);
+  // unset($fields['shipping']['shipping_country']);
+  // unset($fields['shipping']['shipping_company']);
+  // unset($fields['shipping']['shipping_address_1']);
+  unset($fields['shipping']['shipping_address_2']);
+  // unset($fields['shipping']['shipping_postcode']);
+  // unset($fields['shipping']['shipping_city']);
+  return $fields;
+}
+function dd_override_billing_fields( $fields ) {
+  unset($fields['billing_state']);
+  unset($fields['billing_country']);
+  unset($fields['billing_company']);
+  // unset($fields['billing_address_1']);
+  unset($fields['billing_address_2']);
+  // unset($fields['billing_postcode']);
+  // unset($fields['billing_city']);
+  return $fields;
+}
+function dd_override_shipping_fields( $fields ) {
+  unset($fields['shipping_state']);
+  unset($fields['shipping_country']);
+  unset($fields['shipping_company']);
+  // unset($fields['shipping_address_1']);
+  unset($fields['shipping_address_2']);
+  // unset($fields['shipping_postcode']);
+  // unset($fields['shipping_city']);
+  return $fields;
+}
+/* End - Remove Woocommerce User Fields */
+
+/* Make Woocommerce Phone Field Not Required  */
+// add_filter( 'woocommerce_billing_fields', 'dd_npr_filter_phone', 10, 1 );
+// function dd_npr_filter_phone( $address_fields ) {
+//   $address_fields['billing_phone']['required'] = false;
+//   return $address_fields;
+// }
+/* End - Make Woocommerce Phone Field Not Required  */
+
+
+
+add_filter('woocommerce_checkout_fields', 'dd_order_fields');
+
+function dd_order_fields($fields) {
+
+    $order = array(
+        'billing_first_name', 
+        'billing_last_name', 
+        'billing_email', 
+        'billing_phone',
+        'billing_city',
+        'billing_postcode',  
+        'billing_address_1'
+
+    );
+    foreach($order as $field)
+    {
+        $ordered_fields[$field] = $fields['billing'][$field];
+    }
+
+    $fields['billing'] = $ordered_fields;
+    $fields['shipping'] = $ordered_fields;
+    return $fields;
+
+}
+
+
+
+// add_filter('woocommerce_form_field_args','dd_form_field_args',10,3);
+
+// function dd_form_field_args($args, $key, $value) {
+//   $args['class'] = array('form-control');
+//   return $args;
+// }

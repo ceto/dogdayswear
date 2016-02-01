@@ -20,14 +20,10 @@ wc_print_notice( $info_message, 'notice' );
 ?>
 
 <form class="checkout_coupon" method="post" style="display:none">
-
-	<p class="form-row form-row-first">
-		<input type="text" name="coupon_code" class="input-text" placeholder="<?php esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" id="coupon_code" value="" />
-	</p>
-
-	<p class="form-row form-row-last">
-		<input type="submit" class="button" name="apply_coupon" value="<?php esc_attr_e( 'Apply Coupon', 'woocommerce' ); ?>" />
-	</p>
-
-	<div class="clear"></div>
+  <div class="input-group">
+    <input type="text" name="coupon_code" class="input-group-field" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" />
+    <div class="input-group-button">
+      <input type="submit" class="button" name="apply_coupon" value="<?php esc_attr_e( 'Apply Coupon', 'woocommerce' ); ?>" />
+    </div>
+  </div>
 </form>

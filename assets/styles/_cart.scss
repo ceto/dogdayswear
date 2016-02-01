@@ -4,15 +4,34 @@
 
  .shop_table {
   width: 100%;
+  td  {
+    vertical-align: top;
+  }
  }
 .woocommerce-cart {
   table.cart {
     .product-thumbnail {
-      width:6rem;
+      display: inline-block;
+      width:20%;  
+      max-width:4rem;
+      float:left;
+      margin:0 .5rem 0 0;
+      a {
+        display: inline-block;  
+      }
+    }
+    .prodtitle {
+      display: block;
+      line-height: 1.2;
+    }
+    .variation {
+      display: inline-block;
+      margin-bottom: 0;
     }
     .product-quantity {
+
       .quantity {
-        width: 2.5rem;
+       display: inline-block;
       }
     }
   }
@@ -30,9 +49,6 @@ dl.variation {
   }
 }
 .actions {
-  .coupon {
-    float:left;
-  }
   .update_cart {
     //float:right;
   }

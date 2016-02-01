@@ -55,3 +55,16 @@ h4, h5, h6 {
     font-size: 3rem;
   }
 }
+
+// th {
+//   font-size: .75rem;
+//   line-height: 1.6;
+// }
+
+tbody th, tfoot th {
+  font-weight: $global-weight-bold;
+  text-align: left;
+  font-size: .75rem;
+  //line-height: 1;
+  vertical-align: top;
+}

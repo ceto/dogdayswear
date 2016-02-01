@@ -4,6 +4,7 @@
 
 .form-row {
   @include clearfix();
+  margin-bottom: $global-margin/2;
 }
 
 .form-row-first,
@@ -25,3 +26,31 @@ ul.payment_methods {
   list-style-type: none;
   margin:0;
 }
+
+label[for^="payment_method_"] {
+  img {
+    width:6rem;
+    margin:0 .5rem;
+    //display: block;
+  }
+}
+
+
+.woocommerce-checkout {
+ .form-row {
+  label {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+ } 
+}
+#billing_city_field.form-row-wide {
+  clear:none;
+  float: left;
+  width: 68.5%;
+}
+#billing_postcode_field.form-row-last {
+  width: 28.5%;
+}
+
