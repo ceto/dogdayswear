@@ -48,3 +48,27 @@
   padding:2rem 0 4rem;
   //text-align: center;
 }
+
+.colvariants {
+  list-style-type: none;
+  margin:0;
+}
+
+.colvariant {
+  float:left;
+  margin:0 .333rem .333rem 0;
+  a {
+    display: block;
+    width:3.5rem;
+    height:3.5rem;
+    overflow: hidden;
+    border:1px solid $medium-gray;
+    &:hover, &:focus {
+      border-color: $secondary-color;
+    }
+
+  }
+  &.actual a {
+    border-color: $primary-color;
+  }
+}
