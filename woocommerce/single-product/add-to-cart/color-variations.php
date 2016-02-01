@@ -9,10 +9,12 @@ if ( empty( $product ) || ! $product->exists() ) {
   return;
 }
 
+$actclmeta = substr($product->get_sku(),0,3);
 
-$related = get_post_meta( $product->id, '_colvariants_ids', true );
 
-if ( sizeof( $related ) == 0 ) return;
+// $related = get_post_meta( $product->id, '_colvariants_ids', true );
+
+//if ( sizeof( $related ) == 0 ) return;
 
 $args = apply_filters( 'woocommerce_related_products_args', array(
   'post_type'            => 'product',
@@ -21,20 +23,22 @@ $args = apply_filters( 'woocommerce_related_products_args', array(
   'posts_per_page'       => 0,
   'orderby'              => 'name',
   'order'                => 'ASC',
-  'post__in'             => $related,
+  'meta_key'             => '_sku',
+  'meta_value'           => $actclmeta,
+  'meta_compare'          => 'LIKE'
+  //'post__in'             => $related,
   //'post__not_in'         => array( $product->id )
 ) );
 
 $relproducts = new WP_Query( $args );
 
-$woocommerce_loop['columns'] = $columns;
 
 if ( $relproducts->have_posts() ) : ?>
 
 
-  <div class="colors">
+  <div class="colorvariations">
 
-    <label for=""><?php _e('Colors','woocommerce'); ?></label>
+    <label><?php _e('Colors','woocommerce'); ?></label>
     <ul class="colvariants">
       <?php while ( $relproducts->have_posts() ) : $relproducts->the_post(); ?>
         <?php 

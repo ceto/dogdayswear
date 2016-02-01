@@ -29,6 +29,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 	<?php if ( empty( $available_variations ) && false !== $available_variations ) : ?>
 		<p class="stock out-of-stock"><?php _e( 'This product is currently out of stock and unavailable.', 'woocommerce' ); ?></p>
 	<?php else : ?>
+
 		<?php wc_get_template_part( 'single-product/add-to-cart/color', 'variations' ); ?>
 		
 		<div class="variations">
@@ -41,7 +42,14 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 						echo end( $attribute_keys ) === $attribute_name ? apply_filters( 'woocommerce_reset_variations_link', '<a class="reset_variations" href="#">' . __( 'Clear', 'woocommerce' ) . '</a>' ) : '';
 					?>
 				</div>
+				
+
+
 			<?php endforeach;?>
+<!-- 			<div class="variations__item">
+				<label for="quantity"><?php _e('Quantity','woocommerce'); ?></label>
+				<?php woocommerce_quantity_input( array( 'input_value' => isset( $_POST['quantity'] ) ? wc_stock_amount( $_POST['quantity'] ) : 1 ) ); ?>
+			</div> -->
 		</div>
 
 
