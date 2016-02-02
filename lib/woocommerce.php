@@ -118,6 +118,23 @@ function dd_override_checkout_fields( $fields ) {
   unset($fields['shipping']['shipping_address_2']);
   // unset($fields['shipping']['shipping_postcode']);
   // unset($fields['shipping']['shipping_city']);
+
+
+  $order = array(
+    'billing_first_name', 
+    'billing_last_name', 
+    'billing_email', 
+    'billing_phone',
+    'billing_city',
+    'billing_postcode',  
+    'billing_address_1'
+  );
+  foreach($order as $field) {
+        $ordered_fields[$field] = $fields['billing'][$field];
+    }
+
+  $fields['billing'] = $ordered_fields;
+
   return $fields;
 }
 function dd_override_billing_fields( $fields ) {
@@ -152,36 +169,29 @@ function dd_override_shipping_fields( $fields ) {
 
 
 
-add_filter('woocommerce_checkout_fields', 'dd_order_fields');
+// add_filter('woocommerce_checkout_fields', 'dd_order_fields');
 
-function dd_order_fields($fields) {
+// function dd_order_fields($fields) {
 
-    $order = array(
-        'billing_first_name', 
-        'billing_last_name', 
-        'billing_email', 
-        'billing_phone',
-        'billing_city',
-        'billing_postcode',  
-        'billing_address_1'
+//     $order = array(
+//         'billing_first_name', 
+//         'billing_last_name', 
+//         'billing_email', 
+//         'billing_phone',
+//         'billing_city',
+//         'billing_postcode',  
+//         'billing_address_1'
 
-    );
-    foreach($order as $field)
-    {
-        $ordered_fields[$field] = $fields['billing'][$field];
-    }
+//     );
+//     foreach($order as $field)
+//     {
+//         $ordered_fields[$field] = $fields['billing'][$field];
+//     }
 
-    $fields['billing'] = $ordered_fields;
-    $fields['shipping'] = $ordered_fields;
-    return $fields;
+//     $fields['billing'] = $ordered_fields;
+//     //$fields['shipping'] = $ordered_fields;
+//     return $fields;
 
-}
-
-
-
-// add_filter('woocommerce_form_field_args','dd_form_field_args',10,3);
-
-// function dd_form_field_args($args, $key, $value) {
-//   $args['class'] = array('form-control');
-//   return $args;
 // }
+
+
