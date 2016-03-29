@@ -38,8 +38,6 @@
 }
 
 
-
-
 .productaddinfo {
   padding:2rem 0;
 }
@@ -59,19 +57,55 @@
 
 .colvariant {
   float:left;
-  margin:0 .333rem .333rem 0;
+  margin:0 .75rem .75rem 0;
   a {
     display: block;
-    width:3.5rem;
-    height:3.5rem;
+    width:3.875rem;
+    height:3.875rem;
     overflow: hidden;
     border:1px solid $medium-gray;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding:2px;
+    background-position: center;
+    background-clip: content-box;
+    font-size: 0;
+    color:transparent;
     &:hover, &:focus {
       border-color: $secondary-color;
     }
-
   }
   &.actual a {
     border-color: $primary-color;
   }
 }
+
+.colvariant--kaleidoscope a {
+  background-image: url('../images/colors/kaleidoscope.jpg');
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi){ background-image: url('../images/colors/kaleidoscope@2x.jpg'); }
+}
+.colvariant--skyler a {
+  background-image: url('../images/colors/skyler.jpg');
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi){ background-image: url('../images/colors/skyler@2x.jpg'); }
+}
+.colvariant--cubes a {
+  background-image: url('../images/colors/cubes.jpg');
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi){ background-image: url('../images/colors/cubes@2x.jpg'); }
+}
+.colvariant--prana a {
+  background-image: url('../images/colors/prana.jpg');
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi){ background-image: url('../images/colors/prana@2x.jpg'); }
+}
+.colvariant--cosmos a {
+  background-image: url('../images/colors/cosmos.jpg');
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi){ background-image: url('../images/colors/cosmos@2x.jpg'); }
+}
+.colvariant--fekete a {
+  background-image: url('../images/colors/black.jpg');
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi){ background-image: url('../images/colors/black@2x.jpg'); }
+}
+.colvariant--holy-hands a {
+  background-image: url('../images/colors/holyhands.jpg');
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi){ background-image: url('../images/colors/holyhands@2x.jpg'); }
+}
+
