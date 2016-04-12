@@ -15,6 +15,11 @@ global $post, $product, $woocommerce;
 
 $attachment_ids = $product->get_gallery_attachment_ids();
 
+if ( has_post_thumbnail() ) {
+ $attachment_ids = array_merge( array(get_post_thumbnail_id()) , $attachment_ids );
+}
+
+
 if ( $attachment_ids ) {
 	$loop 		= 0;
 	$columns 	= apply_filters( 'woocommerce_product_thumbnails_columns', 3 );
@@ -46,7 +51,12 @@ if ( $attachment_ids ) {
 
 			$image_class = esc_attr( implode( ' ', $classes ) );
 
-			echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', sprintf( '<div class="item"><a href="%s" class="%s" title="%s" data-rel="prettyPhoto[product-gallery]">%s</a></div>', $image_link, $image_class, $image_caption, $image ), $attachment_id, $post->ID, $image_class );
+			$swapimage = wp_get_attachment_image( $attachment_id, apply_filters( 'single_product_large_thumbnail_size', 'shop_single' ), 0,$attr = array(
+				'title'	=> $image_title,
+				'alt'	=> $image_title
+				) );
+
+			echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', sprintf( '<div class="item"><a href="%s" class="%s" title="%s" data-swapimage="%s" data-rel="prettyPhoto[product-gallery]">%s</a></div>', $image_link, $image_class, $image_caption, esc_attr($swapimage), $image ), $attachment_id, $post->ID, $image_class );
 
 			$loop++;
 		}

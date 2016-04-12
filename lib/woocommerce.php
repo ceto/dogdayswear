@@ -50,7 +50,7 @@ function woocommerce_support() {
 add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
 
 
-/*** Featured Prod List Mods ****/
+/*** Featured Prod List Mods (Homepage)****/
 
 function dd_woocommerce_before_widget_product_list() { return ''; }
 function dd_woocommerce_after_widget_product_list() { return ''; }
@@ -92,8 +92,21 @@ remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_r
 add_action( 'woocommerce_after_single_product', 'woocommerce_output_related_products', 20);
 
 
+/****** Remove some tabs on product Page ****/
 
+add_filter( 'woocommerce_product_tabs', 'dd_remove_product_tabs', 98 );
+function dd_remove_product_tabs( $tabs ) {
+    unset( $tabs['description'] );        // Remove the description tab
+    //unset( $tabs['reviews'] );      // Remove the reviews tab
+    unset( $tabs['additional_information'] );   // Remove the additional information tab
+    return $tabs;
+}
 
+/*** Move long description under to prod summary ***/
+function dd_template_product_description() {
+  wc_get_template( 'single-product/tabs/description.php' );
+}
+add_action( 'woocommerce_single_product_summary', 'dd_template_product_description', 20 );
 
 
 
@@ -121,12 +134,12 @@ function dd_override_checkout_fields( $fields ) {
 
 
   $order = array(
-    'billing_first_name', 
-    'billing_last_name', 
-    'billing_email', 
+    'billing_first_name',
+    'billing_last_name',
+    'billing_email',
     'billing_phone',
     'billing_city',
-    'billing_postcode',  
+    'billing_postcode',
     'billing_address_1'
   );
   foreach($order as $field) {
@@ -174,12 +187,12 @@ function dd_override_shipping_fields( $fields ) {
 // function dd_order_fields($fields) {
 
 //     $order = array(
-//         'billing_first_name', 
-//         'billing_last_name', 
-//         'billing_email', 
+//         'billing_first_name',
+//         'billing_last_name',
+//         'billing_email',
 //         'billing_phone',
 //         'billing_city',
-//         'billing_postcode',  
+//         'billing_postcode',
 //         'billing_address_1'
 
 //     );

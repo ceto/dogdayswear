@@ -146,6 +146,22 @@ $('document').ready(function(){
   });
 
 
+  $('.woocommerce-main-image').magnificPopup({
+    type: 'image',
+    closeOnContentClick: true,
+    closeBtnInside: false,
+    fixedContentPos: true,
+    mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
+    image: {
+      verticalFit: true
+    },
+    zoom: {
+      enabled: true,
+      duration: 300 // don't foget to change the duration also in CSS
+    }
+  });
+
+
   $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
     disableOn: 700,
     type: 'iframe',
@@ -154,6 +170,23 @@ $('document').ready(function(){
     preloader: false,
 
     fixedContentPos: false
+  });
+
+  $('.woocommerce-main-image').zoom({
+      url: $(this).parent().attr('href')
+   });
+
+  $('.prodthumbs .item a').on('click', function(e) {
+   e.preventDefault();
+   $('.woocommerce-main-image').trigger('zoom.destroy');
+   $('.woocommerce-main-image').css('min-height', $('.woocommerce-main-image .attachment-shop_single').height());
+   $('.woocommerce-main-image').attr('href', $(this).attr('href') );
+   $('.woocommerce-main-image .attachment-shop_single').replaceWith($(this).data('swapimage'));
+   $('.woocommerce-main-image').zoom({
+      url: $(this).parent().attr('href')
+   });
+
+   setTimeout(function() { $('.woocommerce-main-image').css('min-height', 'auto'); } , 2000)
   });
 
 });

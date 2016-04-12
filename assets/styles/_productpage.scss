@@ -4,9 +4,24 @@
 .productessence {
   padding:2rem 0;
 }
-
-.prodthumbs {
+.woocommerce-main-image {
+  display: block;
+}
+.owl-carousel.prodthumbs {
   margin-top: 1rem;
+  width: calc(100% + 1rem);
+  margin:.5rem 0 0 -.5rem;
+  .item {
+    padding:.5rem;
+    a {
+      display: block;
+      // padding:2px;
+      // border:1px solid $medium-gray;
+      // &:hover, &:focus {
+      //   border-color:$secondary-color;
+      // }
+    }
+  }
 }
 
 .productsummary {
@@ -40,6 +55,7 @@
 
 .productaddinfo {
   padding:2rem 0;
+  display:none;
 }
 
 .productfooter {

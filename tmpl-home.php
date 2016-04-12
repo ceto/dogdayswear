@@ -3,38 +3,18 @@
  * Template Name: Home Page Template
  */
 ?>
-<header class="hero hero--home" role="banner">
+<header class="hero hero--home" role="banner" data-magellan data-threshold="0">
   <div class="row container">
     <div class="columns medium-10 medium-centered large-centered large-10 xlarge-8 xxlarge-6">
       <div class="hero__content">
           <h1 class="hero__title">Jóga és sportruházat a legizzasztóbb mozgásformákhoz.</h1>
-          <a href="<?= get_permalink( woocommerce_get_page_id( 'shop' ) ) ?>" class="hero__more button">Ugrok a kollekcióra</a>
+          <a href="#main" class="hero__more button">Mi a DogDays Yogawear</a>
       </div>
     </div>
   </div>
 </header>
 
-<main class="main" role="main">
-
-  <section class="home__featprodsblock">
-    <div class="row container fullwidth">
-      <div class="columns">
-        <div class="featprod owl-carousel">
-          <?php
-            $args = array(
-              'before_widget' => '',
-              'after_widget' => '',
-            );
-            $wcargs =array (
-              'show' => 'featured',
-              'number' => '6',
-            );
-            the_widget('WC_Widget_Products', $wcargs, $args);
-           ?>
-        </div>
-      </div>
-    </div>
-  </section>
+<main id="main" class="main" role="main" data-magellan-target="main">
 
   <section class="ps inverseblock">
     <div class="row container">
@@ -72,6 +52,25 @@
     </div>
   </section>
 
+  <section class="home__featprodsblock">
+    <div class="row container fullwidth">
+      <div class="columns">
+        <div class="featprod owl-carousel">
+          <?php
+            $args = array(
+              'before_widget' => '',
+              'after_widget' => '',
+            );
+            $wcargs =array (
+              'show' => 'featured',
+              'number' => '6',
+            );
+            the_widget('WC_Widget_Products', $wcargs, $args);
+           ?>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section class="ps grayblock looksec">
     <div class="row container">
@@ -154,6 +153,8 @@
       </div>
     </div>
   </section>
+
+
 
 
 
