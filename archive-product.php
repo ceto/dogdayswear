@@ -50,10 +50,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			</div>
 		</div>
+
 	</header>
 
 	<?php if ( have_posts() ) : ?>
-
 	<div class="row container">
 		<div class="columns">
 				<?php

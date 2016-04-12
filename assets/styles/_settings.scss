@@ -120,7 +120,7 @@ $header-sizes: (
     'h5': 17,
     'h6': 16,
   ),
-  medium: (
+  large: (
     'h1': 40,
     'h2': 31,
     'h3': 25,
@@ -130,7 +130,7 @@ $header-sizes: (
   ),
 );
 $header-color: $primary-color;
-$header-lineheight: 1.25;
+$header-lineheight: 1.125;
 $header-margin-top: 3rem;
 $header-margin-bottom: 0.5rem;
 $header-text-rendering: optimizeLegibility;
@@ -226,9 +226,9 @@ $badge-font-size: 0.6rem;
 // 10. Breadcrumbs
 // ---------------
 
-$breadcrumbs-margin: 0 0 $global-margin 0;
+$breadcrumbs-margin: 0 0 $global-margin/1.5 0;
 $breadcrumbs-item-font-size: rem-calc(14);
-$breadcrumbs-item-color: $primary-color;
+$breadcrumbs-item-color: $secondary-color;
 $breadcrumbs-item-color-current: $black;
 $breadcrumbs-item-color-disabled: $medium-gray;
 $breadcrumbs-item-margin: 0.333rem;

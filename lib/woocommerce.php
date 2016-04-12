@@ -82,8 +82,8 @@ add_filter( 'woocommerce_after_widget_product_list', 'dd_woocommerce_after_widge
 remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20);
 add_action( 'woocommerce_single_product_summary', 'woocommerce_breadcrumb', 0 );
 
-remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10);
-add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 25 );
+//remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10);
+//add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 25 );
 
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15);
 add_action( 'woocommerce_after_single_product', 'woocommerce_upsell_display', 15);

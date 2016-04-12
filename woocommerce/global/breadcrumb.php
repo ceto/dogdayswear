@@ -24,6 +24,7 @@ if ( ! empty( $breadcrumb ) ) : ?>
 					echo '<span class="show-for-sr">Current: </span>' . esc_html( $crumb[0] );
 				}
 				echo '</li>';
+				if ( ($key+2) ==  sizeof( $breadcrumb ) ) {break;}
 			}
 		?>
 	</ul>

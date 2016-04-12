@@ -29,8 +29,14 @@
   //padding-top: 2rem;
   .price {
     font-size: 1.5rem;
+    margin-bottom: .5rem;
     @include breakpoint(tablet) {
       font-size:2rem;
+    }
+
+    span {
+      font-weight: $global-weight-bold;
+      color:$primary-color;
     }
   }
 }
@@ -44,10 +50,18 @@
   @include clearfix();
 }
 .variations__item {
-  width: 48.5%;
+  width:48.75%;
+  max-width: 14rem;
   float:left;
   &:nth-of-type(2n) {
     float:right;
+  }
+
+  select {
+    margin-bottom: .25rem;
+  }
+  .reset_variations {
+    display: none !important;
   }
 
 }
@@ -64,6 +78,7 @@
 }
 .colorvariations {
   @include clearfix();
+  margin: 1rem 0 .5rem;
 }
 
 .colvariants {
@@ -125,3 +140,19 @@
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi){ background-image: url('../images/colors/holyhands@2x.jpg'); }
 }
 
+.woocommerce-variation-availability {
+  p {
+    margin-bottom: 0;
+  }
+}
+.woocommerce-variation-add-to-cart {
+  label[for="quantity"] {
+    display: none;
+  }
+  .quantity {
+    display:none !important;
+  }
+  button {
+    margin-top: 2.5rem;
+  }
+}

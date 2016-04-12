@@ -38,17 +38,17 @@ if ( $relproducts->have_posts() ) : ?>
 
   <div class="colorvariations">
 
-    <label><?php _e('Colors','woocommerce'); ?></label>
+    <label><?php _e('Szín','dd'); ?></label>
     <ul class="colvariants">
       <?php while ( $relproducts->have_posts() ) : $relproducts->the_post(); ?>
-        <?php 
+        <?php
           $cl = array_shift( wc_get_product_terms( get_the_id(), 'pa_szin', array( 'fields' => 'names' ) ) );
         ?>
         <li class="colvariant colvariant--<?= sanitize_title($cl); ?><?= ($product->id==get_the_id())?' actual':''; ?>">
           <a href="<?php the_permalink(); ?>"><? echo $cl; ?></a>
         </li>
      <?php endwhile; // end of the loop. ?>
-    </ul> 
+    </ul>
 
   </div>
 

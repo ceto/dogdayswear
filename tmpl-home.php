@@ -85,69 +85,17 @@
 
         <div class="lookbookgrid">
           <div class="grid-sizer"></div>
-          <div class="grid-item">
-            <a href="assets/images/galeria/001.jpg">
-              <img src="http://placehold.it/640x480" alt="001">
-            </a>
-          </div>
-          <div class="grid-item">
-             <a href="assets/images/galeria/005.jpg">
-              <img src="http://placehold.it/640x480" alt="005">
-            </a>
-          </div>
-          <div class="grid-item">
-             <a href="assets/images/galeria/002.jpg#">
-              <img src="http://placehold.it/640x480" alt="002">
-            </a>
-          </div>
-          <div class="grid-item">
-            <a href="assets/images/galeria/003.jpg">
-              <img src="http://placehold.it/640x480" alt="003">
-            </a>
-          </div>
-          <div class="grid-item">
-            <a href="assets/images/galeria/004.jpg">
-              <img src="http://placehold.it/640x480" alt="004">
-            </a>
-          </div>
+          <?php
+            $gitems = get_post_meta( get_the_ID(), 'home_gallery', TRUE );
+            foreach ( (array) $gitems as $attachment_id => $attachment_url ) : ?>
+            <?php $targetimg = wp_get_attachment_image_src( $attachment_id, 'full' ) ?>
 
-          <div class="grid-item">
-            <a href="assets/images/galeria/006.jpg">
-              <img src="http://placehold.it/640x480" alt="006">
-            </a>
-          </div>
-          <div class="grid-item">
-             <a href="assets/images/galeria/008.jpg">
-              <img src="http://placehold.it/640x480" alt="008">
-            </a>
-          </div>
-
-          <div class="grid-item">
-             <a href="assets/images/galeria/009.jpg#">
-              <img src="http://placehold.it/640x480" alt="009">
-            </a>
-          </div>
-          <div class="grid-item">
-            <a href="assets/images/galeria/010.jpg">
-              <img src="http://placehold.it/640x480" alt="010">
-            </a>
-          </div>
-          <div class="grid-item">
-            <a href="assets/images/galeria/011.jpg">
-              <img src="http://placehold.it/640x480" alt="011">
-            </a>
-          </div>
-          <div class="grid-item">
-            <a href="assets/images/galeria/007.jpg">
-              <img src="http://placehold.it/640x480" alt="007">
-            </a>
-          </div>
-
-          <div class="grid-item">
-             <a href="assets/images/galeria/012.jpg">
-              <img src="http://placehold.it/640x480" alt="012">
-            </a>
-          </div>
+            <div class="grid-item">
+              <a href="<?= $targetimg[0]; ?>">
+                <?= wp_get_attachment_image( $attachment_id, 'freemedium' ) ?>
+              </a>
+            </div>
+            <?php endforeach; ?>
         </div>
 
       </div>
