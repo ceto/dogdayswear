@@ -41,7 +41,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		</header>
 
-		<section class="productessence">
+		<section class="productessence ps">
 
 			<div class="row container">
 				<div class="columns medium-7 large-6">
@@ -98,11 +98,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 </div><!-- #product-<?php the_ID(); ?> -->
 <footer class="productfooter">
-	<div class="row container">
-		<div class="columns">
-			<?php do_action( 'woocommerce_after_single_product' ); ?>
-		</div>
-	</div>
-
+	<?php do_action( 'woocommerce_after_single_product' ); ?>
 </footer>
 

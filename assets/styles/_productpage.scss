@@ -1,8 +1,14 @@
 .productheader {
   padding:0;
 }
-.productessence {
-  padding:2rem 0;
+.productessence.ps {
+  padding-top: 0;
+  @include breakpoint(tablet) {
+    padding-top:2rem;
+  }
+}
+.productimages {
+  margin-bottom: 1rem;
 }
 .woocommerce-main-image {
   display: block;
@@ -68,13 +74,19 @@
 
 
 .productaddinfo {
-  padding:2rem 0;
+  padding:0 0 4rem;
   display:none;
 }
 
 .productfooter {
-  padding:2rem 0 4rem;
+  padding:4rem 0 0;
+  //border-top:.5rem solid $primary-color;
+  //border-bottom:1px solid #000;
   //text-align: center;
+}
+
+.productrelated {
+
 }
 .colorvariations {
   @include clearfix();

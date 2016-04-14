@@ -55,7 +55,7 @@
   <section class="home__featprodsblock">
     <div class="row container fullwidth">
       <div class="columns">
-        <div class="featprod owl-carousel">
+        <div class="prod-carousel owl-carousel">
           <?php
             $args = array(
               'before_widget' => '',

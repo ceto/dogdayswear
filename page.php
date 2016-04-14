@@ -3,7 +3,7 @@
   <?php //if ( !is_cart() && !is_checkout() && !is_account_page() ) : ?>
     <?php get_template_part('templates/page', 'header'); ?>
   <?php //endif;  ?>
-  <div class="pagecontent">
+  <div class="pagecontent ps">
     <div class="row container">
       <div class="columns">
         <?php the_content(); ?>

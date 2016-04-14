@@ -112,18 +112,17 @@ $('document').ready(function(){
     itemsMobile : false // itemsMobile disabled - inherit from itemsTablet option
   });
 
+  var prodOwl = $('.prod-carousel');
 
-  var featOwl = $('.featprod');
-
-  featOwl.owlCarousel({
+  prodOwl.owlCarousel({
     pagination:false,
     navigation : false,
 
-    items : 5, //10 items above 1000px browser width
-    itemsDesktop : [1280,4], //5 items between 1000px and 901px
-    itemsDesktopSmall : [768,3], // betweem 900px and 601px
-    itemsTablet: [480,2], //2 items between 480 and 0
-    itemsMobile : false // itemsMobile disabled - inherit from itemsTablet option
+    items : 6, //10 items above 1000px browser width
+    itemsDesktop : [1280,5], //5 items between 1000px and 901px
+    itemsDesktopSmall : [1024,4], // betweem 900px and 601px
+    itemsTablet: [768,3], //2 items between 480 and 0
+    itemsMobile : [480,2] // itemsMobile disabled - inherit from itemsTablet option
   });
 
 

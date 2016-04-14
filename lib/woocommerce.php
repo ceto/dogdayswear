@@ -38,6 +38,12 @@ function dd_save_colvariants_products( $post_id, $post ) {
 add_action( 'woocommerce_process_product_meta', 'dd_save_colvariants_products', 10, 2 );
 
 
+/** Change number of related products on product page **/
+function dd_related_products_limit($args) {
+  $args['posts_per_page'] = 6;
+  return $args;
+}
+add_filter( 'woocommerce_output_related_products_args', 'dd_related_products_limit' );
 
 
 /****** Number of Products on lists *******/
@@ -50,7 +56,7 @@ function woocommerce_support() {
 add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
 
 
-/*** Featured Prod List Mods (Homepage)****/
+/*** Featured Prod List Mods (Remove UL & LI tags)****/
 
 function dd_woocommerce_before_widget_product_list() { return ''; }
 function dd_woocommerce_after_widget_product_list() { return ''; }

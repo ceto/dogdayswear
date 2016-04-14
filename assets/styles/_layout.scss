@@ -1,3 +1,6 @@
+body {
+  border-top: 1px solid $primary-color;
+}
 .row.container {
   @include breakpoint(medium) {
     padding-left: 2%;
@@ -14,6 +17,16 @@
   }
 
 }
+.row.container.collapse {
+  @include breakpoint(medium) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  @include breakpoint(large) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
 
 .row.container.fullwidth {
   padding-left: 0;
@@ -26,13 +39,14 @@
   }
 
   > .columns {
-    padding:0;
+    padding-left:0;
+    padding-right:0;
   }
 }
 
 .document {
   position: relative;
-  padding-top: 5rem;
+  padding-top: 3.5rem;
   //border-top: 1px solid $medium-gray;
   @include breakpoint(tablet) {
     padding-top: 7.5rem;

@@ -37,21 +37,22 @@ $woocommerce_loop['columns'] = $columns;
 
 if ( $products->have_posts() ) : ?>
 
-	<div class="related products">
-
-		<h2><?php _e( 'Related Products', 'woocommerce' ); ?></h2>
-
-		<?php woocommerce_product_loop_start(); ?>
-
-			<?php while ( $products->have_posts() ) : $products->the_post(); ?>
-
-				<?php wc_get_template_part( 'content', 'product' ); ?>
-
-			<?php endwhile; // end of the loop. ?>
-
-		<?php woocommerce_product_loop_end(); ?>
-
-	</div>
+	<aside class="productrelated">
+<!-- 		<div class="row container">
+			<div class="columns"><h2 class="rowtitle"><?php _e( 'Related Products', 'woocommerce' ); ?></h2></div>
+		</div> -->
+    <div class="row container fullwidth">
+      <div class="columns">
+        <div class="prod-carousel owl-carousel">
+					<?php //woocommerce_product_loop_start(); ?>
+					<?php while ( $products->have_posts() ) : $products->the_post(); ?>
+						<?php wc_get_template_part( 'content-widget', 'product' ); ?>
+					<?php endwhile; // end of the loop. ?>
+					<?php //woocommerce_product_loop_end(); ?>
+				</div>
+			</div>
+		</div>
+	</aside>
 
 <?php endif;
 

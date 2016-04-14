@@ -7,10 +7,11 @@
 }
 
 .menu--sitemenu {
-  text-align: right;
+
   font-size: 125%;
   text-transform: uppercase;
   @include breakpoint(tablet){
+    text-align: right;
     float:right;
     clear:right;
     font-size: 100%;
@@ -48,12 +49,13 @@
 
 
 .menu--shopmenu {
-  text-align: right;
+  
   font-size: 100%;
   margin-right: .333rem;
   @include breakpoint(tablet){
     font-size: 87.5%;
     float:right;
+    text-align: right;
 
   }
   > li:not(.menu-text) {

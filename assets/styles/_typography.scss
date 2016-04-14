@@ -68,3 +68,15 @@ tbody th, tfoot th {
   //line-height: 1;
   vertical-align: top;
 }
+
+.rowtitle {
+  text-align: center;
+  background-color: $light-gray;
+  line-height: 1;
+  font-size: 1rem;
+  margin:0;
+  padding:.75em 1em;
+  display: inline-block;
+  //color:$dark-gray;
+
+}

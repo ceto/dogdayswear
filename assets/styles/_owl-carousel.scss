@@ -3,6 +3,11 @@
  *  v1.3.2
  */
 
+.prod-carousel {
+  background-color: $secondary-color;
+}
+
+
 /* clearfix */
 .owl-carousel .owl-wrapper:after {
   content: ".";

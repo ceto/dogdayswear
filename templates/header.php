@@ -1,6 +1,6 @@
 <header class="siteheader">
   <div class="row container">
-    <div class="columns text-right tablet-text-left tablet-4">
+    <div class="columns tablet-4">
       <a class="sitelogo" href="<?= esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
     </div>
     <div class="columns tablet-8">

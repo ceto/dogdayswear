@@ -14,6 +14,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
+<header class="bannerheader">
+	<div class="row container collapse">
+		<div class="columns">
+			<div class="bannerheader__ill">
+
+			</div>
+		</div>
+	</div>
+</header>
 
 <main class="main" role="main">
 	<div class="row container">
@@ -30,7 +39,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		</div>
 	</div>
 
-	<header class="pageheader">
+	<header class="archiveheader">
 		<div class="row container text-center">
 			<div class="columns large-8 large-centered">
 				<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
