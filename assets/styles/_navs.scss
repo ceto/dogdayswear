@@ -1,8 +1,12 @@
 .sitenav {
 
   @include clearfix();
+  @include breakpoint(medium) {
+    margin:.25rem 0 0;
+
+  }
   @include breakpoint(tablet) {
-    margin:.875rem 0 0;
+    margin:1.75rem 0 0;
 
   }
 }
@@ -11,14 +15,14 @@
 
   font-size: 125%;
   text-transform: uppercase;
-  @include breakpoint(tablet){
+  @include breakpoint(medium){
     text-align: right;
     float:right;
     clear:right;
     font-size: 87.5%;
     transform: translateX(1.25em);
   }
-  @include breakpoint(large){
+  @include breakpoint(tablet){
     font-size: 100%;
   }
   @include breakpoint(xlarge){
@@ -29,7 +33,7 @@
 .menu {
   > li:not(.menu-text) {
     display: block;
-    @include breakpoint(tablet) {
+    @include breakpoint(medium) {
       display: table-cell;
     }
     > a {
@@ -64,7 +68,7 @@
   margin-right: .333rem;
   text-align: right;
 
-  @include breakpoint(tablet){
+  @include breakpoint(medium){
 
   }
   > li:not(.menu-text) {

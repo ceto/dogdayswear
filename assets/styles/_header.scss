@@ -62,7 +62,7 @@
 .off-canvas.position-right.off-canvas-right {
   height: 100vh;
 
-  @include breakpoint(tablet) {
+  @include breakpoint(medium) {
     z-index: 1;
     left: 0;
 
@@ -120,12 +120,19 @@
   background-repeat: no-repeat;
   background-position: left center;
   background-size: auto 100%;
+  @include breakpoint(medium) {
+    background-image: url('../images/logo_2line.svg');
+    width: 14.5rem;
+    height: 2rem;
+    margin: .25rem 0;
+  }
 
   @include breakpoint(tablet) {
-    background-image: url('../images/logo_1line.svg');
-    width: 20.333rem;
+    //background-image: url('../images/logo_1line.svg');
+    width: 13rem;
     height: 3.5rem;
     margin: .875rem 0 0;
+    //background-color: red;
 
   }
 }
