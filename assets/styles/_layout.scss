@@ -1,5 +1,5 @@
 body {
-  border-top: 1px solid $primary-color;
+
 }
 .row.container {
   @include breakpoint(medium) {
@@ -49,7 +49,7 @@ body {
   padding-top: 3.5rem;
   //border-top: 1px solid $medium-gray;
   @include breakpoint(tablet) {
-    padding-top: 7.5rem;
+    padding-top: 6.5rem;
   }
 
 }

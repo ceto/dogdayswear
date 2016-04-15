@@ -2,7 +2,8 @@
 
   @include clearfix();
   @include breakpoint(tablet) {
-    margin:.25rem 0 0;
+    margin:.875rem 0 0;
+
   }
 }
 
@@ -14,7 +15,14 @@
     text-align: right;
     float:right;
     clear:right;
+    font-size: 87.5%;
+    transform: translateX(1.25em);
+  }
+  @include breakpoint(large){
     font-size: 100%;
+  }
+  @include breakpoint(xlarge){
+    font-size: 112.5%;
   }
 }
 
@@ -26,8 +34,12 @@
     }
     > a {
       //text-transform: lowercase;
-      font-weight: $global-weight-bold;
+
+      font-weight: $global-weight-extrabold;
       color:$body-font-color;
+      @include breakpoint(xlarge){
+        padding:.5rem 1.333rem;
+      }
       .home & {
         @include breakpoint(tablet) {
           color:$white;
@@ -43,24 +55,22 @@
 
 .shopnav {
   @include clearfix();
-  margin-top: 1.25rem;
+  float:right;
 }
 
 
 
 .menu--shopmenu {
-  
-  font-size: 100%;
   margin-right: .333rem;
+  text-align: right;
+
   @include breakpoint(tablet){
-    font-size: 87.5%;
-    float:right;
-    text-align: right;
 
   }
   > li:not(.menu-text) {
     > a {
-      padding: 0.5rem .333rem;
+      padding: .5rem .333rem;
+      font-weight: $global-weight-normal;
       .home & {
       }
       &:hover, &:focus {
@@ -95,11 +105,18 @@
 .menu--sub {
   text-align: center;
   font-size: 87.5%;
+  @include breakpoint(tablet){
+    font-size: 112.5%;
+  }
+  @include breakpoint(xlarge){
+    font-size: 125%;
+  }
   > li:not(.menu-text) {
     display: inline-block;
     > a {
+      font-weight: $global-weight-extrabold;
       display: inline-block;
-      padding: 0.7rem .5rem;
+      padding: 0.7em .5em;
       &:hover, &:focus {
       }
     }

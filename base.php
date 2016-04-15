@@ -9,6 +9,7 @@ use Roots\Sage\Wrapper;
 <html <?php language_attributes(); ?>>
   <?php get_template_part('templates/head'); ?>
   <body <?php body_class(); ?>>
+    <?php get_template_part('templates/header','toprow'); ?>
     <div class="off-canvas-wrapper">
       <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
         <div class="off-canvas-content" data-off-canvas-content>
@@ -23,11 +24,6 @@ use Roots\Sage\Wrapper;
           <?php get_template_part('templates/footer'); ?>
         </div><!-- /.off-canvas-content -->
         <div class="off-canvas off-canvas-right position-right" id="offCanvasRight" data-off-canvas data-position="right">
-          <!--[if IE]>
-            <div class="alert alert-warning">
-              <?php _e('You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.', 'sage'); ?>
-            </div>
-          <![endif]-->
           <?php
             do_action('get_header');
             get_template_part('templates/header');

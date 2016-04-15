@@ -19,7 +19,7 @@
       $cats = get_terms( 'product_cat', $args );
     ?>
     <ul class="menu menu--sub">
-      <li><a href="<?php echo get_term_link($parcateID) ?>"><?= __('Show all', 'dd'); ?></a></li>
+      <li><a href="<?php echo get_term_link($parcateID) ?>"><?= __('Mutasd mindet', 'dd'); ?></a></li>
       <?php foreach( $cats as $cat ) : ?>
           <li <?= ($oricateID==$cat->term_id)?'class="current"':''; ?>><a href="<?= get_term_link($cat->term_id) ?>"><?= $cat->name ?></a></li>
       <?php endforeach; ?>
