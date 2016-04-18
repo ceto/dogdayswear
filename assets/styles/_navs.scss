@@ -39,7 +39,7 @@
     > a {
       //text-transform: lowercase;
 
-      font-weight: $global-weight-extrabold;
+      font-weight: $global-weight-bold;
       color:$body-font-color;
       @include breakpoint(xlarge){
         padding:.5rem 1.333rem;
@@ -118,9 +118,10 @@
   > li:not(.menu-text) {
     display: inline-block;
     > a {
-      font-weight: $global-weight-extrabold;
+      //text-transform: uppercase;
+      font-weight: $global-weight-bold;
       display: inline-block;
-      padding: 0.7em .5em;
+      padding: 0.7em .333em;
       &:hover, &:focus {
       }
     }

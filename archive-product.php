@@ -18,7 +18,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div class="row container collapse">
 		<div class="columns">
 			<div class="bannerheader__ill">
-
+				<?php
+					global $wp_query;
+				  $cat = $wp_query->get_queried_object();
+				  $thumbnail_id = get_woocommerce_term_meta( $cat->term_id, 'thumbnail_id', true );
+				  $banner = wp_get_attachment_image( $thumbnail_id , 'narrowbanner');
+				  if ( $banner ) {
+					    echo $banner;
+					}
+				?>
 			</div>
 		</div>
 	</div>

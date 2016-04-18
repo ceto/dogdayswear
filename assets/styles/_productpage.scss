@@ -41,9 +41,12 @@
     }
 
     span {
-      font-weight: $global-weight-bold;
+      //font-weight: $global-weight-bold;
       color:$primary-color;
     }
+  }
+  label {
+    //text-transform: uppercase;
   }
 }
 

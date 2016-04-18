@@ -7,7 +7,7 @@
   <div class="row collapse">
     <div class="columns">
       <div class="bannerheader__ill">
-
+        <?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'narrowbanner'); } ?>
       </div>
     </div>
   </div>
