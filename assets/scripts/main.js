@@ -207,7 +207,7 @@ $('document').ready(function(){
       magnify: 0.75
    });
 
-   setTimeout(function() { $('.woocommerce-main-image').css('min-height', 'auto'); } , 2000)
+   setTimeout(function() { $('.woocommerce-main-image').css('min-height', 'auto'); } , 2000);
   });
 
 });
