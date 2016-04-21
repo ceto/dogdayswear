@@ -27,7 +27,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			// filter hook for include new pages inside the payment method
 			$get_checkout_url = apply_filters( 'woocommerce_get_checkout_url', WC()->cart->get_checkout_url() ); ?>
 
-			<form name="checkout" method="post" class="checkout woocommerce-checkout" action="<?php echo esc_url( $get_checkout_url ); ?>" enctype="multipart/form-data" data-abide novalidate>
+			<form name="checkout" method="post" class="checkout woocommerce-checkout" action="<?php echo esc_url( $get_checkout_url ); ?>" enctype="multipart/form-data" data-abide>
 
 				<div class="row">
 					<div class="columns tablet-6 large-7">
