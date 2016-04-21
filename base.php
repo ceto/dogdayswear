@@ -16,7 +16,6 @@ use Roots\Sage\Wrapper;
           <?php get_template_part('templates/header','mobile'); ?>
           <div class="document" role="document">
             <?php include Wrapper\template_path(); ?>
-
             <?php /*if (Setup\display_sidebar()) : ?>
               <?php include Wrapper\sidebar_path(); ?>
             <?php endif; */ ?>

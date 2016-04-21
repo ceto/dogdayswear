@@ -1,6 +1,31 @@
+.wc_payment_methods {
+  p {
+    font-size: .75rem;
+  }
+  li.payment_method_paypal {
+    white-space: nowrap;
+    > * {
+      white-space: normal;
+    }
+  }
+}
+.wc-terms-and-conditions {
+  @include clearfix();
+  margin: 2rem 0 1rem !important;
+  white-space: nowrap;
+  label[for="terms"] {
+    white-space: normal;
+  }
+  .input-checkbox {
+    float:left;
+    margin-top: .25rem;
+  }
+}
+
   /**
    * Forms
    */
+
 
 .form-row {
   @include clearfix();
@@ -35,16 +60,27 @@ label[for^="payment_method_"] {
   }
 }
 
-
-.woocommerce-checkout {
- .form-row {
+.woocommerce-billing-fields, .woocommerce-shipping-fields {
   label {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
- } 
+
+  input[type="checkbox"], input[type="radio"] {
+    + label {
+      overflow: visible;
+    }
+  }
 }
+
+.woocommerce-checkout {
+ .form-row {
+
+ }
+}
+
+
 #billing_city_field.form-row-wide {
   clear:none;
   float: left;

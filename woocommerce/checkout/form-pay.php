@@ -21,7 +21,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 ?>
 <form id="order_review" method="post">
-
 	<table class="shop_table">
 		<thead>
 			<tr>
@@ -70,6 +69,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				?>
 			</ul>
 		<?php endif; ?>
+
 		<div class="form-row">
 			<input type="hidden" name="woocommerce_pay" value="1" />
 
@@ -77,7 +77,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			<?php do_action( 'woocommerce_pay_order_before_submit' ); ?>
 
-			<?php echo apply_filters( 'woocommerce_pay_order_button_html', '<input type="submit" class="button alt" id="place_order" value="' . esc_attr( $order_button_text ) . '" data-value="' . esc_attr( $order_button_text ) . '" />' ); ?>
+			<?php echo apply_filters( 'woocommerce_pay_order_button_html', '<input type="submit" class="button large expanded alt" id="place_order" value="' . esc_attr( $order_button_text ) . '" data-value="' . esc_attr( $order_button_text ) . '" />' ); ?>
 
 			<?php do_action( 'woocommerce_pay_order_after_submit' ); ?>
 

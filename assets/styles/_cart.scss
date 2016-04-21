@@ -2,7 +2,21 @@
  * Cart page
  */
 
- .shop_table {
+.wcmsg {
+  @include clearfix();
+  font-size: .875rem;
+  .button {
+    float:right;
+    font-size: .666rem;
+    margin-left: .5rem;
+    background-color: $dark-gray;
+    &:hover, &:focus {
+      background-color: $secondary-color;
+    }
+  }
+}
+
+.shop_table {
   width: 100%;
   td  {
     vertical-align: top;
@@ -12,12 +26,12 @@
   table.cart {
     .product-thumbnail {
       display: inline-block;
-      width:20%;  
+      width:20%;
       max-width:4rem;
       float:left;
       margin:0 .5rem 0 0;
       a {
-        display: inline-block;  
+        display: inline-block;
       }
     }
     .prodtitle {

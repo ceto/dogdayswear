@@ -8,7 +8,7 @@
     <div class="columns medium-10 medium-centered large-centered large-10 xlarge-8 xxlarge-6">
       <div class="hero__content">
           <h1 class="hero__title">Jóga és sportruházat a legizzasztóbb mozgásformákhoz.</h1>
-          <a href="#main" class="hero__more button">Mi a DogDays Yogawear</a>
+          <a href="#main" class="hero__more button">Ruháinkról bővebben</a>
       </div>
     </div>
   </div>
@@ -22,7 +22,7 @@
         <img class="slog2" src="<?= get_stylesheet_directory_uri(); ?>/dist/images/slogan_2line.svg" alt="Don't fear the sweat">
       </div>
       <div class="columns medium-8 large-8">
-          <p class="imadunk">Mi, a DogDays megálmodói, imádunk melegben jógázni, sportolni és nem ijeszt meg minket, ha csatakokban folyik rólunk a verejték. Hosszú évek gyakorlása alatt, kitapasztaltuk, milyen a tökéletes jóga, illetve sportruházat és ezt, gondos tervezgetés után, meg is alkottuk számotokra. Ruháink külföldi, prémium anyagokból, Magyarországon készülnek.
+          <p class="imadunk">Imádunk melegben jógázni sportolni és nem ijeszt meg minket ha csatakokban folyik rólunk a verejték. Hosszú évek gyakorlása alatt kitapasztaltuk, hogy milyen a tökéletes jóga-, illetve sportruházat. Ezt gondos tervezés után megalkottuk számotokra. Ruháink külföldi prémium anyagokból Magyarországon készülnek.
           </p>
       </div>
     </div>
@@ -46,6 +46,7 @@
             <p>A légáteresztő, elasztikus anyagokbó́l készült ruháink nedvesség hatására sem veszítik el formájukat, nem nehezednek a testedre, így biztosítva a szabad mozgásteret.</p>
             <h3>Különleges forma és mintázat</h3>
             <p>Nincs szebb, mint az emberi test, ezért igyekszünk belőle minél többet ízlésesen szabadon hagyni. Emellett, egyedi tervezésű mintákkal tesszük még különlegesebbé darabjainkat.</p>
+            <p><br><a class="button small" href="<?= get_permalink( woocommerce_get_page_id( 'shop' ) )?>">Mutasd a kollekciót</a></p>
           </div>
         </div>
       </div>

@@ -97,6 +97,24 @@
 
 $('document').ready(function(){
 
+  /*** Required data param for inputs ***/
+  $('.woocommerce-billing-fields .validate-required').find('input[type=text], input[type=email]').prop('required','true');
+
+  $('#createaccount').on('change',function(e) {
+    if ($(this).prop('checked')) {
+      $('.create-account .validate-required').find('input').prop('required','true');
+    } else {
+      $('.create-account .validate-required').find('input').prop('required','false');
+    }
+  });
+
+  $('#ship-to-different-address-checkbox').on('change',function(e) {
+    if ($(this).prop('checked')) {
+      $('.woocommerce-shipping-fields .validate-required').find('input').prop('required','true');
+    } else {
+      $('.woocommerce-shipping-fields .validate-required').find('input').prop('required','false');
+    }
+  });
 
   /*** Thumbnail Carousel on Single product Page ***/
   var prodthumbsOwl = $('.prodthumbs');
@@ -175,7 +193,7 @@ $('document').ready(function(){
 
   $('.woocommerce-main-image').zoom({
       url: $('.woocommerce-main-image').attr('href'),
-      magnify: .75,
+      magnify: 0.75,
    });
 
   $('.prodthumbs .item a').on('click', function(e) {
@@ -186,7 +204,7 @@ $('document').ready(function(){
    $('.woocommerce-main-image .attachment-shop_single').replaceWith($(this).data('swapimage'));
    $('.woocommerce-main-image').zoom({
       url: $('.woocommerce-main-image').attr('href'),
-      magnify: .75
+      magnify: 0.75
    });
 
    setTimeout(function() { $('.woocommerce-main-image').css('min-height', 'auto'); } , 2000)
