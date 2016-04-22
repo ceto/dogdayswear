@@ -14,9 +14,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <div class="row">
 	<div class="columns tablet-10 tablet-push-1 xlarge-7 xlarge-push-0 xxlarge-8">
-		<h2><?php _e("Cart Items",'dd') ?></h2>
-		<?php wc_print_notices(); ?>
 
+		<?php wc_print_notices(); ?>
 		<?php do_action( 'woocommerce_before_cart' ); ?>
 
 		<form action="<?php echo esc_url( WC()->cart->get_cart_url() ); ?>" method="post">

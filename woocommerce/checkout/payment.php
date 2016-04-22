@@ -23,7 +23,7 @@ if ( ! is_ajax() ) {
 }
 ?>
 <div id="payment" class="woocommerce-checkout-payment">
-	<h3><?php _e('Payment method','woocommerce')  ?></h3>
+	<h3><?php _e('Válassz fizetési módot','dd')  ?></h3>
 	<?php if ( WC()->cart->needs_payment() ) : ?>
 		<ul class="wc_payment_methods payment_methods methods">
 			<?php
@@ -47,9 +47,9 @@ if ( ! is_ajax() ) {
 
 		<?php do_action( 'woocommerce_review_order_before_submit' ); ?>
 
-		<?php echo apply_filters( 'woocommerce_order_button_html', '<input type="submit" class="button alt large expanded" name="woocommerce_checkout_place_order" id="place_order" value="' . esc_attr( $order_button_text ) . '" data-value="' . esc_attr( $order_button_text ) . '" />' ); ?>
+		<?php echo apply_filters( 'woocommerce_order_button_html', '<input type="submit" class="button alt expanded" name="woocommerce_checkout_place_order" id="place_order" value="' . esc_attr( $order_button_text ) . '" data-value="' . esc_attr( $order_button_text ) . '" />' ); ?>
 
-		<?php do_action( 'woocommerce_review_order_after_submit' ); ?>
+		<?php //do_action( 'woocommerce_review_order_after_submit' ); ?>
 
 		<?php wp_nonce_field( 'woocommerce-process_checkout' ); ?>
 	</div>

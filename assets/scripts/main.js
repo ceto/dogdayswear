@@ -95,7 +95,7 @@
 
 
 
-$('document').ready(function(){
+$('document').ready(function($){
 
   /*** Required data param for inputs ***/
   $('.woocommerce-billing-fields .validate-required').find('input[type=text], input[type=email]').prop('required','true');
@@ -114,6 +114,11 @@ $('document').ready(function(){
     } else {
       $('.woocommerce-shipping-fields .validate-required').find('input').prop('required','false');
     }
+  });
+
+  $(document.body).on('change', 'input[name="payment_method"]', function() {
+    $('body').trigger('update_checkout');
+    $.ajax( $fragment_refresh );
   });
 
   /*** Thumbnail Carousel on Single product Page ***/

@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<?php do_action( 'woocommerce_before_cart_totals' ); ?>
 
-	<h2><?php _e( 'Cart Totals', 'woocommerce' ); ?></h2>
+	<h2 class="smalltitle"><?php _e( 'Cart Totals', 'woocommerce' ); ?></h2>
 
 	<table cellspacing="0" width="100%">
 
@@ -83,7 +83,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	</table>
 
-	<?php if ( WC()->cart->get_cart_tax() ) : ?>
+	<?php /* if ( WC()->cart->get_cart_tax() ) : ?>
 		<p class="wc-cart-shipping-notice"><small><?php
 
 			$estimated_text = WC()->customer->is_customer_outside_base() && ! WC()->customer->has_calculated_shipping()
@@ -93,7 +93,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 			printf( __( 'Note: Shipping and taxes are estimated%s and will be updated during checkout based on your billing and shipping information.', 'woocommerce' ), $estimated_text );
 
 		?></small></p>
-	<?php endif; ?>
+	<?php endif; */ ?>
+
+	<p class="wc-cart-shipping-notice">
+		<small>
+			<?php _e('Megjegyzés: Utánvétes fizetési mód választása esetén plusz 400 Ft kezelési költséget számítunk fel','dd'); ?>
+		</small>
+	</p>
 
 	<div class="wc-proceed-to-checkout">
 

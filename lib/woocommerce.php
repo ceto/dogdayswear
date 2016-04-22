@@ -178,6 +178,7 @@ function dd_override_shipping_fields( $fields ) {
 }
 /* End - Remove Woocommerce User Fields */
 
+
 /* Make Woocommerce Phone Field Not Required  */
 // add_filter( 'woocommerce_billing_fields', 'dd_npr_filter_phone', 10, 1 );
 // function dd_npr_filter_phone( $address_fields ) {
@@ -213,4 +214,40 @@ function dd_override_shipping_fields( $fields ) {
 
 // }
 
+/****** Chande Add To Cart Button text *****/
+add_filter( 'woocommerce_product_add_to_cart_text' , 'dd_woocommerce_product_add_to_cart_text' );
+/**
+ * custom_woocommerce_template_loop_add_to_cart
+*/
+function dd_woocommerce_product_add_to_cart_text() {
+  global $product;
 
+  $product_type = $product->product_type;
+
+  switch ( $product_type ) {
+    case 'external':
+      return __( 'Buy product', 'woocommerce' );
+    break;
+    case 'grouped':
+      return __( 'View products', 'woocommerce' );
+    break;
+    case 'simple':
+      return __( 'Add to cart', 'woocommerce' );
+    break;
+    case 'variable':
+      return __( 'Read more', 'woocommerce' );
+    break;
+    default:
+      return __( 'Read more', 'woocommerce' );
+  }
+
+}
+
+
+/**** Variaiton List default option text ***/
+// add_filter( 'woocommerce_dropdown_variation_attribute_options_args', 'dd_remove_select_text');
+// function dd_remove_select_text( $args ){
+//   global $product;
+//   $args['show_option_none'] = __( 'Válassz méretet', 'dd' );;
+//   return $args;
+// }

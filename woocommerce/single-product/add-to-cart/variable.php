@@ -31,7 +31,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 	<?php else : ?>
 
 		<?php wc_get_template_part( 'single-product/add-to-cart/color', 'variations' ); ?>
-		
+
 		<div class="variations">
 			<?php foreach ( $attributes as $attribute_name => $options ) : ?>
 				<div class="variations__item">
@@ -42,7 +42,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 						echo end( $attribute_keys ) === $attribute_name ? apply_filters( 'woocommerce_reset_variations_link', '<a class="reset_variations" href="#">' . __( 'Clear', 'woocommerce' ) . '</a>' ) : '';
 					?>
 				</div>
-				
+
 
 
 			<?php endforeach;?>

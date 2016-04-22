@@ -2,6 +2,19 @@
  * Cart page
  */
 
+.smalltitle {
+  font-size: 1rem;
+  font-weight: $global-weight-bold;
+  //text-transform: uppercase;
+  color:inherit;
+  padding: .666rem;
+  background-color: $ultralight-gray;
+  border:1px solid $light-gray;
+  //margin-bottom: 0;
+
+
+}
+
 .wcmsg {
   @include clearfix();
   font-size: .875rem;

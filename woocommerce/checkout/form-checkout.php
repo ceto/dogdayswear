@@ -47,7 +47,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 						<?php endif; ?>
 					</div>
 					<div class="columns tablet-6 large-5">
-							<h3 id="order_review_heading"><?php _e( 'Your order', 'woocommerce' ); ?></h3>
+							<h3 class="smalltitle" id="order_review_heading"><?php _e( 'Your order', 'woocommerce' ); ?></h3>
 
 							<?php do_action( 'woocommerce_checkout_before_order_review' ); ?>
 
