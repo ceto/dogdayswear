@@ -8,7 +8,7 @@
     <div class="columns medium-10 medium-centered large-centered large-10 xlarge-8 xxlarge-6">
       <div class="hero__content">
           <h1 class="hero__title">Jóga és sportruházat a legizzasztóbb mozgásformákhoz.</h1>
-          <a href="<?= get_permalink( woocommerce_get_page_id( 'shop' ) )?>" class="hero__more button">Ugrok a webáruházra</a>
+          <a href="<?= get_permalink( woocommerce_get_page_id( 'shop' ) )?>" class="hero__more button">Vásárlás</a>
       </div>
     </div>
   </div>
@@ -22,8 +22,7 @@
         <img class="slog2" src="<?= get_stylesheet_directory_uri(); ?>/dist/images/slogan_2line.svg" alt="Don't fear the sweat">
       </div>
       <div class="columns medium-8 large-8">
-          <p class="imadunk">Imádunk melegben jógázni sportolni és nem ijeszt meg minket ha csatakokban folyik rólunk a verejték. Hosszú évek gyakorlása alatt kitapasztaltuk, hogy milyen a tökéletes jóga-, illetve sportruházat. Ezt gondos tervezés után megalkottuk számotokra. Ruháink külföldi prémium anyagokból Magyarországon készülnek.
-          </p>
+          <p class="imadunk">A DogDays kifejezés a nyári hónapok legmelegebb napjaira utal. Nem véletlenül választottuk ezt a nevet, hiszen mi, a DogDays Yoga Wear megálmodói, imádunk melegben jógázni, sportolni és nem ijeszt meg minket, ha csatakokban folyik rólunk a verejték. Hosszú évek gyakorlása alatt, kitapasztaltuk milyen a tökéletes jóga-, illetve sportruházat és gondos tervezés, anyaggyűjtés után, ezt meg is alkottuk számotokra. Ruháink külföldi, prémium anyagokból, Magyarországon készülnek.</p>
       </div>
     </div>
   </section>
@@ -77,7 +76,7 @@
     <div class="row container">
       <div class="columns medium-6 medium-centered text-center">
         <h2 class="blocktitle">Galéria</h2>
-          <p class="lead">Mozogj szabadon és magabiztosan hogy csak magadra koncentrálhass</p>
+          <p class="lead">Mozogj szabadon és magabiztosan, hogy csak magadra koncentrálhass!</p>
           <br>
       </div>
     </div>
@@ -118,12 +117,13 @@
       <div class="columns medium-8 medium-pull-4 large-6 large-pull-6">
         <div class="featblock__text">
           <div class="featblock__text__inner">
-            <h2>Megvásárolható</h2>
-            <p>Raktáron lévő ruháink megrendelhetők webáruházunkból. Vagy látogass el személyesen bemutatótermünkbe, ahol felpróbálhatod és megveheted ruháinkat.</p>
+            <h2>Személyes vásárlás</h2>
+            <p>Ruháinkat személyesen is felpróbálhatod és megvásárolhatod az alábbi címen:</p>
             <h4>Bikram Jóga Központ Astoria</h4>
             <p>1075 Budapest,<br>Károly körút. 1.<br>
-            Telefon: <a href="tel:+36205954060">+36 20 595 4060</a><br>
-            Email: <a href="mailto:hello@dogdayswear.com">hello@dogdayswear.com</a></p>
+            Telefon: <a href="tel:+3613280774">+36 (1) 328-0774</a><br>
+            Email: <a href="mailto:hello@dogdayswear.com">hello@dogdayswear.com</a><br>
+            Honlap: <a target="_blank" href="http://www.bikram.hu">bikram.hu</a></p>
             <p><small><em><a class="popup-gmaps" href="https://maps.google.com/maps?q=Károly+körút 1,+Budapest,+Magyarország&amp;hl=hu&amp;t=v&amp;hnear=Károly+körút 1,+Budapest,+Magyarország">Mutasd a térképen &raquo;</a></em></small></p>
             <h5>Nyitvatartás*</h5>
             <p>Hétköznap 16:30-21:00<br><small><em>*Időpontegyeztetés szükséges</em></small></p>

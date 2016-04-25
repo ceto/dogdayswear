@@ -3,7 +3,7 @@
 add_filter('woocommerce_get_availability', 'dd_custom_get_availability');
 
 function dd_custom_get_availability($availability) {
-  $availability['availability'] = 'Nincs készleten - <small><a class="ooscontactlink" href="'.get_permalink(143).'">Itt jelezd igényedet</a></small>';
+  $availability['availability'] = 'Nincs készleten - <small><a class="ooscontactlink" href="'.get_permalink(143).'">Értesítést kérek, ha van raktáron!</a></small>';
   return $availability;
 }
 
