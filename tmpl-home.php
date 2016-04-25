@@ -8,7 +8,7 @@
     <div class="columns medium-10 medium-centered large-centered large-10 xlarge-8 xxlarge-6">
       <div class="hero__content">
           <h1 class="hero__title">Jóga és sportruházat a legizzasztóbb mozgásformákhoz.</h1>
-          <a href="#main" class="hero__more button">Ruháinkról bővebben</a>
+          <a href="<?= get_permalink( woocommerce_get_page_id( 'shop' ) )?>" class="hero__more button">Ugrok a webáruházra</a>
       </div>
     </div>
   </div>
@@ -119,14 +119,14 @@
         <div class="featblock__text">
           <div class="featblock__text__inner">
             <h2>Megvásárolható</h2>
-            <p>Hamarosan indul webáruházunk. Addig látogass el személyesen bemutatótermünkbe, ahol felpróbálhatod és megveheted ruháinkat</p>
+            <p>Raktáron lévő ruháink megrendelhetők webáruházunkból. Vagy látogass el személyesen bemutatótermünkbe, ahol felpróbálhatod és megveheted ruháinkat.</p>
             <h4>Bikram Jóga Központ Astoria</h4>
             <p>1075 Budapest,<br>Károly körút. 1.<br>
             Telefon: <a href="tel:+36205954060">+36 20 595 4060</a><br>
             Email: <a href="mailto:hello@dogdayswear.com">hello@dogdayswear.com</a></p>
             <p><small><em><a class="popup-gmaps" href="https://maps.google.com/maps?q=Károly+körút 1,+Budapest,+Magyarország&amp;hl=hu&amp;t=v&amp;hnear=Károly+körút 1,+Budapest,+Magyarország">Mutasd a térképen &raquo;</a></em></small></p>
-            <h5>Nyitvatartás</h5>
-            <p>Hétköznap 16:30-21:00</p>
+            <h5>Nyitvatartás*</h5>
+            <p>Hétköznap 16:30-21:00<br><small><em>*Időpontegyeztetés szükséges</em></small></p>
           </div>
         </div>
       </div>

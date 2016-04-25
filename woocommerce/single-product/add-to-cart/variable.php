@@ -43,14 +43,14 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 					?>
 				</div>
 
-
-
 			<?php endforeach;?>
+
 <!-- 			<div class="variations__item">
 				<label for="quantity"><?php _e('Quantity','woocommerce'); ?></label>
 				<?php woocommerce_quantity_input( array( 'input_value' => isset( $_POST['quantity'] ) ? wc_stock_amount( $_POST['quantity'] ) : 1 ) ); ?>
 			</div> -->
 		</div>
+		<p><small><a class="linktosizetable" href="<?= get_the_permalink(554) ?> "><?= __('Mérettáblázat','dd'); ?></a></small></p>
 
 
 

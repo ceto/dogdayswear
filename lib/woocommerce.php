@@ -1,5 +1,12 @@
 <?php
 
+add_filter('woocommerce_get_availability', 'dd_custom_get_availability');
+
+function dd_custom_get_availability($availability) {
+  $availability['availability'] = 'Nincs készleten - <small><a class="ooscontactlink" href="'.get_permalink(143).'">Itt jelezd igényedet</a></small>';
+  return $availability;
+}
+
 // add related products selector to product edit screen
 function dd_select_colvariants_products() {
   global $post, $woocommerce;

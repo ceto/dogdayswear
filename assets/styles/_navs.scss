@@ -91,6 +91,11 @@
 .menu--sidemenu {
   > li:not(.menu-text) {
     display: block;
+    &.active {
+      > a {
+        color:$primary-color;
+      }
+    }
     > a {
       padding: 0.7rem 0;
       .home & {
