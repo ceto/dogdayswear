@@ -110,10 +110,10 @@
   text-align: center;
   font-size: 87.5%;
   @include breakpoint(tablet){
-    font-size: 112.5%;
+    //font-size: 112.5%;
   }
   @include breakpoint(xlarge){
-    font-size: 125%;
+    font-size: 112.5%;
   }
   > li:not(.menu-text) {
     display: inline-block;

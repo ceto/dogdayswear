@@ -18,7 +18,7 @@
     <?php while (have_posts()) : the_post(); ?>
 
       <div class="row container">
-        <div class="columns tablet-9 tablet-push-3">
+        <div class="columns tablet-9 tablet-push-3 large-8 large-push-4">
           <header class="sidedhead">
             <h1 class="pagetitle"><?= Titles\title(); ?></h1>
           </header>
