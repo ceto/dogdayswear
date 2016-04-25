@@ -6,7 +6,7 @@
           </div>
         </div>
 
-        <form id="contact_form" action="<?= get_template_directory_uri(); ?>/contact_me.php" method="post" data-abide="ajax">
+        <form id="contact_form" action="<?= get_template_directory_uri(); ?>/contact_me.php" method="post" data-abide>
 
           <div class="row">
             <div class="columns">
@@ -21,7 +21,7 @@
           <div class="row collapse">
             <div class="columns small-6">
               <label for="message_email"><?php _e('E-Mail cím','dd'); ?>*
-                <input type="email" required pattern="email" placeholder="<?php _e('E-mail címe','dd'); ?>*" id="message_email" name="message_email" value="<?php echo $_POST['message_email']; ?>">
+                <input type="email" required placeholder="<?php _e('E-mail címe','dd'); ?>*" id="message_email" name="message_email" value="<?php echo $_POST['message_email']; ?>">
                 <small class="form-error">Megadása kötelező</small>
               </label>
             </div>
@@ -36,7 +36,7 @@
           <div class="row">
             <div class="columns">
               <label for="message_text"><?php _e('Üzenet','dd'); ?>*
-                <textarea placeholder="<?php _e('pl.: termék neve, szín, méret ...','dd'); ?>" rows="5" id="message_text" name="message_text"><?php if ($_POST['message_text']!='') {
+                <textarea required placeholder="<?php _e('pl.: termék neve, szín, méret ...','dd'); ?>" rows="5" id="message_text" name="message_text"><?php if ($_POST['message_text']!='') {
                   echo $_POST['message_text']; }?></textarea>
                 <small class="form-error">Üzenet szövege lemaradt</small>
               </label>

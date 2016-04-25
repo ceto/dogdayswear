@@ -215,4 +215,65 @@ $('document').ready(function($){
    setTimeout(function() { $('.woocommerce-main-image').css('min-height', 'auto'); } , 2000);
   });
 
+  /*** CONTACT FORM ******/
+  $("#contact_form").on('submit', function(ev) {
+    ev.preventDefault();
+    var user_name = $('input[name=message_name]').val();
+      var user_email = $('input[name=message_email]').val();
+      var user_tel = $('input[name=message_tel]').val();
+      var user_msg = $('textarea[name=message_text]').val();
+
+      var proceed = true;
+      if (user_name === "") {
+          proceed = false;
+      }
+      if (user_email === "") {
+          proceed = false;
+      }
+      if (user_msg === "") {
+          proceed = false;
+      }
+
+
+      //everything looks good! proceed...
+      if (proceed) {
+          //data to be sent to server
+          post_data = {
+              'userName': user_name,
+              'userEmail': user_email,
+              'userTel': user_tel,
+              'userMsg': user_msg
+          };
+
+          //Ajax post data to server
+          $.post($('#contact_form').attr('action'), post_data, function(response){
+
+              //load json data from server and output message
+              if (response.type === 'error') {
+                  output = '<p class="error">' + response.text + '</p>';
+              }
+              else {
+
+                  output = '<p class="success">' + response.text + '</p>';
+
+                  //reset values in all input fields
+                  $('#contact_form input').val('');
+                  $('#contact_form textarea').val('');
+              }
+
+              $("#result").hide().html(output).slideDown();
+          }, 'json');
+
+      }
+
+      return false;
+  });
+
+
+    //reset previously set border colors and hide all message on .keyup()
+    $("#contact_form input, #contact_form textarea").keyup(function(){
+        $("#result").slideUp();
+    });
+
+
 });

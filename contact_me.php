@@ -17,7 +17,7 @@ if($_POST) {
     die($output);
   }
 
-  if(!isset($_POST["userName"]) || !isset($_POST["userEmail"]) || !isset($_POST["userTel"])) {
+  if(!isset($_POST["userName"]) || !isset($_POST["userEmail"]) || !isset($_POST["userMsg"])) {
     $output = json_encode(array('type'=>'error', 'text' => 'Hiányzó kötelező mező'));
     die($output);
   }
@@ -37,11 +37,6 @@ if($_POST) {
     $output = json_encode(array('type'=>'error', 'text' => 'Érvénytelen e-mail cím'));
     die($output);
   }
-  if(strlen($user_Tel)<6) {
-    $output = json_encode(array('type'=>'error', 'text' => 'Telefonszám megadása kötelező'));
-    die($output);
-  }
-
 
   $headers = 'From: '.$user_Email.'' . "\r\n" .
   'Reply-To: '.$user_Email.'' . "\r\n" .
