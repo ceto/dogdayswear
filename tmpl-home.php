@@ -92,7 +92,7 @@
 
             <div class="grid-item">
               <a href="<?= $targetimg[0]; ?>">
-                <?= wp_get_attachment_image( $attachment_id, 'freemedium' ) ?>
+                <?= wp_get_attachment_image( $attachment_id, 'shop_single_image_size' ) ?>
               </a>
             </div>
             <?php endforeach; ?>
