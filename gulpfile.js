@@ -184,6 +184,14 @@ gulp.task('styles', ['wiredep'], function() {
     .pipe(writeToManifest('styles'));
 });
 
+
+// ### Woocommerce Scripts Copy
+gulp.task('wcscripts', function() {
+  return gulp.src('../../plugins/woocommerce/assets/js/**/*')
+    .pipe(gulp.dest(path.source + 'scripts/woocommerce/'));
+});
+
+
 // ### Scripts
 // `gulp scripts` - Runs JSHint then compiles, combines, and optimizes Bower JS
 // and project JS.
@@ -226,7 +234,7 @@ gulp.task('images', function() {
 // `gulp jshint` - Lints configuration JSON and project JS.
 gulp.task('jshint', function() {
   return gulp.src([
-    'bower.json', 'gulpfile.js'
+    'bower.json', 'gulpfile.js', '!assets/scripts/woocommerce/**/*'
   ].concat(project.js))
     .pipe(jshint())
     .pipe(jshint.reporter('jshint-stylish'))
