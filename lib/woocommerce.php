@@ -32,6 +32,7 @@ function dd_select_colvariants_products() {
   </div>
   <?php
 }
+
 add_action('woocommerce_product_options_related', 'dd_select_colvariants_products');
 
 // save related products selector on product edit screen

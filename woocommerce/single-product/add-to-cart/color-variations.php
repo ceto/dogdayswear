@@ -9,7 +9,7 @@ if ( empty( $product ) || ! $product->exists() ) {
   return;
 }
 
-$actclmeta = substr($product->get_sku(),0,3);
+$actclmeta = substr($product->get_sku(),0,4);
 
 
 // $related = get_post_meta( $product->id, '_colvariants_ids', true );

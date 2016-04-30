@@ -2,19 +2,6 @@
   "dependencies": {
     "main.js": {
       "files": [
-        "scripts/woocommerce/frontend/add-to-cart.js",
-        "scripts/woocommerce/frontend/single-product.js",
-        "scripts/woocommerce/frontend/address-i18n.js",
-        "scripts/woocommerce/frontend/cart.js",
-        "scripts/woocommerce/frontend/password-strength-meter.js",
-        "scripts/woocommerce/frontend/woocommerce.js",
-        "scripts/woocommerce/frontend/country-select.js",
-        "scripts/woocommerce/frontend/checkout.js",
-        "scripts/woocommerce/frontend/cart-fragments.js",
-        "scripts/woocommerce/frontend/add-to-cart-variation.js",
-        "scripts/woocommerce/select2/select2.js",
-        "scripts/woocommerce/jquery-blockui/jquery.blockUI.js",
-        "scripts/woocommerce/jquery-cookie/jquery.cookie.js",
         "scripts/main.js"
       ],
       "main": true
