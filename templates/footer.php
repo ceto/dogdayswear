@@ -1,3 +1,4 @@
+<?php get_template_part('templates/mailchimp','subscribe' ); ?>
 <footer class="sitefooter grayblock">
   <div class="row container">
     <div class="columns medium-10 medium-centered large-10  text-center">

@@ -59,7 +59,8 @@
   @include clearfix();
 }
 .variations__item {
-  width:48.75%;
+  //width:48.75%;
+  width:100%;
   max-width: 14rem;
   float:left;
   &:nth-of-type(2n) {

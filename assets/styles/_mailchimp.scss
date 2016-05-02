@@ -1,0 +1,36 @@
+.csimpi {
+  border-top:1px solid $primary-color;
+  h2 {
+    margin-bottom: .0875em;
+    font-size: 1.5rem;
+    @include breakpoint(medium) {
+      font-size: 1.875rem;
+    }
+  }
+  p {
+    margin-bottom: 0;
+  }
+
+  form {
+    margin-top: .75rem;
+  }
+
+  input[type="email"] {
+    //background-color: transparent;
+    //border-color: $primary-color;
+    //color:$white;
+  }
+  .input-group {
+    margin-bottom: 0;
+  }
+  .input-group-button {
+    padding-left: .5rem;
+  }
+
+  .response {
+    font-size: .875rem;
+    line-height: 1.4;
+    padding-top: .5rem;
+    text-align: left;
+  }
+}
