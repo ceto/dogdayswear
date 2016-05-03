@@ -1,5 +1,6 @@
 .csimpi {
-  border-top:1px solid $primary-color;
+  border-top:1px solid rgba(#000,1);
+  border-bottom:1px solid rgba(#000,.25);
   h2 {
     margin-bottom: .0875em;
     font-size: 1.5rem;
@@ -26,11 +27,15 @@
   .input-group-button {
     padding-left: .5rem;
   }
-
-  .response {
-    font-size: .875rem;
-    line-height: 1.4;
+  .mce-responses {
     padding-top: .5rem;
     text-align: left;
+    font-size: .875rem;
+    line-height: 1.4;
+  }
+  .response {
+
+    //padding-top: .5rem;
+
   }
 }
