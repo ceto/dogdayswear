@@ -85,3 +85,9 @@ tbody th, tfoot th {
 .breadcrumbs {
   //font-weight: $global-weight-bold;
 }
+
+.pagecontent, .postcontent {
+  li {
+    margin-bottom: .5em
+  }
+}

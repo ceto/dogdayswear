@@ -35,3 +35,4 @@
     <?php endwhile; ?>
   </div>
 </main>
+<?php get_template_part('templates/block', 'featprods' ); ?>

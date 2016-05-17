@@ -89,15 +89,18 @@
 
 
 .menu--sidemenu {
+  font-size: .875rem;
   > li:not(.menu-text) {
     display: block;
     &.active {
       > a {
+
         color:$primary-color;
       }
     }
     > a {
-      padding: 0.7rem 0;
+      font-weight: $global-weight-normal;
+      padding: 0.5rem 0;
       .home & {
       }
       &:hover, &:focus {

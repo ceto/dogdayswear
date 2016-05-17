@@ -146,15 +146,21 @@
   .columns {
     position: relative;
     height: 0;
-    padding-bottom: 25%;
+    padding-bottom: 30%;
     @include breakpoint(medium) {
       padding-bottom: 20%;
     }
     @include breakpoint(tablet) {
+      padding-bottom: 18%;
+    }
+    @include breakpoint(large) {
+      padding-bottom: 16%;
+    }
+    @include breakpoint(xlarge) {
       padding-bottom: 13%;
     }
     @include breakpoint(xxlarge) {
-      padding-bottom: 10%;
+      padding-bottom: 12%;
     }
   }
 }
@@ -195,6 +201,24 @@
   }
 }
 
+
+.bannerheader__text {
+  position: absolute;
+  top: 50%;
+  left:0;
+  width: 100%;
+  transform:translateY(-50%);
+  text-align: center;
+  color:$white;
+  *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.bannerheader__title {
+  text-transform: uppercase;
+  color:inherit;
+}
 .archiveheader {
   padding: 2.5rem 0 1.5rem;
   @include breakpoint(tablet) {
