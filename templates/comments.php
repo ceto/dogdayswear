@@ -5,7 +5,7 @@ if (post_password_required()) {
 ?>
 
 <aside id="comments" class="comments ps row container lightblock">
-  <div class="columns tablet-10 tablet-centered large-8">
+  <div class="columns tablet-10 tablet-centered xlarge-9 xxlarge-8"">
     <?php if (have_comments()) : ?>
       <h2><?php printf(_nx('One response to &ldquo;%2$s&rdquo;', '%1$s responses to &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'sage'), number_format_i18n(get_comments_number()), '<span>' . get_the_title() . '</span>'); ?></h2>
 

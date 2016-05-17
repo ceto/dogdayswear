@@ -71,8 +71,13 @@
     font-weight: $global-weight-bold;
     padding: 1rem 1rem 0;
     text-transform: uppercase;
-    font-size: 1.25rem;
+    font-size: 1rem;
+    margin-bottom: 0;
     color:inherit;
+    @include breakpoint(tablet){
+      font-size: 1.25rem;
+    }
+
   }
   .star-rating {
     padding: 0 1rem 0;
