@@ -1,3 +1,99 @@
+/******* Filter NAv *****/
+.filternav {
+  border-bottom: 1px solid $light-gray;
+  //background-color: $light-gray;
+  text-align: right;
+}
+.filterblock {
+
+  padding:.75rem 0 .25rem 1%;
+  @include clearfix();
+  display: inline-block;
+
+
+  @include breakpoint('tablet') {
+
+  }
+  ul {
+    list-style-type: none;
+    margin:0;
+    padding:0;
+    float:left;
+    li {
+      display: block;
+      float:left;
+      margin-bottom: 0;
+      a {
+        display: block;
+        width:1.75rem;
+        height:1.75rem;
+        overflow: hidden;
+      }
+      span {
+        display:none;
+      }
+    }
+  }
+}
+
+.filterblock--colors {
+  ul li a {
+    color:transparent;
+  }
+}
+
+.filterblock--size {
+  ul li a {
+    display: block;
+    text-align: center;
+    border:1px solid $medium-gray;
+    margin-left:.5em;
+    background-color: $light-gray;
+    font-weight: $global-weight-bold;
+    color:$secondary-color;
+    font-size: .875rem;
+    line-height: 1.75rem;
+    &:hover, &:focus {
+      border-color:$dark-gray;
+    }
+  }
+
+  ul li.chosen a {
+    border-color: $secondary-color;
+  }
+}
+.colvariant--tiny {
+  margin:0 .5rem .5rem 0;
+  a {
+    width:1.75rem;
+    height:1.75rem;
+    padding:1px;
+    //border-color: transparent;
+    &:hover, &:focus {
+      border-color: $dark-gray;
+    }
+  }
+  &.chosen a {
+    border-color: $secondary-color;
+  }
+}
+
+.filterblock--colors {
+
+}
+
+.filterblock__title {
+  font-size: .666rem;
+  line-height: 1;
+  float:left;
+  padding-right: .75em;
+  margin:.875em 0 0 1rem;
+  font-weight: $global-weight-bold;
+  color: inherit;
+  text-transform: uppercase;
+  //display: none;
+}
+
 .products.row.container.fullwidth {
   padding:.25rem;
   margin-bottom: 8rem;
@@ -28,7 +124,33 @@
 }
 .productsquare {
   position: relative;
-    overflow: hidden;
+  overflow: hidden;
+}
+
+.productsquare {
+  del {
+    font-size: 70%;
+    font-weight: $global-weight-bold;
+    color:$secondary-color;
+  }
+  ins {
+    text-decoration: none;
+  }
+}
+
+.onsale {
+  display:inline-block;
+  padding:.875em 1.75em;
+  //margin:1rem 1rem;
+  line-height: 1;
+  text-transform: uppercase;
+  font-size: .75rem;
+  font-weight: $global-weight-extrabold;
+  letter-spacing: 0.05em;
+  position:absolute;
+  background-color:$primary-color;
+  z-index: 1;
+  color:$white;
 }
 
 .productsquare__imagelink {

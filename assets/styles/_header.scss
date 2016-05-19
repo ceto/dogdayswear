@@ -46,7 +46,7 @@
   padding:.5rem 0 .5rem 0;
   display: inline-block;
   float: right;
-  font-weight: $global-weight-bold;
+
   color:$secondary-color;
   .icon {
     margin-left: .5em;
@@ -56,6 +56,21 @@
   &:hover, &:focus {
     //background-color: $light-gray;
     color: $primary-color;
+  }
+  .total {
+    display: inline-block;
+    font-weight: $global-weight-extrabold;
+    margin-left: .5em;
+  }
+  .badge {
+    //position: absolute;
+    font-size: .5rem;
+    min-width: 1.6333em;
+    font-weight: $global-weight-extrabold;
+    //top:0;
+    transform:translateY(-.125em);
+    margin-left: .125em;
+
   }
 }
 

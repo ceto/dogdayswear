@@ -31,6 +31,52 @@ if ( ! defined( 'ABSPATH' ) ) {
 		</div>
 	</div>
 </header>
+<nav class="filternav">
+	<div class="row container">
+		<div class="columns">
+			<?php
+			    $args = array(
+            'before_widget' => '<div class="filterblock filterblock--colors %1$s">',
+            'after_widget' => '</div>',
+          	'before_title'  => '<h3 class="filterblock__title">',
+    				'after_title'   => '</h3>'
+          );
+			    $wcargs =array (
+			    	'title' => __('Szín','dd'),
+			      'attribute' => 'szin',
+			      'query_type' => 'or'
+			    );
+			    the_widget('WC_Widget_Layered_Nav', $wcargs, $args);
+
+			    $args = array(
+            'before_widget' => '<div class="filterblock filterblock--size %1$s">',
+            'after_widget' => '</div>',
+          	'before_title'  => '<h3 class="filterblock__title">',
+    				'after_title'   => '</h3>'
+          );
+			    $wcargs =array (
+			    	'title' => __('Méret','dd'),
+			      'attribute' => 'meret',
+			      'query_type' => 'and'
+			    );
+			    the_widget('WC_Widget_Layered_Nav', $wcargs, $args);
+
+			    $args = array(
+            'before_widget' => '<div class="filterblock filterblock--activefilters %1$s">',
+            'after_widget' => '</div>',
+          	'before_title'  => '<h3 class="filterblock__title">',
+    				'after_title'   => '</h3>'
+          );
+			    $wcargs =array (
+			    	'title' => __('Aktív szűrők','dd'),
+			    );
+			    //the_widget('WC_Widget_Layered_Nav_Filters', $wcargs, $args);
+			?>
+		</div>
+	</div>
+</nav>
+
+<?php //dynamic_sidebar('sidebar-primary'); ?>
 
 <main class="main" role="main">
 	<div class="row container">
@@ -132,3 +178,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 	</div>
 
 </main>
+
+

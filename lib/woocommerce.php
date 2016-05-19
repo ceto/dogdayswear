@@ -93,7 +93,9 @@ add_filter( 'woocommerce_after_widget_product_list', 'dd_woocommerce_after_widge
 
 
 //remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 5);
-//add_action( 'woocommerce_before_single_product', 'woocommerce_template_single_title', 15 );
+//remove_action( 'woocommerce_before_single_product', 'wc_print_notices', 10 );
+//add_action( 'dd_topaccstuff', 'wc_print_notices', 10 );
+
 
 remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20);
 add_action( 'woocommerce_single_product_summary', 'woocommerce_breadcrumb', 0 );
@@ -261,3 +263,8 @@ function dd_woocommerce_product_add_to_cart_text() {
 //   $args['show_option_none'] = __( 'Válassz méretet', 'dd' );;
 //   return $args;
 // }
+
+
+
+
+

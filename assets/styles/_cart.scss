@@ -162,6 +162,7 @@
 .wcmsg {
   @include clearfix();
   font-size: .875rem;
+  //text-align:left;
   .button {
     float:right;
     font-size: .666rem;

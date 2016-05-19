@@ -22,7 +22,7 @@
         <img class="slog2" src="<?= get_stylesheet_directory_uri(); ?>/dist/images/slogan_2line.svg" alt="Don't fear the sweat">
       </div>
       <div class="columns medium-8 large-8">
-          <p class="imadunk">A DogDays kifejezés a nyári hónapok legmelegebb napjaira utal. Nem véletlenül választottuk ezt a nevet, hiszen mi, a DogDays Yoga Wear megálmodói, imádunk melegben jógázni, sportolni és nem ijeszt meg minket, ha csatakokban folyik rólunk a verejték. Hosszú évek gyakorlása alatt, kitapasztaltuk milyen a tökéletes jóga-, illetve sportruházat és gondos tervezés, anyaggyűjtés után, ezt meg is alkottuk számotokra. Ruháink külföldi, prémium anyagokból, Magyarországon készülnek.</p>
+          <div class="imadunk"><?= apply_filters('the_content', get_post_meta( get_the_ID(), 'home_dontfear', TRUE ) ); ?></div>
       </div>
     </div>
   </section>
@@ -39,13 +39,7 @@
       <div class="columns medium-8 medium-pull-4 large-6 large-pull-6">
         <div class="featblock__text">
           <div class="featblock__text__inner">
-            <h3>Ruháink nem látszanak át</h3>
-            <p>Izzasztó mozgásformáknál előfordul, hogy ruhánk csurom vizes lesz és átlátszóvá válhat. Anyagaink kiválasztásánál kölön hangsúlyt fektettünk arra, hogy ez ne fordulhasson elő.</p>
-            <h3>Nem áll el a testedtől</h3>
-            <p>A légáteresztő, elasztikus anyagokbó́l készült ruháink nedvesség hatására sem veszítik el formájukat, nem nehezednek a testedre, így biztosítva a szabad mozgásteret.</p>
-            <h3>Különleges forma és mintázat</h3>
-            <p>Nincs szebb, mint az emberi test, ezért igyekszünk belőle minél többet ízlésesen szabadon hagyni. Emellett, egyedi tervezésű mintákkal tesszük még különlegesebbé darabjainkat.</p>
-            <p><br><a class="button small" href="<?= get_permalink( woocommerce_get_page_id( 'shop' ) )?>">Mutasd a kollekciót</a></p>
+            <?php the_content(); ?>
           </div>
         </div>
       </div>
@@ -99,16 +93,7 @@
       <div class="columns medium-8 medium-pull-4 large-6 large-pull-6">
         <div class="featblock__text">
           <div class="featblock__text__inner">
-            <h2>Személyes vásárlás</h2>
-            <p>Ruháinkat személyesen is felpróbálhatod és megvásárolhatod az alábbi címen:</p>
-            <h4>Bikram Jóga Központ Astoria</h4>
-            <p>1075 Budapest,<br>Károly körút. 1.<br>
-            Telefon: <a href="tel:+3613280774">+36 (1) 328-0774</a><br>
-            Email: <a href="mailto:hello@dogdayswear.com">hello@dogdayswear.com</a><br>
-            Honlap: <a target="_blank" href="http://www.bikram.hu">bikram.hu</a></p>
-            <p><small><em><a class="popup-gmaps" href="https://maps.google.com/maps?q=Károly+körút 1,+Budapest,+Magyarország&amp;hl=hu&amp;t=v&amp;hnear=Károly+körút 1,+Budapest,+Magyarország">Mutasd a térképen &raquo;</a></em></small></p>
-            <h5>Nyitvatartás*</h5>
-            <p>Hétköznap 16:30-21:00<br><small><em>*Időpontegyeztetés szükséges</em></small></p>
+            <?= apply_filters('the_content', get_post_meta( get_the_ID(), 'home_showroom', TRUE ) ); ?>
           </div>
         </div>
       </div>

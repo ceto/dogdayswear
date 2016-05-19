@@ -68,12 +68,44 @@
     ) );
 
     $cmb_homepage->add_field( array(
+        'name' => 'Dont Fear the Sweat',
+        'id'   => 'home_dontfear',
+        'type' => 'wysiwyg',
+        'options' => array(
+            'textarea_rows' => '5',
+            'media_buttons' => false
+        ),
+    ) );
+
+    $cmb_homepage->add_field( array(
         'name' => 'Gallery',
         'id'   => 'home_gallery',
         'type' => 'file_list',
         // 'preview_size' => array( 100, 100 ), // Default: array( 50, 50 )
     ) );
 
-
-
+    $cmb_homepage->add_field( array(
+        'name' => 'Bemutatóterem',
+        'id'   => 'home_showroom',
+        'type' => 'wysiwyg',
+        'options' => array(
+            'textarea_rows' => '12',
+            'media_buttons' => false
+        ),
+    ) );
 }
+
+function dd_cartcount() {
+  global $woocommerce;
+  if ($woocommerce->cart->cart_contents_count != 0) {
+    return '<span class="badge">'. $woocommerce->cart->cart_contents_count.'</span>';
+  } else {
+    return '';
+  }
+}
+function dd_carttotal() {
+  global $woocommerce;
+  return '<span class="total">'.$woocommerce->cart->get_cart_total().'</span>';
+}
+
+

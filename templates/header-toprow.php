@@ -7,17 +7,21 @@
         </nav>
       <?php endif; */ ?>
 
-      <span class="callnow"><i class="icon icon--phone"></i><?php _e('Hívj most','dd') ?>: <a href="tel:06.20.595.4060">06.20.595.4060</a></span> | <a href="<?php the_permalink(7); ?>" class="myacc"><i class="icon icon--user"></i> Fiókom</a>
+      <span class="callnow"><i class="icon icon--phone"></i><span class="show-for-medium"><?php _e('Hívj most','dd') ?>:</span> <a href="tel:06.20.595.4060">06.20.595.4060</a></span> | <a href="<?php the_permalink(7); ?>" class="myacc"><i class="icon icon--user"></i> Fiókom</a>
       <span class="cartindex">
-        <a id="csiki" href="<?php the_permalink(5); ?>">Kosár <i class="icon icon--cart"></i></a>
+        <a id="csiki" href="<?php the_permalink(5); ?>"><i class="icon icon--cart"></i>
+          <?= dd_carttotal(); ?>
+          <?= dd_cartcount(); ?>
+        </a>
       </span>
 
     </div>
   </div>
 </aside>
 
+
 <?php
-  the_widget( 'WC_Widget_Cart',
+   the_widget( 'WC_Widget_Cart',
     array(
       'hide_if_empty' => 0,
       'title' => __('Cart','woocommerce' )

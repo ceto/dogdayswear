@@ -50,6 +50,17 @@
   }
 }
 
+.productsummary .price {
+  del span {
+    font-size: 60%;
+    font-weight: $global-weight-bold;
+    color:$secondary-color;
+  }
+  ins {
+    text-decoration: none;
+  }
+}
+
 .productshortdesc {
   font-weight: $global-weight-bold;
   font-size: 1.25rem;
@@ -126,6 +137,8 @@
     border-color: $primary-color;
   }
 }
+
+
 
 .colvariant--kaleidoscope a {
   background-image: url('../images/colors/kaleidoscope.jpg');

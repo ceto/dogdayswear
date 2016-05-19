@@ -141,18 +141,23 @@ body {
   }
 }
 .featblock__text {
-  padding:2rem 0;
+  padding:4rem 0;
   position: relative;
   z-index: 1;
   //max-width: 45rem;
   @include breakpoint(medium) {
+    padding:2rem 0;
     height: 48rem;
     max-height: 50rem;
   }
   @include breakpoint(large) {
-    min-height: 42rem;
+    min-height: 50rem;
     height: 100vh;
     padding:4rem 12% 4rem 0;
+  }
+
+  @include breakpoint(xlarge) {
+    min-height: 44rem;
   }
 
 }
@@ -164,6 +169,9 @@ body {
     position: relative;
     transform: translateY(-50%);
     top:50%;
+  }
+  .button {
+    margin-top:1.5rem;
   }
 
 }
@@ -243,13 +251,17 @@ body {
   font-weight:$global-weight-bold;
   opacity: .666;
   margin-top: 1.333rem;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   line-height: 1.75;
   margin-bottom: 0;
   @include breakpoint(tablet) {
-    font-size: 1.4rem;
+    font-size: 1.25rem;
     margin-top: 2%;
     margin-left: 2rem;
+  }
+  p {
+    font-size:inherit;
+    line-height:inherit;
   }
 }
 

@@ -92,6 +92,12 @@
   });
 
 
+(function($) {
+  $.slugi = function(input) {
+    var output = 'colvariant colvariant--tiny colvariant--' + input.replace(/ /gi, '-').toLowerCase();
+    return output;
+  };
+})(jQuery);
 
 
 
@@ -344,5 +350,8 @@ $('document').ready(function($){
        $('.topacc').foundation('toggle', $('#thetopcart'));
     });
 
+    $('.filterblock--colors li a').each( function( i, val ) {
+     $(this).parent().addClass($.slugi($(this).text())) ;
+    });
 
 });
