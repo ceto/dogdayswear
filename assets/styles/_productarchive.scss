@@ -6,7 +6,7 @@
 }
 .filterblock {
 
-  padding:.75rem 0 .25rem 1%;
+  padding:.75rem 0 .25rem 0;
   @include clearfix();
   display: inline-block;
 
@@ -63,7 +63,7 @@
   }
 }
 .colvariant--tiny {
-  margin:0 .5rem .5rem 0;
+  margin:0 0 .5rem .5rem;
   a {
     width:1.75rem;
     height:1.75rem;
@@ -82,7 +82,7 @@
 
 }
 
-.filterblock__title {
+.filterblock__title, .filterreset {
   font-size: .666rem;
   line-height: 1;
   float:left;
@@ -91,7 +91,18 @@
   font-weight: $global-weight-bold;
   color: inherit;
   text-transform: uppercase;
-  //display: none;
+  display: none;
+}
+
+.filterreset {
+  display: inline-block;
+  float:none;
+  line-height: 1;
+  margin:1.5rem 0 0 3%;
+  padding:0 0;
+  vertical-align: top;
+  color:$dark-gray;
+  font-weight: $global-weight-extrabold;
 }
 
 .products.row.container.fullwidth {
