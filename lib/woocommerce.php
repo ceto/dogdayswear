@@ -265,6 +265,17 @@ function dd_woocommerce_product_add_to_cart_text() {
 // }
 
 
+/******* Email Utánvét Szöveg ****/
 
+add_action( 'woocommerce_email_before_order_table', 'dd_utanvet_content', 20, 2 );
+function dd_utanvet_content($order,  $is_admin_email ) {
+  if ($order->get_shipping_method() == 'Személyes átvétel') {
+    echo '<p>' . $order->get_shipping_method() . '</p>';
+    echo '<h2>Személyes átvétel helyszíne</h2>';
+    echo '<p><strong>Bikram Jóga Központ Astoria</strong><br>1075 Budapest, Károly krt. 1.</p>
+    <p><strong>Nyitvatartás*</strong><br>H-Cs: 17:00-21:00<br>P: 15:00-19:00<br><a href="http://www.bikram.hu">www.bikram.hu</a></p>
+    <p><em>*Rendelésed jóváhagyása után e-mailben értesítünk, hogy melyik naptól tudod átvenni a csomagodat.</em></p>';
+  }
+}
 
 

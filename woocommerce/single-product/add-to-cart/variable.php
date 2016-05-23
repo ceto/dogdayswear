@@ -51,6 +51,12 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 			</div> -->
 		</div>
 		<p><small><a class="linktosizetable" href="<?= get_the_permalink(554) ?> "><?= __('Mérettáblázat','dd'); ?></a></small></p>
+			<div class="reveal" id="sizemodal" data-reveal>
+			  <h2>Mérettáblázat</h2>
+			  <button class="close-button" data-close aria-label="Close modal" type="button">
+			    <span aria-hidden="true">&times;</span>
+		  	</button>
+			</div>
 
 
 

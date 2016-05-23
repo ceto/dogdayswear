@@ -354,4 +354,23 @@ $('document').ready(function($){
      $(this).parent().addClass($.slugi($(this).text())) ;
     });
 
+
+    //Mérettablazat modal
+    $('.linktosizetable').on('click', function(e) {
+      e.preventDefault();
+      var $modal = $('#sizemodal');
+      $.ajax($(this).attr('href'))
+        .done(function(resp){
+          var cleanTitle = $(resp).find('.pagetitle').eq(0);
+          var cleanCont = $(resp).find('.pagecontent').eq(0);
+          $modal.html('<h2>Mérettáblázat</h2><button class="close-button" data-close aria-label="Close modal" type="button"><span aria-hidden="true">&times;</span></button>').append(cleanCont).foundation('open');
+        });
+
+    });
+    // var $modal = $('#sizemodal');
+    // $.ajax('/dd/vasarlasi-informaciok/merettablazat/')
+    //   .done(function(resp){
+    //     $modal.html(resp.html).foundation('open');
+    // });
+
 });
