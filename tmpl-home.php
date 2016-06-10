@@ -16,6 +16,8 @@
 
 <main id="main" class="main" role="main" data-magellan-target="main">
 
+  <?php get_template_part('templates/promorow'); ?>
+
   <section class="ps inverseblock">
     <div class="row container">
       <div class="columns medium-4 large-4">
