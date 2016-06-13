@@ -14,7 +14,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-
 <main class="main" role="main">
 	<?php while ( have_posts() ) : the_post(); ?>
 		<?php wc_get_template_part( 'content', 'single-product' ); ?>

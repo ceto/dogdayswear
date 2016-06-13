@@ -8,11 +8,11 @@
 <?php if ( $sticky[0] && $the_stickyposts->post_count>0 ) : $the_stickyposts->the_post(); ?>
   <aside class="promorow promorow--nobg ps ps--kispad darkblock">
     <div class="row container">
-      <div class="columns medium-10 medium-centered tablet-12">
+      <div class="columns">
         <div class="row">
           <div class="columns tablet-7">
             <h3 class="promorow__title"><?php the_title(); ?></h3>
-            <p class="promorow__discl"><?php the_excerpt(); ?></p>
+            <div class="promorow__discl"><?php the_excerpt(); ?></div>
           </div>
           <div class="columns tablet-5 tablet-text-right">
             <a href="<?php the_permalink(); ?>" class="button promorow__action">Részletek</a>

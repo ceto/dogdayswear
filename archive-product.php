@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 ?>
-
+<?php //get_template_part('templates/promorow'); ?>
 <header class="bannerheader">
 	<div class="row container collapse">
 		<div class="columns">
@@ -31,6 +31,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 		</div>
 	</div>
 </header>
+
+
 <nav class="filternav">
 	<div class="row container">
 		<div class="columns">
@@ -76,6 +78,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		</div>
 	</div>
 </nav>
+
 
 <?php //dynamic_sidebar('sidebar-primary'); ?>
 
@@ -179,5 +182,3 @@ if ( ! defined( 'ABSPATH' ) ) {
 	</div>
 
 </main>
-
-
