@@ -4,8 +4,8 @@
     <?php get_template_part('templates/post', 'header' ); ?>
     <div class="row container">
       <div class="columns tablet-10 tablet-centered xlarge-9 xxlarge-8">
-        <div class="ps postcontent">
-          <?php the_content(); ?>
+        <div class="postcontent">
+          <?php the_content('', true); ?>
         </div>
       </div>
     </div>

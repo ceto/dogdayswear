@@ -1,3 +1,52 @@
+
+
+
+.pagetitle {
+  margin: 0;
+
+  text-transform: uppercase;
+
+  color: inherit;
+}
+
+
+.metablock {
+  font-size: .875rem;
+  //text-transform: uppercase;
+  //font-weight: $global-weight-bold;
+  margin:0 0 .5rem;
+  .byline {
+    display: inline-block;
+    margin:0;
+    &:before {
+      content: ' | ';
+    }
+  }
+}
+.pageheader {
+  padding: 2rem 0 2rem;
+  //background-color: red;
+}
+
+.pageheader__title {
+  margin: 0;
+  text-transform: uppercase;
+  //color: inherit;
+}
+.pageheader__lead {
+  font-size: 1.5rem;
+  //color:$primary-color;
+}
+.pageheader__fig {
+  margin:3rem 0 0;
+  padding:0 0;
+
+}
+
+.postcontent {
+  margin-bottom: 6rem;
+}
+
 .pagecontent.ps {
   padding-top: 1rem;
 }

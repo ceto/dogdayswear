@@ -269,7 +269,7 @@ function dd_woocommerce_product_add_to_cart_text() {
 
 add_action( 'woocommerce_email_before_order_table', 'dd_utanvet_content', 20, 2 );
 function dd_utanvet_content($order,  $is_admin_email ) {
-  if ($order->get_shipping_method() == 'Személyes átvétel') {
+  if ( ($order->get_shipping_method() == 'Személyes átvétel') && (!$is_admin_email) )  {
     echo '<p>' . $order->get_shipping_method() . '</p>';
     echo '<h2>Személyes átvétel helyszíne</h2>';
     echo '<p><strong>Bikram Jóga Központ Astoria</strong><br>1075 Budapest, Károly krt. 1.</p>
@@ -279,3 +279,35 @@ function dd_utanvet_content($order,  $is_admin_email ) {
 }
 
 
+
+
+/**
+ * woocommerce_package_rates is a 2.1+ hook
+ */
+add_filter( 'woocommerce_package_rates', 'dd_hide_shipping_when_free_is_available', 10, 2 );
+
+/**
+ * Hide shipping rates when free shipping is available
+ *
+ * @param array $rates Array of rates found for the package
+ * @param array $package The package array/object being shipped
+ * @return array of modified rates
+ */
+function dd_hide_shipping_when_free_is_available( $rates, $package ) {
+
+  // Only modify rates if free_shipping is present
+    if ( isset( $rates['free_shipping'] ) ) {
+
+      // To unset a single rate/method, do the following. This example unsets flat_rate shipping
+      unset( $rates['flat_rate'] );
+
+      // To unset all methods except for free_shipping and local pickup, do the following
+      $local_pickup           = $rates['local_pickup'];
+      $free_shipping          = $rates['free_shipping'];
+      $rates                  = array();
+      $rates['free_shipping'] = $free_shipping;
+      $rates['local_pickup'] = $local_pickup;
+  }
+
+  return $rates;
+}
