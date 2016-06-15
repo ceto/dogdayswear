@@ -2,19 +2,22 @@
   margin-top:-5rem;
   position: relative;
 
+  background-color: $body-font-color;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  //background-attachment: fixed;
   //min-height: 30rem;
 
   @include breakpoint(medium) {
     height: 100vh;
+    height:calc(100vh - 8.5rem);
     min-height: 35rem;
     max-height: 49rem;
   }
 
   @include breakpoint(tablet) {
-    margin-top:-7.5rem;
+    margin-top:-6.5rem;
   }
 }
 

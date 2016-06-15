@@ -19,7 +19,10 @@
     <?php while (have_posts()) : the_post(); ?>
 
       <div class="row container">
-        <div class="columns tablet-9 tablet-push-3">
+        <div class="columns tablet-3">
+          <?php get_template_part('templates/sidebar','page'); ?>
+        </div>
+        <div class="columns tablet-9">
 
           <div class="row">
             <div class="columns medium-8 medium-centered tablet-10 xlarge-8">
@@ -35,9 +38,7 @@
 
           </div>
         </div>
-        <div class="columns tablet-3 tablet-pull-9">
-          <?php get_template_part('templates/sidebar','page'); ?>
-        </div>
+
 
       </div>
     <?php endwhile; ?>

@@ -18,7 +18,7 @@
             </div>
           </div>
 
-          <div class="row collapse">
+          <div class="row">
             <div class="columns small-6">
               <label for="message_email"><?php _e('E-Mail cím','dd'); ?>*
                 <input type="email" required placeholder="<?php _e('E-mail címe','dd'); ?>*" id="message_email" name="message_email" value="<?php echo $_POST['message_email']; ?>">
