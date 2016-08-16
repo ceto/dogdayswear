@@ -311,3 +311,19 @@ function dd_hide_shipping_when_free_is_available( $rates, $package ) {
 
   return $rates;
 }
+
+
+
+/** Custom Palceholder **/
+add_action( 'init', 'custom_fix_thumbnail' );
+
+function custom_fix_thumbnail() {
+  add_filter('woocommerce_placeholder_img_src', 'custom_woocommerce_placeholder_img_src');
+
+  function custom_woocommerce_placeholder_img_src( $src ) {
+
+  $src = get_stylesheet_directory_uri().'/dist/images/placeholder.png';
+
+  return $src;
+  }
+}

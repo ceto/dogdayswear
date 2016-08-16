@@ -118,8 +118,8 @@
   margin:0 .75rem .75rem 0;
   a {
     display: block;
-    width:3.875rem;
-    height:3.875rem;
+    width:2.666rem;
+    height:2.666rem;
     overflow: hidden;
     border:1px solid $medium-gray;
     background-repeat: no-repeat;
@@ -132,10 +132,15 @@
     &:hover, &:focus {
       border-color: $secondary-color;
     }
+    @include breakpoint(xlarge) {
+      width:3.666rem;
+      height:3.666rem;
+    }
   }
   &.actual a {
     border-color: $primary-color;
   }
+
 }
 
 
@@ -168,6 +173,27 @@
   background-image: url('../images/colors/holyhands.jpg');
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi){ background-image: url('../images/colors/holyhands@2x.jpg'); }
 }
+
+/***NEW COLORS ***/
+.colvariant--skyler-joy a {
+  background-image: url('../images/colors/skylerjoy.jpg');
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi){ background-image: url('../images/colors/skylerjoy@2x.jpg'); }
+}
+.colvariant--tucan a {
+  background-image: url('../images/colors/tucan.jpg');
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi){ background-image: url('../images/colors/tucan@2x.jpg'); }
+}
+.colvariant--freebird a {
+  background-image: url('../images/colors/freebird.jpg');
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi){ background-image: url('../images/colors/freebird@2x.jpg'); }
+}
+.colvariant--ananasana a {
+  background-image: url('../images/colors/ananasana.jpg');
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi){ background-image: url('../images/colors/ananasana@2x.jpg'); }
+}
+
+
+
 
 .woocommerce-variation-availability {
   p {
