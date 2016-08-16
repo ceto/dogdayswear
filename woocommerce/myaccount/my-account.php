@@ -26,7 +26,9 @@ wc_print_notices();
 <div class="row container">
 	<div class="columns tablet-3">
 		<aside class="sidebar">
-			<?php	do_action( 'woocommerce_account_navigation' ); ?>
+			<section class="widget">
+				<?php	do_action( 'woocommerce_account_navigation' ); ?>
+			</section>
 		</aside>
 	</div>
 	<div class="columns tablet-9">
