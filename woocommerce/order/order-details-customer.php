@@ -38,31 +38,30 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php do_action( 'woocommerce_order_details_after_customer_details', $order ); ?>
 </table>
 
-<?php if ( ! wc_ship_to_billing_address_only() && $order->needs_shipping_address() ) : ?>
 
-<div class="col2-set addresses">
-	<div class="col-1">
 
-<?php endif; ?>
-
-<header class="title">
-	<h3><?php _e( 'Billing Address', 'woocommerce' ); ?></h3>
-</header>
-<address>
-	<?php echo ( $address = $order->get_formatted_billing_address() ) ? $address : __( 'N/A', 'woocommerce' ); ?>
-</address>
+<div class="row medium-up-2 adresses">
+	<div class="column">
+		<header class="title">
+			<h3><?php _e( 'Billing Address', 'woocommerce' ); ?></h3>
+		</header>
+		<address>
+			<?php echo ( $address = $order->get_formatted_billing_address() ) ? $address : __( 'N/A', 'woocommerce' ); ?>
+		</address>
+	</div>
 
 <?php if ( ! wc_ship_to_billing_address_only() && $order->needs_shipping_address() ) : ?>
 
-	</div><!-- /.col-1 -->
-	<div class="col-2">
+	<div class="column">
 		<header class="title">
 			<h3><?php _e( 'Shipping Address', 'woocommerce' ); ?></h3>
 		</header>
 		<address>
 			<?php echo ( $address = $order->get_formatted_shipping_address() ) ? $address : __( 'N/A', 'woocommerce' ); ?>
 		</address>
-	</div><!-- /.col-2 -->
-</div><!-- /.col2-set -->
-
+	</div><!-- /.column -->
 <?php endif; ?>
+
+</div><!-- /.row -->
+
+

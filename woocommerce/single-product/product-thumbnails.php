@@ -2,9 +2,18 @@
 /**
  * Single Product Thumbnails
  *
+ * This template can be overridden by copying it to yourtheme/woocommerce/single-product/product-thumbnails.php.
+ *
+ * HOWEVER, on occasion WooCommerce will need to update template files and you
+ * (the theme developer) will need to copy the new files to your theme to
+ * maintain compatibility. We try to do this as little as possible, but it does
+ * happen. When this occurs the version of the template file will be bumped and
+ * the readme will list any important changes.
+ *
+ * @see 	    https://docs.woocommerce.com/document/template-structure/
  * @author 		WooThemes
  * @package 	WooCommerce/Templates
- * @version     2.3.0
+ * @version     2.6.3
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -24,7 +33,7 @@ if ( $attachment_ids ) {
 	$loop 		= 0;
 	$columns 	= apply_filters( 'woocommerce_product_thumbnails_columns', 3 );
 	?>
-	<div class="prodthumbs owl-carousel"><?php
+	<div class="prodthumbs owl-carousel <?php echo 'columns-' . $columns; ?>"><?php
 
 		foreach ( $attachment_ids as $attachment_id ) {
 
@@ -36,27 +45,27 @@ if ( $attachment_ids ) {
 			if ( ( $loop + 1 ) % $columns == 0 )
 				$classes[] = 'last';
 
-			$image_link = wp_get_attachment_url( $attachment_id );
+			$image_class = implode( ' ', $classes );
+			$props       = wc_get_product_attachment_props( $attachment_id, $post );
 
-			if ( ! $image_link )
+			if ( ! $props['url'] ) {
 				continue;
+			}
 
-			$image_title 	= esc_attr( get_the_title( $attachment_id ) );
-			$image_caption 	= esc_attr( get_post_field( 'post_excerpt', $attachment_id ) );
+			$swapimage = wp_get_attachment_image( $attachment_id, apply_filters( 'single_product_large_thumbnail_size', 'shop_single' ), 0, $props );
 
-			$image       = wp_get_attachment_image( $attachment_id, apply_filters( 'single_product_small_thumbnail_size', 'shop_thumbnail' ), 0, $attr = array(
-				'title'	=> $image_title,
-				'alt'	=> $image_title
-				) );
-
-			$image_class = esc_attr( implode( ' ', $classes ) );
-
-			$swapimage = wp_get_attachment_image( $attachment_id, apply_filters( 'single_product_large_thumbnail_size', 'shop_single' ), 0,$attr = array(
-				'title'	=> $image_title,
-				'alt'	=> $image_title
-				) );
-
-			echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', sprintf( '<div class="item"><a href="%s" class="%s" title="%s" data-swapimage="%s" data-rel="prettyPhoto[product-gallery]">%s</a></div>', $image_link, $image_class, $image_caption, esc_attr($swapimage), $image ), $attachment_id, $post->ID, $image_class );
+			echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', sprintf( '
+				<div class="item"><a href="%s" class="%s" title="%s" data-swapimage="%s" data-rel="prettyPhoto[product-gallery]">%s</a></div>',
+					esc_url( $props['url'] ),
+					esc_attr( $image_class ),
+					esc_attr( $props['caption'] ),
+					esc_attr($swapimage),
+					wp_get_attachment_image( $attachment_id, apply_filters( 'single_product_small_thumbnail_size', 'shop_thumbnail' ), 0, $props )
+					),
+					$attachment_id,
+					$post->ID,
+					esc_attr( $image_class )
+					);
 
 			$loop++;
 		}
