@@ -1,0 +1,1499 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: dogdays\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"X-Generator: Poedit 1.8.8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: assets\n"
+"X-Poedit-SearchPathExcluded-1: dist\n"
+"X-Poedit-SearchPathExcluded-2: bower_components\n"
+"X-Poedit-SearchPathExcluded-3: node_modules\n"
+
+#: 404.php:7
+msgid "Sorry, but the page you were trying to view does not exist."
+msgstr ""
+
+#: archive-product.php:56
+#: woocommerce/single-product/add-to-cart/color-variations.php:41
+msgid "Szín"
+msgstr ""
+
+#: archive-product.php:71
+msgid "Méret"
+msgstr ""
+
+#: functions.php:28
+#, php-format
+msgid "Error locating %s for inclusion"
+msgstr ""
+
+#: index.php:8 search.php:5
+msgid "Sorry, no results were found."
+msgstr ""
+
+#: lib/CMB2/example-functions.php:80
+msgid "Test Metabox"
+msgstr ""
+
+#: lib/CMB2/example-functions.php:91 lib/CMB2/example-functions.php:383
+msgid "Test Text"
+msgstr ""
+
+#: lib/CMB2/example-functions.php:92 lib/CMB2/example-functions.php:104
+#: lib/CMB2/example-functions.php:112 lib/CMB2/example-functions.php:120
+#: lib/CMB2/example-functions.php:129 lib/CMB2/example-functions.php:137
+#: lib/CMB2/example-functions.php:152 lib/CMB2/example-functions.php:160
+#: lib/CMB2/example-functions.php:168 lib/CMB2/example-functions.php:185
+#: lib/CMB2/example-functions.php:194 lib/CMB2/example-functions.php:207
+#: lib/CMB2/example-functions.php:214 lib/CMB2/example-functions.php:221
+#: lib/CMB2/example-functions.php:235 lib/CMB2/example-functions.php:248
+#: lib/CMB2/example-functions.php:261 lib/CMB2/example-functions.php:273
+#: lib/CMB2/example-functions.php:282 lib/CMB2/example-functions.php:290
+#: lib/CMB2/example-functions.php:299 lib/CMB2/example-functions.php:306
+#: lib/CMB2/example-functions.php:320 lib/CMB2/example-functions.php:384
+#: lib/CMB2/example-functions.php:475 lib/CMB2/example-functions.php:483
+#: lib/CMB2/example-functions.php:490 lib/CMB2/example-functions.php:497
+#: lib/CMB2/example-functions.php:504 lib/CMB2/example-functions.php:511
+#: lib/CMB2/example-functions.php:518 lib/CMB2/example-functions.php:545
+#: lib/CMB2/example-functions.php:553 lib/CMB2/example-functions.php:560
+#: lib/CMB2/example-functions.php:597
+msgid "field description (optional)"
+msgstr ""
+
+#: lib/CMB2/example-functions.php:103
+msgid "Test Text Small"
+msgstr ""
+
+#: lib/CMB2/example-functions.php:111
+msgid "Test Text Medium"
+msgstr ""
+
+#: lib/CMB2/example-functions.php:119
+msgid "Website URL"
+msgstr ""
+
+#: lib/CMB2/example-functions.php:128
+msgid "Test Text Email"
+msgstr ""
+
+#: lib/CMB2/example-functions.php:136
+msgid "Test Time"
+msgstr ""
+
+#: lib/CMB2/example-functions.php:144 lib/CMB2/example-functions.php:145
+msgid "Time zone"
+msgstr ""
+
+#: lib/CMB2/example-functions.php:151
+msgid "Test Date Picker"
+msgstr ""
+
+#: lib/CMB2/example-functions.php:159
+msgid "Test Date Picker (UNIX timestamp)"
+msgstr ""
+
+#: lib/CMB2/example-functions.php:167
+msgid "Test Date/Time Picker Combo (UNIX timestamp)"
+msgstr ""
+
+#: lib/CMB2/example-functions.php:184
+msgid "Test Money"
+msgstr ""
+
+#: lib/CMB2/example-functions.php:193
+msgid "Test Color Picker"
+msgstr ""
+
+#: lib/CMB2/example-functions.php:206
+msgid "Test Text Area"
+msgstr ""
+
+#: lib/CMB2/example-functions.php:213
+msgid "Test Text Area Small"
+msgstr ""
+
+#: lib/CMB2/example-functions.php:220
+msgid "Test Text Area for Code"
+msgstr ""
+
+#: lib/CMB2/example-functions.php:227
+msgid "Test Title Weeeee"
+msgstr ""
+
+#: lib/CMB2/example-functions.php:228
+msgid "This is a title description"
+msgstr ""
+
+#: lib/CMB2/example-functions.php:234
+msgid "Test Select"
+msgstr ""
+
+#: lib/CMB2/example-functions.php:240 lib/CMB2/example-functions.php:253
+#: lib/CMB2/example-functions.php:265
+msgid "Option One"
+msgstr ""
+
+#: lib/CMB2/example-functions.php:241 lib/CMB2/example-functions.php:254
+#: lib/CMB2/example-functions.php:266
+msgid "Option Two"
+msgstr ""
+
+#: lib/CMB2/example-functions.php:242 lib/CMB2/example-functions.php:255
+#: lib/CMB2/example-functions.php:267
+msgid "Option Three"
+msgstr ""
+
+#: lib/CMB2/example-functions.php:247
+msgid "Test Radio inline"
+msgstr ""
+
+#: lib/CMB2/example-functions.php:260
+msgid "Test Radio"
+msgstr ""
+
+#: lib/CMB2/example-functions.php:272
+msgid "Test Taxonomy Radio"
+msgstr ""
+
+#: lib/CMB2/example-functions.php:281
+msgid "Test Taxonomy Select"
+msgstr ""
+
+#: lib/CMB2/example-functions.php:289
+msgid "Test Taxonomy Multi Checkbox"
+msgstr ""
+
+#: lib/CMB2/example-functions.php:298
+msgid "Test Checkbox"
+msgstr ""
+
+#: lib/CMB2/example-functions.php:305
+msgid "Test Multi Checkbox"
+msgstr ""
+
+#: lib/CMB2/example-functions.php:311
+msgid "Check One"
+msgstr ""
+
+#: lib/CMB2/example-functions.php:312
+msgid "Check Two"
+msgstr ""
+
+#: lib/CMB2/example-functions.php:313
+msgid "Check Three"
+msgstr ""
+
+#: lib/CMB2/example-functions.php:319
+msgid "Test wysiwyg"
+msgstr ""
+
+#: lib/CMB2/example-functions.php:327
+msgid "Test Image"
+msgstr ""
+
+#: lib/CMB2/example-functions.php:328
+msgid "Upload an image or enter a URL."
+msgstr ""
+
+#: lib/CMB2/example-functions.php:334
+msgid "Multiple Files"
+msgstr ""
+
+#: lib/CMB2/example-functions.php:335
+msgid "Upload or add multiple images/attachments."
+msgstr ""
+
+#: lib/CMB2/example-functions.php:342
+msgid "oEmbed"
+msgstr ""
+
+#: lib/CMB2/example-functions.php:343
+msgid ""
+"Enter a youtube, twitter, or instagram URL. Supports services listed at <a "
+"href=\"http://codex.wordpress.org/Embeds\">http://codex.wordpress.org/"
+"Embeds</a>."
+msgstr ""
+
+#: lib/CMB2/example-functions.php:374
+msgid "About Page Metabox"
+msgstr ""
+
+#: lib/CMB2/example-functions.php:403
+msgid "Repeating Field Group"
+msgstr ""
+
+#: lib/CMB2/example-functions.php:411
+msgid "Generates reusable form entries"
+msgstr ""
+
+#: lib/CMB2/example-functions.php:413
+msgid "Entry {#}"
+msgstr ""
+
+#: lib/CMB2/example-functions.php:414
+msgid "Add Another Entry"
+msgstr ""
+
+#: lib/CMB2/example-functions.php:415
+msgid "Remove Entry"
+msgstr ""
+
+#: lib/CMB2/example-functions.php:428
+msgid "Entry Title"
+msgstr ""
+
+#: lib/CMB2/example-functions.php:435
+msgid "Description"
+msgstr ""
+
+#: lib/CMB2/example-functions.php:436
+msgid "Write a short description for this entry"
+msgstr ""
+
+#: lib/CMB2/example-functions.php:442
+msgid "Entry Image"
+msgstr ""
+
+#: lib/CMB2/example-functions.php:448
+msgid "Image Caption"
+msgstr ""
+
+#: lib/CMB2/example-functions.php:467
+msgid "User Profile Metabox"
+msgstr ""
+
+#: lib/CMB2/example-functions.php:474 lib/CMB2/example-functions.php:544
+msgid "Extra Info"
+msgstr ""
+
+#: lib/CMB2/example-functions.php:482
+msgid "Avatar"
+msgstr ""
+
+#: lib/CMB2/example-functions.php:489
+msgid "Facebook URL"
+msgstr ""
+
+#: lib/CMB2/example-functions.php:496
+msgid "Twitter URL"
+msgstr ""
+
+#: lib/CMB2/example-functions.php:503
+msgid "Google+ URL"
+msgstr ""
+
+#: lib/CMB2/example-functions.php:510
+msgid "Linkedin URL"
+msgstr ""
+
+#: lib/CMB2/example-functions.php:517
+msgid "User Field"
+msgstr ""
+
+#: lib/CMB2/example-functions.php:537
+msgid "Category Metabox"
+msgstr ""
+
+#: lib/CMB2/example-functions.php:552
+msgid "Term Image"
+msgstr ""
+
+#: lib/CMB2/example-functions.php:559
+msgid "Arbitrary Term Field"
+msgstr ""
+
+#: lib/CMB2/example-functions.php:581
+msgid "Theme Options Metabox"
+msgstr ""
+
+#: lib/CMB2/example-functions.php:596
+msgid "Site Background Color"
+msgstr ""
+
+#: lib/CMB2/includes/CMB2.php:122
+msgid "Metabox configuration is required to have an ID parameter"
+msgstr ""
+
+#: lib/CMB2/includes/CMB2.php:375
+msgid "Click to toggle"
+msgstr ""
+
+#: lib/CMB2/includes/CMB2_Ajax.php:65
+msgid "Please Try Again"
+msgstr ""
+
+#: lib/CMB2/includes/CMB2_Ajax.php:155
+msgid "Remove Embed"
+msgstr ""
+
+#: lib/CMB2/includes/CMB2_Ajax.php:159
+#, php-format
+msgid "No oEmbed Results Found for %s. View more info at"
+msgstr ""
+
+#: lib/CMB2/includes/CMB2_Field.php:1030
+msgid "Add Group"
+msgstr ""
+
+#: lib/CMB2/includes/CMB2_Field.php:1031
+msgid "Remove Group"
+msgstr ""
+
+#: lib/CMB2/includes/CMB2_Field.php:1053 lib/CMB2/includes/CMB2_Field.php:1057
+msgid "None"
+msgstr ""
+
+#: lib/CMB2/includes/CMB2_JS.php:86 lib/CMB2/includes/CMB2_JS.php:119
+#: woocommerce/single-product/add-to-cart/variable.php:42
+msgid "Clear"
+msgstr ""
+
+#: lib/CMB2/includes/CMB2_JS.php:87
+msgid "Default"
+msgstr ""
+
+#: lib/CMB2/includes/CMB2_JS.php:88
+msgid "Select Color"
+msgstr ""
+
+#: lib/CMB2/includes/CMB2_JS.php:89
+msgid "Current Color"
+msgstr ""
+
+#: lib/CMB2/includes/CMB2_JS.php:110
+msgid "Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday"
+msgstr ""
+
+#: lib/CMB2/includes/CMB2_JS.php:111
+msgid "Su, Mo, Tu, We, Th, Fr, Sa"
+msgstr ""
+
+#: lib/CMB2/includes/CMB2_JS.php:112
+msgid "Sun, Mon, Tue, Wed, Thu, Fri, Sat"
+msgstr ""
+
+#: lib/CMB2/includes/CMB2_JS.php:113
+msgid ""
+"January, February, March, April, May, June, July, August, September, "
+"October, November, December"
+msgstr ""
+
+#: lib/CMB2/includes/CMB2_JS.php:114
+msgid "Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec"
+msgstr ""
+
+#: lib/CMB2/includes/CMB2_JS.php:115
+msgid "Next"
+msgstr ""
+
+#: lib/CMB2/includes/CMB2_JS.php:116
+msgid "Prev"
+msgstr ""
+
+#: lib/CMB2/includes/CMB2_JS.php:117
+msgid "Today"
+msgstr ""
+
+#: lib/CMB2/includes/CMB2_JS.php:118 lib/CMB2/includes/CMB2_JS.php:128
+msgid "Done"
+msgstr ""
+
+#: lib/CMB2/includes/CMB2_JS.php:122
+msgid "Choose Time"
+msgstr ""
+
+#: lib/CMB2/includes/CMB2_JS.php:123
+msgid "Time"
+msgstr ""
+
+#: lib/CMB2/includes/CMB2_JS.php:124
+msgid "Hour"
+msgstr ""
+
+#: lib/CMB2/includes/CMB2_JS.php:125
+msgid "Minute"
+msgstr ""
+
+#: lib/CMB2/includes/CMB2_JS.php:126
+msgid "Second"
+msgstr ""
+
+#: lib/CMB2/includes/CMB2_JS.php:127
+msgid "Now"
+msgstr ""
+
+#: lib/CMB2/includes/CMB2_JS.php:135
+msgid "Use this file"
+msgstr ""
+
+#: lib/CMB2/includes/CMB2_JS.php:136
+msgid "Use these files"
+msgstr ""
+
+#: lib/CMB2/includes/CMB2_JS.php:137 lib/CMB2/includes/CMB2_Types.php:1021
+msgid "Remove Image"
+msgstr ""
+
+#: lib/CMB2/includes/CMB2_JS.php:138 lib/CMB2/includes/CMB2_Types.php:357
+#: lib/CMB2/includes/CMB2_Types.php:1040
+msgid "Remove"
+msgstr ""
+
+#: lib/CMB2/includes/CMB2_JS.php:139 lib/CMB2/includes/CMB2_Types.php:1035
+msgid "File:"
+msgstr ""
+
+#: lib/CMB2/includes/CMB2_JS.php:140 lib/CMB2/includes/CMB2_Types.php:1038
+#: woocommerce/emails/plain/email-order-items.php:59
+msgid "Download"
+msgstr ""
+
+#: lib/CMB2/includes/CMB2_JS.php:141
+msgid "Select / Deselect All"
+msgstr ""
+
+#: lib/CMB2/includes/CMB2_Types.php:298
+msgid "Add Row"
+msgstr ""
+
+#: lib/CMB2/includes/CMB2_Types.php:768 lib/CMB2/includes/CMB2_Types.php:816
+msgid "No terms"
+msgstr ""
+
+#: lib/CMB2/includes/CMB2_Types.php:884
+msgid "Add or Upload Files"
+msgstr ""
+
+#: lib/CMB2/includes/CMB2_Types.php:945
+msgid "Add or Upload File"
+msgstr ""
+
+#: lib/CMB2/includes/CMB2_hookup.php:120
+msgid ""
+"Term Metadata is a WordPress > 4.4 feature. Please upgrade your WordPress "
+"install."
+msgstr ""
+
+#: lib/CMB2/includes/CMB2_hookup.php:124
+msgid "Term metaboxes configuration requires a 'taxonomies' parameter"
+msgstr ""
+
+#: lib/CMB2/includes/helper-functions.php:250
+msgid "Save"
+msgstr ""
+
+#: lib/custom.php:11
+msgid "Hero"
+msgstr ""
+
+#: lib/custom.php:24
+msgid "Slider"
+msgstr ""
+
+#: lib/custom.php:26
+msgid "Slide {#}"
+msgstr ""
+
+#: lib/custom.php:27
+msgid "Új slide hozzáadása"
+msgstr ""
+
+#: lib/custom.php:28
+msgid "Slide törlése"
+msgstr ""
+
+#: lib/custom.php:60
+msgid "Hompage elements"
+msgstr ""
+
+#: lib/extras.php:31
+msgid "Continued"
+msgstr ""
+
+#: lib/setup.php:31
+msgid "Primary Navigation"
+msgstr ""
+
+#: lib/setup.php:35
+msgid "Shop Related Navigation"
+msgstr ""
+
+#: lib/setup.php:39
+msgid "Sidebar Navigation on Pages"
+msgstr ""
+
+#: lib/setup.php:69
+msgid "Primary"
+msgstr ""
+
+#: lib/setup.php:78
+msgid "Footer"
+msgstr ""
+
+#: lib/setup.php:87
+msgid "Page aside"
+msgstr ""
+
+#: lib/titles.php:13
+msgid "Latest Posts"
+msgstr ""
+
+#: lib/titles.php:18
+#, php-format
+msgid "Search Results for %s"
+msgstr ""
+
+#: lib/titles.php:20
+msgid "Not Found"
+msgstr ""
+
+#: lib/woocommerce.php:19
+msgid "Color Variants"
+msgstr ""
+
+#: lib/woocommerce.php:20
+msgid "Search for a product&hellip;"
+msgstr ""
+
+#: lib/woocommerce.php:30
+msgid ""
+"Color variants are products which are diplayed and linked on product page "
+"as a color selector field. Please included current color variant also."
+msgstr ""
+
+#: lib/woocommerce.php:241
+msgid "Buy product"
+msgstr ""
+
+#: lib/woocommerce.php:244
+msgid "View products"
+msgstr ""
+
+#: lib/woocommerce.php:247
+msgid "Add to cart"
+msgstr ""
+
+#: lib/woocommerce.php:250 lib/woocommerce.php:253
+msgid "Read more"
+msgstr ""
+
+#: page.php:10 template-contact.php:34 template-custom.php:30
+#: templates/content-page.php:5 templates/content-single.php:14
+msgid "Pages:"
+msgstr ""
+
+#: templates/comments.php:20
+msgid "&larr; Older comments"
+msgstr ""
+
+#: templates/comments.php:23
+msgid "Newer comments &rarr;"
+msgstr ""
+
+#: templates/comments.php:32
+msgid "Comments are closed."
+msgstr ""
+
+#: templates/contact-form.php:4
+msgid "Nincs raktáron a kiszemelt ruhadarab?"
+msgstr ""
+
+#: templates/contact-form.php:5
+msgid "Küldd el a nevét és a kívánt méretet. Utánajárunk."
+msgstr ""
+
+#: templates/contact-form.php:13
+msgid "Név"
+msgstr ""
+
+#: templates/contact-form.php:14
+msgid "Adja meg nevét"
+msgstr ""
+
+#: templates/contact-form.php:23
+msgid "E-Mail cím"
+msgstr ""
+
+#: templates/contact-form.php:24
+msgid "E-mail címe"
+msgstr ""
+
+#: templates/contact-form.php:29
+msgid "Telefon"
+msgstr ""
+
+#: templates/contact-form.php:30
+msgid "Add meg telefonszámodat"
+msgstr ""
+
+#: templates/contact-form.php:38
+msgid "Üzenet"
+msgstr ""
+
+#: templates/contact-form.php:39
+msgid "pl.: termék neve, szín, méret ..."
+msgstr ""
+
+#: templates/contact-form.php:53
+msgid "Elküldöm"
+msgstr ""
+
+#: templates/entry-meta.php:3
+msgid "By"
+msgstr ""
+
+#: templates/header-toprow.php:11
+msgid "Hívj most"
+msgstr ""
+
+#: templates/header-toprow.php:29
+msgid "Cart"
+msgstr ""
+
+#: templates/listersubnav.php:22
+msgid "Mutasd mindet"
+msgstr ""
+
+#: templates/mailchimp-subscribe.php:17
+msgid "Jöhet"
+msgstr ""
+
+#: templates/sidebar-page.php:6
+msgid "Vásárlási információk"
+msgstr ""
+
+#: woocommerce/auth/form-grant-access.php:16
+#: woocommerce/auth/form-login.php:18
+#, php-format
+msgid "%s would like to connect to your store"
+msgstr ""
+
+#: woocommerce/auth/form-grant-access.php:20
+#, php-format
+msgid ""
+"This will give \"%s\" <strong>%s</strong> access which will allow it to:"
+msgstr ""
+
+#: woocommerce/auth/form-grant-access.php:30
+#, php-format
+msgid "Logged in as %s"
+msgstr ""
+
+#: woocommerce/auth/form-grant-access.php:30
+msgid "Logout"
+msgstr ""
+
+#: woocommerce/auth/form-grant-access.php:34
+msgid "Approve"
+msgstr ""
+
+#: woocommerce/auth/form-grant-access.php:35
+msgid "Deny"
+msgstr ""
+
+#: woocommerce/auth/form-login.php:22
+#, php-format
+msgid ""
+"To connect to %1$s you need to be logged in. Log in to your store below, or "
+"%2$scancel and return to %1$s%3$s"
+msgstr ""
+
+#: woocommerce/auth/form-login.php:26 woocommerce/myaccount/form-login.php:44
+msgid "Username or email address"
+msgstr ""
+
+#: woocommerce/auth/form-login.php:30 woocommerce/global/form-login.php:31
+#: woocommerce/myaccount/form-login.php:48
+#: woocommerce/myaccount/form-login.php:97
+msgid "Password"
+msgstr ""
+
+#: woocommerce/auth/header.php:20
+msgid "Application Authentication Request"
+msgstr ""
+
+#: woocommerce/cart/cart-empty.php:18
+msgid "Your cart is currently empty."
+msgstr ""
+
+#: woocommerce/cart/cart-empty.php:22
+msgid "Return To Shop"
+msgstr ""
+
+#: woocommerce/cart/cart-shipping.php:46
+msgid "Shipping costs will be calculated once you have provided your address."
+msgstr ""
+
+#: woocommerce/cart/cart-shipping.php:48
+msgid ""
+"There are no shipping methods available. Please double check your address, "
+"or contact us if you need any help."
+msgstr ""
+
+#: woocommerce/cart/cart-totals.php:19
+msgid "Cart Totals"
+msgstr ""
+
+#: woocommerce/cart/cart-totals.php:24 woocommerce/cart/mini-cart.php:81
+#: woocommerce/checkout/review-order.php:50
+msgid "Subtotal"
+msgstr ""
+
+#: woocommerce/cart/cart-totals.php:46
+msgid "Shipping"
+msgstr ""
+
+#: woocommerce/cart/cart-totals.php:78 woocommerce/cart/cart.php:29
+#: woocommerce/checkout/review-order.php:18
+#: woocommerce/checkout/review-order.php:97
+#: woocommerce/myaccount/my-orders.php:28
+#: woocommerce/order/order-details.php:33
+msgid "Total"
+msgstr ""
+
+#: woocommerce/cart/cart-totals.php:100
+msgid ""
+"Megjegyzés: Utánvétes fizetési mód választása esetén plusz 400 Ft kezelési "
+"költséget számítunk fel"
+msgstr ""
+
+#: woocommerce/cart/cart.php:28 woocommerce/checkout/form-pay.php:27
+#: woocommerce/checkout/review-order.php:17
+#: woocommerce/emails/email-order-details.php:33
+#: woocommerce/order/order-details.php:32
+msgid "Product"
+msgstr ""
+
+#: woocommerce/cart/cart.php:65 woocommerce/emails/email-order-details.php:35
+msgid "Price"
+msgstr ""
+
+#: woocommerce/cart/cart.php:97 woocommerce/cart/mini-cart.php:48
+msgid "Remove this item"
+msgstr ""
+
+#: woocommerce/cart/cart.php:130
+msgid "Coupon"
+msgstr ""
+
+#: woocommerce/cart/cross-sells.php:40
+msgid "You may be interested in&hellip;"
+msgstr ""
+
+#: woocommerce/cart/mini-cart.php:73
+msgid "No products in the cart."
+msgstr ""
+
+#: woocommerce/cart/mini-cart.php:86
+msgid "View Cart"
+msgstr ""
+
+#: woocommerce/cart/mini-cart.php:87
+msgid "Checkout"
+msgstr ""
+
+#: woocommerce/cart/proceed-to-checkout-button.php:16
+msgid "Proceed to Checkout"
+msgstr ""
+
+#: woocommerce/cart/shipping-calculator.php:24
+msgid "Calculate Shipping"
+msgstr ""
+
+#: woocommerce/cart/shipping-calculator.php:30
+msgid "Select a country&hellip;"
+msgstr ""
+
+#: woocommerce/cart/shipping-calculator.php:54
+msgid "Select a state&hellip;"
+msgstr ""
+
+#: woocommerce/cart/shipping-calculator.php:87
+msgid "Update Totals"
+msgstr ""
+
+#: woocommerce/checkout/cart-errors.php:18
+msgid ""
+"There are some issues with the items in your cart (shown above). Please go "
+"back to the cart page and resolve these issues before checking out."
+msgstr ""
+
+#: woocommerce/checkout/cart-errors.php:22
+msgid "Return To Cart"
+msgstr ""
+
+#: woocommerce/checkout/form-billing.php:19
+msgid "Billing &amp; Shipping"
+msgstr ""
+
+#: woocommerce/checkout/form-billing.php:23
+msgid "Billing Details"
+msgstr ""
+
+#: woocommerce/checkout/form-billing.php:40
+msgid "Create an account?"
+msgstr ""
+
+#: woocommerce/checkout/form-billing.php:51
+msgid ""
+"Create an account by entering the information below. If you are a returning "
+"customer please login at the top of the page."
+msgstr ""
+
+#: woocommerce/checkout/form-checkout.php:23
+msgid "You must be logged in to checkout."
+msgstr ""
+
+#: woocommerce/checkout/form-checkout.php:50
+msgid "Your order"
+msgstr ""
+
+#: woocommerce/checkout/form-coupon.php:18
+msgid "Have a coupon?"
+msgstr ""
+
+#: woocommerce/checkout/form-coupon.php:18
+msgid "Click here to enter your code"
+msgstr ""
+
+#: woocommerce/checkout/form-login.php:18
+msgid "Returning customer?"
+msgstr ""
+
+#: woocommerce/checkout/form-login.php:19
+msgid "Click here to login"
+msgstr ""
+
+#: woocommerce/checkout/form-login.php:26
+msgid ""
+"If you have shopped with us before, please enter your details in the boxes "
+"below. If you are a new customer please proceed to the Billing &amp; "
+"Shipping section."
+msgstr ""
+
+#: woocommerce/checkout/form-pay.php:28
+msgid "Qty"
+msgstr ""
+
+#: woocommerce/checkout/form-pay.php:29
+msgid "Totals"
+msgstr ""
+
+#: woocommerce/checkout/form-pay.php:67
+msgid ""
+"Sorry, it seems that there are no available payment methods for your "
+"location. Please contact us if you require assistance or wish to make "
+"alternate arrangements."
+msgstr ""
+
+#: woocommerce/checkout/form-shipping.php:33
+msgid "Ship to a different address?"
+msgstr ""
+
+#: woocommerce/checkout/form-shipping.php:58
+#: woocommerce/single-product/tabs/additional-information.php:16
+msgid "Additional Information"
+msgstr ""
+
+#: woocommerce/checkout/payment.php:26
+msgid "Válassz fizetési módot"
+msgstr ""
+
+#: woocommerce/checkout/payment.php:35
+msgid ""
+"Sorry, it seems that there are no available payment methods for your state. "
+"Please contact us if you require assistance or wish to make alternate "
+"arrangements."
+msgstr ""
+
+#: woocommerce/checkout/payment.php:35
+msgid "Please fill in your details above to see available payment methods."
+msgstr ""
+
+#: woocommerce/checkout/payment.php:42
+msgid ""
+"Since your browser does not support JavaScript, or it is disabled, please "
+"ensure you click the <em>Update Totals</em> button before placing your "
+"order. You may be charged more than the amount stated above if you fail to "
+"do so."
+msgstr ""
+
+#: woocommerce/checkout/terms.php:16
+#, php-format
+msgid ""
+"I&rsquo;ve read and accept the <a href=\"%s\" target=\"_blank\">terms &amp; "
+"conditions</a>"
+msgstr ""
+
+#: woocommerce/checkout/thankyou.php:18
+msgid ""
+"Unfortunately your order cannot be processed as the originating bank/"
+"merchant has declined your transaction."
+msgstr ""
+
+#: woocommerce/checkout/thankyou.php:22
+msgid "Please attempt your purchase again or go to your account page."
+msgstr ""
+
+#: woocommerce/checkout/thankyou.php:24
+msgid "Please attempt your purchase again."
+msgstr ""
+
+#: woocommerce/checkout/thankyou.php:28 woocommerce/myaccount/my-orders.php:84
+msgid "Pay"
+msgstr ""
+
+#: woocommerce/checkout/thankyou.php:30
+msgid "My Account"
+msgstr ""
+
+#: woocommerce/checkout/thankyou.php:36 woocommerce/checkout/thankyou.php:67
+msgid "Thank you. Your order has been received."
+msgstr ""
+
+#: woocommerce/checkout/thankyou.php:40
+msgid "Order Number:"
+msgstr ""
+
+#: woocommerce/checkout/thankyou.php:44
+msgid "Date:"
+msgstr ""
+
+#: woocommerce/checkout/thankyou.php:48
+msgid "Total:"
+msgstr ""
+
+#: woocommerce/checkout/thankyou.php:53
+msgid "Payment Method:"
+msgstr ""
+
+#: woocommerce/emails/admin-cancelled-order.php:27
+#: woocommerce/emails/plain/admin-cancelled-order.php:24
+#, php-format
+msgid "The order #%d from %s has been cancelled. The order was as follows:"
+msgstr ""
+
+#: woocommerce/emails/admin-failed-order.php:27
+#: woocommerce/emails/plain/admin-failed-order.php:24
+#, php-format
+msgid "Payment for order #%d from %s has failed. The order was as follows:"
+msgstr ""
+
+#: woocommerce/emails/admin-new-order.php:27
+#, php-format
+msgid "You have received an order from %s. The order is as follows:"
+msgstr ""
+
+#: woocommerce/emails/customer-completed-order.php:27
+#: woocommerce/emails/plain/customer-completed-order.php:24
+#, php-format
+msgid ""
+"Hi there. Your recent order on %s has been completed. Your order details "
+"are shown below for your reference:"
+msgstr ""
+
+#: woocommerce/emails/customer-invoice.php:28
+#: woocommerce/emails/plain/customer-invoice.php:25
+#, php-format
+msgid ""
+"An order has been created for you on %s. To pay for this order please use "
+"the following link: %s"
+msgstr ""
+
+#: woocommerce/emails/customer-invoice.php:28
+msgid "pay"
+msgstr ""
+
+#: woocommerce/emails/customer-new-account.php:26
+#: woocommerce/emails/plain/customer-new-account.php:24
+#, php-format
+msgid ""
+"Thanks for creating an account on %s. Your username is <strong>%s</strong>."
+msgstr ""
+
+#: woocommerce/emails/customer-new-account.php:30
+#, php-format
+msgid "Your password has been automatically generated: <strong>%s</strong>"
+msgstr ""
+
+#: woocommerce/emails/customer-new-account.php:34
+#: woocommerce/emails/plain/customer-new-account.php:29
+#, php-format
+msgid ""
+"You can access your account area to view your orders and change your "
+"password here: %s."
+msgstr ""
+
+#: woocommerce/emails/customer-note.php:27
+#: woocommerce/emails/plain/customer-note.php:24
+msgid "Hello, a note has just been added to your order:"
+msgstr ""
+
+#: woocommerce/emails/customer-note.php:31
+#: woocommerce/emails/plain/customer-note.php:32
+msgid "For your reference, your order details are shown below."
+msgstr ""
+
+#: woocommerce/emails/customer-processing-order.php:27
+#: woocommerce/emails/plain/customer-processing-order.php:24
+msgid ""
+"Your order has been received and is now being processed. Your order details "
+"are shown below for your reference:"
+msgstr ""
+
+#: woocommerce/emails/customer-refunded-order.php:29
+#, php-format
+msgid "Hi there. Your order on %s has been partially refunded."
+msgstr ""
+
+#: woocommerce/emails/customer-refunded-order.php:32
+#, php-format
+msgid "Hi there. Your order on %s has been refunded."
+msgstr ""
+
+#: woocommerce/emails/customer-reset-password.php:26
+#: woocommerce/emails/plain/customer-reset-password.php:24
+msgid ""
+"Someone requested that the password be reset for the following account:"
+msgstr ""
+
+#: woocommerce/emails/customer-reset-password.php:27
+#: woocommerce/emails/plain/customer-reset-password.php:26
+#, php-format
+msgid "Username: %s"
+msgstr ""
+
+#: woocommerce/emails/customer-reset-password.php:28
+#: woocommerce/emails/plain/customer-reset-password.php:27
+msgid "If this was a mistake, just ignore this email and nothing will happen."
+msgstr ""
+
+#: woocommerce/emails/customer-reset-password.php:29
+#: woocommerce/emails/plain/customer-reset-password.php:28
+msgid "To reset your password, visit the following address:"
+msgstr ""
+
+#: woocommerce/emails/customer-reset-password.php:32
+msgid "Click here to reset your password"
+msgstr ""
+
+#: woocommerce/emails/email-addresses.php:25
+#: woocommerce/emails/plain/email-addresses.php:22
+msgid "Billing address"
+msgstr ""
+
+#: woocommerce/emails/email-addresses.php:31
+#: woocommerce/emails/plain/email-addresses.php:26
+msgid "Shipping address"
+msgstr ""
+
+#: woocommerce/emails/email-customer-details.php:25
+#: woocommerce/emails/plain/email-customer-details.php:24
+msgid "Customer details"
+msgstr ""
+
+#: woocommerce/emails/email-order-details.php:25
+#: woocommerce/emails/email-order-details.php:27
+#, php-format
+msgid "Order #%s"
+msgstr ""
+
+#: woocommerce/emails/email-order-details.php:34
+#: woocommerce/single-product/add-to-cart/variable.php:49
+#: woocommerce/single-product/add-to-cart/variation-add-to-cart-button.php:17
+msgid "Quantity"
+msgstr ""
+
+#: woocommerce/emails/plain/admin-new-order.php:24
+#, php-format
+msgid "You have received an order from %s."
+msgstr ""
+
+#: woocommerce/emails/plain/customer-new-account.php:27
+#, php-format
+msgid "Your password is <strong>%s</strong>."
+msgstr ""
+
+#: woocommerce/emails/plain/customer-refunded-order.php:24
+#, php-format
+msgid ""
+"Hi there. Your order on %s has been refunded. Your order details are shown "
+"below for your reference:"
+msgstr ""
+
+#: woocommerce/emails/plain/email-order-details.php:24
+#, php-format
+msgid "Order number: %s"
+msgstr ""
+
+#: woocommerce/emails/plain/email-order-details.php:25
+msgid "jS F Y"
+msgstr ""
+
+#: woocommerce/emails/plain/email-order-details.php:42
+#, php-format
+msgid "View order: %s"
+msgstr ""
+
+#: woocommerce/emails/plain/email-order-items.php:43
+#, php-format
+msgid "Quantity: %s"
+msgstr ""
+
+#: woocommerce/emails/plain/email-order-items.php:46
+#, php-format
+msgid "Cost: %s"
+msgstr ""
+
+#: woocommerce/emails/plain/email-order-items.php:57
+#, php-format
+msgid "Download %d"
+msgstr ""
+
+#: woocommerce/global/form-login.php:27
+#: woocommerce/myaccount/form-lost-password.php:31
+msgid "Username or email"
+msgstr ""
+
+#: woocommerce/global/form-login.php:43
+#: woocommerce/myaccount/form-login.php:58
+msgid "Remember me"
+msgstr ""
+
+#: woocommerce/global/form-login.php:47
+#: woocommerce/myaccount/form-login.php:62
+msgid "Lost your password?"
+msgstr ""
+
+#: woocommerce/loop/no-products-found.php:17
+msgid "No products were found matching your selection."
+msgstr ""
+
+#: woocommerce/loop/result-count.php:30
+msgid "Showing the single result"
+msgstr ""
+
+#: woocommerce/loop/result-count.php:32
+#, php-format
+msgid "Showing all %d results"
+msgstr ""
+
+#: woocommerce/loop/sale-flash.php:19
+#: woocommerce/single-product/sale-flash.php:19
+msgid "Sale!"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:30
+msgid "First name"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:34
+msgid "Last name"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:40
+#: woocommerce/myaccount/form-login.php:90
+msgid "Email address"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:45
+msgid "Password Change"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:48
+msgid "Current Password (leave blank to leave unchanged)"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:52
+msgid "New Password (leave blank to leave unchanged)"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:56
+msgid "Confirm New Password"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-address.php:23
+#: woocommerce/myaccount/my-address.php:27
+#: woocommerce/myaccount/my-address.php:32
+#: woocommerce/order/order-details-customer.php:46
+msgid "Billing Address"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-address.php:23
+#: woocommerce/myaccount/my-address.php:28
+#: woocommerce/order/order-details-customer.php:57
+msgid "Shipping Address"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:37
+msgid "Login"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:74
+msgid "Register"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:83
+msgid "Username"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:104
+msgid "Anti-spam"
+msgstr ""
+
+#: woocommerce/myaccount/form-lost-password.php:28
+msgid ""
+"Lost your password? Please enter your username or email address. You will "
+"receive a link to create a new password via email."
+msgstr ""
+
+#: woocommerce/myaccount/my-address.php:40
+msgid "The following addresses will be used on the checkout page by default."
+msgstr ""
+
+#: woocommerce/myaccount/my-address.php:50
+msgid "Edit"
+msgstr ""
+
+#: woocommerce/myaccount/my-address.php:69
+msgid "You have not set up this type of address yet."
+msgstr ""
+
+#: woocommerce/myaccount/my-downloads.php:20
+msgid "Available Downloads"
+msgstr ""
+
+#: woocommerce/myaccount/my-orders.php:25
+msgid "Order"
+msgstr ""
+
+#: woocommerce/myaccount/my-orders.php:26
+msgid "Date"
+msgstr ""
+
+#: woocommerce/myaccount/my-orders.php:27
+msgid "Status"
+msgstr ""
+
+#: woocommerce/myaccount/my-orders.php:42
+msgid "Recent Orders"
+msgstr ""
+
+#: woocommerce/myaccount/my-orders.php:88
+msgid "View"
+msgstr ""
+
+#: woocommerce/myaccount/my-orders.php:92
+msgid "Cancel"
+msgstr ""
+
+#: woocommerce/myaccount/view-order.php:34
+#, php-format
+msgid "Order #%1$s was placed on %2$s and is currently %3$s."
+msgstr ""
+
+#: woocommerce/myaccount/view-order.php:42 woocommerce/order/tracking.php:25
+msgid "Order Updates"
+msgstr ""
+
+#: woocommerce/myaccount/view-order.php:48 woocommerce/order/tracking.php:31
+msgid "l jS \\o\\f F Y, h:ia"
+msgstr ""
+
+#: woocommerce/order/form-tracking.php:20
+msgid ""
+"To track your order please enter your Order ID in the box below and press "
+"the \"Track\" button. This was given to you on your receipt and in the "
+"confirmation email you should have received."
+msgstr ""
+
+#: woocommerce/order/form-tracking.php:22
+msgid "Order ID"
+msgstr ""
+
+#: woocommerce/order/form-tracking.php:23
+msgid "Billing Email"
+msgstr ""
+
+#: woocommerce/order/order-again.php:16
+msgid "Order Again"
+msgstr ""
+
+#: woocommerce/order/order-details-customer.php:14
+msgid "Customer Details"
+msgstr ""
+
+#: woocommerce/order/order-details-customer.php:19
+msgid "Note:"
+msgstr ""
+
+#: woocommerce/order/order-details-customer.php:26
+msgid "Email:"
+msgstr ""
+
+#: woocommerce/order/order-details-customer.php:33
+msgid "Telephone:"
+msgstr ""
+
+#: woocommerce/order/order-details-customer.php:49
+#: woocommerce/order/order-details-customer.php:60
+#: woocommerce/single-product/meta.php:26
+msgid "N/A"
+msgstr ""
+
+#: woocommerce/order/order-details.php:28
+msgid "Order Details"
+msgstr ""
+
+#: woocommerce/order/tracking.php:14
+#, php-format
+msgid "Order #%s which was made %s has the status &ldquo;%s&rdquo;"
+msgstr ""
+
+#: woocommerce/order/tracking.php:14
+msgid "ago"
+msgstr ""
+
+#: woocommerce/order/tracking.php:16
+msgid "and was completed"
+msgstr ""
+
+#: woocommerce/order/tracking.php:16
+msgid " ago"
+msgstr ""
+
+#: woocommerce/product-searchform.php:26
+msgid "Search for:"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:27
+msgid "Reviews"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:48
+msgid "There are no reviews yet."
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:61
+msgid "Add a review"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:61
+msgid "Be the first to review"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:62
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:66
+msgid "Name"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:68
+msgid "Email"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:71
+msgid "Submit"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:78
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a review."
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:82
+msgid "Your Rating"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:83
+msgid "Rate&hellip;"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:84
+msgid "Perfect"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:85
+msgid "Good"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:86
+msgid "Average"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:87
+msgid "Not that bad"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:88
+msgid "Very Poor"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:92
+msgid "Your Review"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:101
+msgid ""
+"Only logged in customers who have purchased this product may leave a review."
+msgstr ""
+
+#: woocommerce/single-product/add-to-cart/variable.php:30
+msgid "This product is currently out of stock and unavailable."
+msgstr ""
+
+#: woocommerce/single-product/add-to-cart/variable.php:53
+msgid "Mérettáblázat"
+msgstr ""
+
+#: woocommerce/single-product/add-to-cart/variation.php:31
+msgid ""
+"Sorry, this product is unavailable. Please choose a different combination."
+msgstr ""
+
+#: woocommerce/single-product/meta.php:26
+msgid "SKU:"
+msgstr ""
+
+#: woocommerce/single-product/product-attributes.php:29
+msgid "Weight"
+msgstr ""
+
+#: woocommerce/single-product/product-attributes.php:36
+msgid "Dimensions"
+msgstr ""
+
+#: woocommerce/single-product/product-image.php:47
+msgid "Placeholder"
+msgstr ""
+
+#: woocommerce/single-product/rating.php:27
+#, php-format
+msgid "Rated %s out of 5"
+msgstr ""
+
+#: woocommerce/single-product/rating.php:29
+#, php-format
+msgid "out of %s5%s"
+msgstr ""
+
+#: woocommerce/single-product/related.php:42
+msgid "Related Products"
+msgstr ""
+
+#: woocommerce/single-product/up-sells.php:43
+msgid "You may also like&hellip;"
+msgstr ""
