@@ -113,7 +113,7 @@ var cssTasks = function(filename) {
     })
     .pipe(function() {
       return gulpif(enabled.maps, sourcemaps.write('.', {
-        sourceRoot: 'assets/styles/'
+        sourceRoot: '/'
       }));
     })();
 };
@@ -141,7 +141,7 @@ var jsTasks = function(filename) {
     })
     .pipe(function() {
       return gulpif(enabled.maps, sourcemaps.write('.', {
-        sourceRoot: 'assets/scripts/'
+        sourceRoot: '/'
       }));
     })();
 };
@@ -258,6 +258,22 @@ gulp.task('watch', function() {
     snippetOptions: {
       whitelist: ['/wp-admin/admin-ajax.php'],
       blacklist: ['/wp-admin/**']
+    },
+    notify: {
+      styles: {
+          top: 'auto',
+          bottom: '0',
+          margin: '0px',
+          padding: '5px',
+          position: 'fixed',
+          fontSize: '10px',
+          zIndex: '9999',
+          borderRadius: '5px 0px 0px',
+          color: 'white',
+          textAlign: 'center',
+          display: 'block',
+          backgroundColor: 'rgba(242, 115, 33, 0.498039)'
+      }
     }
   });
   gulp.watch([path.source + 'styles/**/*'], ['styles']);

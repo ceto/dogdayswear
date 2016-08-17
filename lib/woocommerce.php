@@ -281,36 +281,50 @@ function dd_utanvet_content($order,  $is_admin_email ) {
 
 
 
-/**
- * woocommerce_package_rates is a 2.1+ hook
- */
-add_filter( 'woocommerce_package_rates', 'dd_hide_shipping_when_free_is_available', 10, 2 );
+
+// add_filter( 'woocommerce_package_rates', 'dd_hide_shipping_when_free_is_available', 10, 2 );
+// function dd_hide_shipping_when_free_is_available( $rates, $package ) {
+//     if ( isset( $rates['free_shipping'] ) ) {
+//       unset( $rates['flat_rate'] );
+//       $local_pickup           = $rates['local_pickup'];
+//       $free_shipping          = $rates['free_shipping'];
+//       $rates                  = array();
+//       $rates['free_shipping'] = $free_shipping;
+//       $rates['local_pickup'] = $local_pickup;
+//   }
+//   return $rates;
+// }
+
 
 /**
- * Hide shipping rates when free shipping is available
+ * Hide shipping flat_rate rates when free shipping is available.
+ * Updated to support WooCommerce 2.6 Shipping Zones.
  *
- * @param array $rates Array of rates found for the package
- * @param array $package The package array/object being shipped
- * @return array of modified rates
+ * @param array $rates Array of rates found for the package.
+ * @return array
  */
-function dd_hide_shipping_when_free_is_available( $rates, $package ) {
-
-  // Only modify rates if free_shipping is present
-    if ( isset( $rates['free_shipping'] ) ) {
-
-      // To unset a single rate/method, do the following. This example unsets flat_rate shipping
-      unset( $rates['flat_rate'] );
-
-      // To unset all methods except for free_shipping and local pickup, do the following
-      $local_pickup           = $rates['local_pickup'];
-      $free_shipping          = $rates['free_shipping'];
-      $rates                  = array();
-      $rates['free_shipping'] = $free_shipping;
-      $rates['local_pickup'] = $local_pickup;
+function ddnew_hide_shipping_when_free_is_available( $rates ) {
+  $free = array();
+  $filteringisneeded=FALSE;
+  foreach ( $rates as $rate_id => $rate ) {
+    if ( $rate->method_id === 'free_shipping' ) {
+      $filteringisneeded=TRUE;
+      break;
+    }
   }
-
-  return $rates;
+  if ($filteringisneeded) {
+    foreach ( $rates as $rate_id => $rate ) {
+       if ( $rate->method_id !== 'flat_rate' ) {
+        $free[ $rate_id ] = $rate;
+       }
+    }
+    return $free;
+  } else {
+    return $rates;
+  }
 }
+
+add_filter( 'woocommerce_package_rates', 'ddnew_hide_shipping_when_free_is_available', 100 );
 
 
 
