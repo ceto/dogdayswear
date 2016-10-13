@@ -17,7 +17,12 @@ if ( empty( $product ) || ! $product->exists() ) {
 	return;
 }
 
-$related = $product->get_related( $posts_per_page );
+//$related = $product->get_related( $posts_per_page );
+$related = $product->get_cross_sells();
+if ( sizeof( $related ) == 0 ) {
+	$related = $product->get_related( $posts_per_page );
+}
+
 
 if ( sizeof( $related ) == 0 ) return;
 
@@ -38,9 +43,14 @@ $woocommerce_loop['columns'] = $columns;
 if ( $products->have_posts() ) : ?>
 
 	<aside class="productrelated">
-<!-- 		<div class="row container">
-			<div class="columns"><h2 class="rowtitle"><?php _e( 'Related Products', 'woocommerce' ); ?></h2></div>
-		</div> -->
+		<div class="row container">
+			<div class="columns">
+				<h2 class="cartitle">
+					<?php // _e( 'Related Products', 'woocommerce' ); ?>
+					<?php _e( 'You may also like&hellip;', 'woocommerce' ) ?>
+				</h2>
+			</div>
+		</div>
     <div class="row container fullwidth">
       <div class="columns">
         <div class="prod-carousel owl-carousel">

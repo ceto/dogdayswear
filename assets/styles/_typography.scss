@@ -82,9 +82,17 @@ tbody th, tfoot th {
   padding:.75em 1em;
   display: inline-block;
   //color:$dark-gray;
-
 }
 
+.cartitle {
+  text-transform: uppercase;
+  //text-align: center;
+  margin:0 0;
+  font-size: 1.125rem;
+  //color:$dark-gray;
+  font-weight: $global-weight-bold;
+
+}
 
 .breadcrumbs {
   //font-weight: $global-weight-bold;

@@ -12,6 +12,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 ?>
+
+<style>
+	.cart-collaterals .cross-sells {
+		display:none;
+	}
+</style>
 <div class="cart_totals <?php if ( WC()->customer->has_calculated_shipping() ) echo 'calculated_shipping'; ?>">
 
 	<?php do_action( 'woocommerce_before_cart_totals' ); ?>
