@@ -9,7 +9,6 @@ use Roots\Sage\Wrapper;
 <html <?php language_attributes(); ?>>
   <?php get_template_part('templates/head'); ?>
   <body <?php body_class(); ?>>
-    <?php get_template_part('templates/tag','manager'); ?>
     <?php get_template_part('templates/header','toprow'); ?>
     <div class="off-canvas-wrapper">
       <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
