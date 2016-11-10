@@ -26,7 +26,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			<p class="text"><?php echo $order->get_formatted_billing_address(); ?></p>
 		</td>
-		<?php if ( ! wc_ship_to_billing_address_only() && $order->needs_shipping_address() && ( $shipping = $order->get_formatted_shipping_address() ) ) : ?>
+		<?php //this php block added by ceto checking local pickup
+			$shipping_local_pickup = false;
+			//if ( $order->has_shipping_method( 'local_pickup' ) ) { $shipping_local_pickup = true; }
+			if ( $items_totals = $order->get_order_item_totals() ) {
+			    foreach ( $items_totals as $items_total ) {
+			        if ( $items_total['value'] == 'Személyes átvétel' && !$shipping_local_pickup ) $shipping_local_pickup = true;
+			    }
+			}
+		?>
+		<?php if ( ! wc_ship_to_billing_address_only() && $order->needs_shipping_address() && ( $shipping = $order->get_formatted_shipping_address() ) && !$shipping_local_pickup ) : ?>
 			<td class="td" style="text-align:left; font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;" valign="top" width="50%">
 				<h3><?php _e( 'Shipping address', 'woocommerce' ); ?></h3>
 
