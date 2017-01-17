@@ -191,6 +191,10 @@
   background-image: url('../images/colors/ananasana.jpg');
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi){ background-image: url('../images/colors/ananasana@2x.jpg'); }
 }
+.colvariant--leaf a {
+  background-image: url('../images/colors/leaf.jpg');
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi){ background-image: url('../images/colors/leaf@2x.jpg'); }
+}
 
 
 
