@@ -22,6 +22,6 @@
     }
   },
   "config": {
-    "devUrl": "http://ceti.no-ip.org/dd"
+    "devUrl": "http://dogdays.dev"
   }
 }
