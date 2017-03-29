@@ -1,5 +1,4 @@
 .hero {
-  margin-top:-5rem;
   position: relative;
 
   background-color: $body-font-color;
@@ -17,7 +16,6 @@
   }
 
   @include breakpoint(tablet) {
-    margin-top:-6.5rem;
   }
 }
 

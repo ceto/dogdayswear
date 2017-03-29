@@ -6,7 +6,7 @@
 
   }
   @include breakpoint(tablet) {
-    margin:1.75rem 0 0;
+    margin:1.4rem 0 0;
 
   }
 }
@@ -38,16 +38,10 @@
     }
     > a {
       //text-transform: lowercase;
-
       font-weight: $global-weight-bold;
       color:$body-font-color;
       @include breakpoint(xlarge){
         padding:.5rem 1.333rem;
-      }
-      .home & {
-        @include breakpoint(medium) {
-          color:$white;
-        }
       }
       &:hover, &:focus {
         color:$primary-color;
@@ -62,6 +56,14 @@
   float:right;
 }
 
+//egyelőre kilövöm a dropdown menut
+.menu--sitemenu {
+ > li {
+  ul {
+    display: none;
+  }
+ }
+}
 
 
 .menu--shopmenu {
