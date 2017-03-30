@@ -139,7 +139,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<?php woocommerce_product_subcategories(); ?>
 
 		<?php while ( have_posts() ) : the_post(); ?>
-			<?php wc_get_template_part( 'content', 'product' ); ?>
+			<div class="column">
+				<?php wc_get_template_part( 'content', 'prcard' ); ?>
+			</div>
 		<?php endwhile; // end of the loop. ?>
 
 

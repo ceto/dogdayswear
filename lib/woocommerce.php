@@ -75,6 +75,11 @@ add_filter( 'woocommerce_before_widget_product_list', 'dd_woocommerce_before_wid
 add_filter( 'woocommerce_after_widget_product_list', 'dd_woocommerce_after_widget_product_list', PHP_INT_MAX  );
 
 
+/*** Product Loop Item Mods *****/
+
+// Akciós label átrakva az név után elé
+remove_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_show_product_loop_sale_flash', 10);
+add_action( 'woocommerce_shop_loop_item_title', 'woocommerce_show_product_loop_sale_flash', 5 );
 
 
 /*** Single Product Page Mods ****/

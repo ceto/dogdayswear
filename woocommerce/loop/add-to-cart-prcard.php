@@ -27,7 +27,7 @@ echo apply_filters( 'woocommerce_loop_add_to_cart_link',
 		esc_attr( isset( $quantity ) ? $quantity : 1 ),
 		esc_attr( $product->id ),
 		esc_attr( $product->get_sku() ),
-		esc_attr( isset( $class ) ? $class : 'button tiny secondary hollow' ),
+		esc_attr( isset( $class ) ? $class : 'button secondary tiny hollow' ),
 		esc_html( $product->add_to_cart_text() )
 	),
 $product );

@@ -1,0 +1,29 @@
+.prcard {
+  text-align: center;
+}
+.prcard__content {
+  padding:1rem .5rem;
+
+  h3 {
+    display: inline;
+    margin:0;
+    font-size: .875rem;
+    font-weight: $global-weight-bold;
+    color: inherit;
+  }
+  .price {
+    margin-top: .5rem;
+    display: block;
+    font-weight: $global-weight-bold;
+    margin-bottom: 1rem;
+    del {
+      font-size: 80%;
+      font-weight: $global-weight-normal;
+      color:get-color(secondary);
+    }
+    ins {
+      text-decoration: none;
+      //color:$primary-color;
+    }
+  }
+}

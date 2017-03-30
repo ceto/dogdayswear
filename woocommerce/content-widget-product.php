@@ -31,7 +31,7 @@ global $product; ?>
       <h3><?php echo $product->get_title(); ?></h3>
       <?php if ( ! empty( $show_rating ) ) echo $product->get_rating_html(); ?>
       <span class="price"><?php echo $product->get_price_html(); ?></span>
-      <?php wc_get_template_part( 'loop/add-to-cart'); ?>
+      <?php //wc_get_template_part( 'loop/add-to-cart'); ?>
     </div>
   </div>
 </div>

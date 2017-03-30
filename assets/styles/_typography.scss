@@ -12,6 +12,10 @@ html, body {
   }
 }
 
+.label {
+  font-weight: $global-weight-extrabold;
+  text-transform: uppercase;
+}
 
 .button {
   text-transform: uppercase;
