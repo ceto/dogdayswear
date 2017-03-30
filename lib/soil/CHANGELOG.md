@@ -1,3 +1,13 @@
+### 3.7.1: August 30th, 2016
+* Enable jQuery noConflict ([#160](https://github.com/roots/soil/issues/160))
+* Disable DNS Prefetch for WordPress Emoji (WP 4.6) ([#159](https://github.com/roots/soil/issues/159))
+
+### 3.7.0: March 7th, 2016
+* Use `home_url` in `root_relative_url` ([#147](https://github.com/roots/soil/issues/147))
+* Add relative URLs to responsive images output ([#146](https://github.com/roots/soil/issues/146))
+* Disable relative URLs in feeds ([#145](https://github.com/roots/soil/issues/145))
+* Switch from Google CDN to jQuery CDN ([#144](https://github.com/roots/soil/issues/144))
+
 ### 3.6.2: December 24th, 2015
 * Add missing oEmbed cleanup ([#134](https://github.com/roots/soil/issues/134))
 

@@ -85,6 +85,23 @@ add_action( 'woocommerce_shop_loop_item_title', 'woocommerce_show_product_loop_s
 /*** Single Product Page Mods ****/
 
 /**
+ * woocommerce_before_main_content hook.
+ *
+ * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
+ * @hooked woocommerce_breadcrumb - 20
+ */
+
+
+/**
+ * woocommerce_before_single_product_summary hook
+ *
+ * @hooked woocommerce_show_product_sale_flash - 10
+ * @hooked woocommerce_show_product_images - 20
+ */
+remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_sale_flash', 10);
+add_action( 'woocommerce_before_single_product', 'woocommerce_show_product_sale_flash', 20 );
+
+/**
  * woocommerce_single_product_summary hook
  *
  * @hooked woocommerce_template_single_title - 5
@@ -96,17 +113,14 @@ add_action( 'woocommerce_shop_loop_item_title', 'woocommerce_show_product_loop_s
  * @hooked woocommerce_template_single_sharing - 50
  */
 
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 5);
+add_action( 'woocommerce_before_single_product', 'woocommerce_template_single_title', 10 );
 
-//remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 5);
-//remove_action( 'woocommerce_before_single_product', 'wc_print_notices', 10 );
-//add_action( 'dd_topaccstuff', 'wc_print_notices', 10 );
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20);
+add_action( 'woocommerce_before_single_product', 'woocommerce_template_single_excerpt', 15 );
 
-
-remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20);
-add_action( 'woocommerce_single_product_summary', 'woocommerce_breadcrumb', 0 );
-
-//remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10);
-//add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 25 );
+remove_action( 'woocommerce_before_single_product', 'wc_print_notices', 10);
+add_action( 'woocommerce_before_main_content', 'wc_print_notices', 25 );
 
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15);
 add_action( 'woocommerce_after_single_product', 'woocommerce_upsell_display', 15);
@@ -129,7 +143,7 @@ function dd_remove_product_tabs( $tabs ) {
 function dd_template_product_description() {
   wc_get_template( 'single-product/tabs/description.php' );
 }
-add_action( 'woocommerce_single_product_summary', 'dd_template_product_description', 20 );
+add_action( 'woocommerce_single_product_summary', 'dd_template_product_description', 5 );
 
 
 

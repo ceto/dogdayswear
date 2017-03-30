@@ -1,6 +1,8 @@
 .sitenav {
 
   @include clearfix();
+  display: inline-block;
+  float:right;
   @include breakpoint(medium) {
     margin:.25rem 0 0;
 
@@ -13,7 +15,7 @@
 
 .menu--sitemenu {
 
-  font-size: 125%;
+  font-size: 87.5%;
   text-transform: uppercase;
   @include breakpoint(medium){
     text-align: right;
@@ -32,9 +34,10 @@
 
 .menu {
   > li:not(.menu-text) {
-    display: block;
+    //display: block;
+    //display: table-cell;
     @include breakpoint(medium) {
-      display: table-cell;
+      //display: table-cell;
     }
     > a {
       //text-transform: lowercase;

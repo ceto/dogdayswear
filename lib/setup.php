@@ -15,6 +15,7 @@ function setup() {
   add_theme_support('soil-nice-search');
   add_theme_support('soil-jquery-cdn');
   add_theme_support('soil-relative-urls');
+  //add_theme_support('soil-js-to-footer');
   //add_theme_support('soil-google-analytics', 'UA-76837684-1'); // Enable to load analytycs
 
   // Make theme available for translation

@@ -22,6 +22,6 @@
     }
   },
   "config": {
-    "devUrl": "http://dogdays.dev/"
+    "devUrl": "http://dogdays.dev"
   }
 }

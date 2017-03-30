@@ -74,21 +74,6 @@
   }
 }
 
-.off-canvas.position-right.off-canvas-right {
-  height: 100vh;
-
-  @include breakpoint(medium) {
-    position: absolute;
-    //z-index: 1;
-    left: 0;
-
-    width: 100%;
-    height: 5.875rem;
-    transform: none;
-
-    background-color: transparent;
-  }
-}
 
 .mobileheader {
   position: absolute;
@@ -127,14 +112,14 @@
   display: inline-block;
   overflow: hidden;
 
-  width: 14.5rem;
-  height: 2.5rem;
-  margin: 1rem 0;
+  width: 7.125rem;
+  height: 2rem;
+  margin: 0 0;
 
   white-space: nowrap;
   text-indent: 200%;
 
-  background-image: url('../images/logo_1line.svg');
+  background-image: url('../images/logo_2line.svg');
   background-repeat: no-repeat;
   background-position: left center;
   background-size: auto 100%;
@@ -155,6 +140,32 @@
   }
 }
 
+.sitecart {
+  position: relative;
+  //background-color: $light-gray;
+  float:right;
+  display: inline-block;
+  padding:.5rem 0;
+  font-size: .75rem;
+  font-weight: $global-weight-extrabold;
+  text-align: center;
+  margin-top: .333rem;
+  margin-left: 2.75rem;
+  a {
+    color:inherit;
+  }
+  .icon {
+    display: block;
+    font-size: 2.5rem;
+  }
+  .badge {
+
+    position: absolute;
+    z-index: -1;
+    left: .1666rem;
+    top:.25rem;
+  }
+}
 .bannerheader {
   background-color: #000;
   //border-top: 1px solid #000;

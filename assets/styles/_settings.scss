@@ -49,8 +49,9 @@
 $global-font-size: 100%;
 $global-width: rem-calc(1600);
 $global-lineheight: 1.5;
+  //primary: #f27321,
 $foundation-palette: (
-  primary: #f27321,
+  primary: #ff5300,
   secondary: #4B4F54,
   success: #3adb76,
   warning: #ffae00,
@@ -221,15 +222,15 @@ $badge-background: $primary-color;
 $badge-color: $white;
 $badge-color-alt: $black;
 $badge-palette: $foundation-palette;
-$badge-padding: 0.3em;
-$badge-minwidth: 2.1em;
-$badge-font-size: 0.6rem;
+$badge-padding: 0.25em;
+$badge-minwidth: 2em;
+$badge-font-size: 0.666rem;
 
 // 10. Breadcrumbs
 // ---------------
 
 $breadcrumbs-margin: 0 0 $global-margin/1.5 0;
-$breadcrumbs-item-font-size: rem-calc(14);
+$breadcrumbs-item-font-size: rem-calc(12);
 $breadcrumbs-item-color: $secondary-color;
 $breadcrumbs-item-color-current: $black;
 $breadcrumbs-item-color-disabled: $medium-gray;

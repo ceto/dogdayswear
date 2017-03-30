@@ -19,9 +19,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <div itemscope itemtype="<?php echo woocommerce_get_product_schema(); ?>" id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<header class="productheader pageheader">
-
-		<div class="row container text-center">
+	<header class="productheader">
+		<div class="row container">
 			<div class="columns">
 				<?php
 					/**
@@ -96,8 +95,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<meta itemprop="url" content="<?php the_permalink(); ?>" />
 
-</div><!-- #product-<?php the_ID(); ?> -->
-<footer class="productfooter">
+	<footer class="productfooter">
 	<?php do_action( 'woocommerce_after_single_product' ); ?>
-</footer>
+	</footer>
+</div><!-- #product-<?php the_ID(); ?> -->
+
 

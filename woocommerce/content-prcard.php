@@ -77,7 +77,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 			do_action( 'woocommerce_after_shop_loop_item_title' );
 		?>
 
-		<?php wc_get_template_part( 'loop/add-to-cart-prcard'); ?>
+		<?php wc_get_template_part( 'loop/add-to-cart'); ?>
 	</div>
 
 </div>

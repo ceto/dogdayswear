@@ -74,7 +74,7 @@
   // Load Events
   $(document).ready(UTIL.loadEvents);
 
-})(jQuery); // Fully reference jQuery after this point.
+
 
   $(document).foundation();
 
@@ -276,101 +276,108 @@ $('document').ready(function($){
   });
 
 
-    //reset previously set border colors and hide all message on .keyup()
-    $("#contact_form input, #contact_form textarea").keyup(function(){
-        $("#result").slideUp();
-    });
+  //reset previously set border colors and hide all message on .keyup()
+  $("#contact_form input, #contact_form textarea").keyup(function(){
+      $("#result").slideUp();
+  });
 
 
-    /*** Mailchipmp ****/
+  /*** Mailchipmp ****/
 
-    // Validate the email address in the form
-    function isValidEmail($form) {
-        // If email is empty, show error message.
-        // contains just one @
-        var email = $form.find('input[type="email"]').val();
-        if (!email || !email.length) {
-            return false;
-        } else if (email.indexOf('@') === -1) {
-            return false;
-        }
-        return true;
-    }
+  // Validate the email address in the form
+  function isValidEmail($form) {
+      // If email is empty, show error message.
+      // contains just one @
+      var email = $form.find('input[type="email"]').val();
+      if (!email || !email.length) {
+          return false;
+      } else if (email.indexOf('@') === -1) {
+          return false;
+      }
+      return true;
+  }
 
-    // Submit the form with an ajax/jsonp request.
-    // Based on http://stackoverflow.com/a/15120409/215821
-    function submitSubscribeForm($form, $resultElement) {
-        $.ajax({
-            type: $form.attr('method'),
-            url: $form.attr('action'),
-            data: $form.serialize(),
-            cache: false,
-            dataType: 'jsonp',
-            jsonp: "c", // trigger MailChimp to return a JSONP response
-            contentType: "application/json; charset=utf-8",
-            error: function(error){
-                // According to jquery docs, this is never called for cross-domain JSONP requests
-            },
-            success: function(data){
-                if (data.result !== 'success') {
-                    var message = data.msg || 'Sorry. Unable to subscribe. Please try again later.';
-                    if (data.msg && data.msg.indexOf("already subscribed") >= 0) {
-                        message = 'Már fel vagy iratkozva. Köszönjük.';
-                    }
-                    $resultElement.html(message);
-                } else {
-                    $resultElement.html('Köszönjük! Feliratkozásod jóvá kell hagynod. A megerősítő e-mailt kiküldtük.');
-                }
-            }
-        });
-    }
+  // Submit the form with an ajax/jsonp request.
+  // Based on http://stackoverflow.com/a/15120409/215821
+  function submitSubscribeForm($form, $resultElement) {
+      $.ajax({
+          type: $form.attr('method'),
+          url: $form.attr('action'),
+          data: $form.serialize(),
+          cache: false,
+          dataType: 'jsonp',
+          jsonp: "c", // trigger MailChimp to return a JSONP response
+          contentType: "application/json; charset=utf-8",
+          error: function(error){
+              // According to jquery docs, this is never called for cross-domain JSONP requests
+          },
+          success: function(data){
+              if (data.result !== 'success') {
+                  var message = data.msg || 'Sorry. Unable to subscribe. Please try again later.';
+                  if (data.msg && data.msg.indexOf("already subscribed") >= 0) {
+                      message = 'Már fel vagy iratkozva. Köszönjük.';
+                  }
+                  $resultElement.html(message);
+              } else {
+                  $resultElement.html('Köszönjük! Feliratkozásod jóvá kell hagynod. A megerősítő e-mailt kiküldtük.');
+              }
+          }
+      });
+  }
 
-    // Turn the given MailChimp form into an ajax version of it.
-    // If resultElement is given, the subscribe result is set as html to
-    // that element.
-    function ajaxMailChimpForm($form, $resultElement){
-        // Hijack the submission. We'll submit the form manually.
-        $form.submit(function(e) {
-            e.preventDefault();
-            if (!isValidEmail($form)) {
-                var error =  'Érvényes e-mail címe szükséges';
-                $resultElement.html(error);
-            } else {
-                $resultElement.html('Feliratkozás&hellip;');
-                submitSubscribeForm($form, $resultElement);
-            }
-        });
-    }
+  // Turn the given MailChimp form into an ajax version of it.
+  // If resultElement is given, the subscribe result is set as html to
+  // that element.
+  function ajaxMailChimpForm($form, $resultElement){
+      // Hijack the submission. We'll submit the form manually.
+      $form.submit(function(e) {
+          e.preventDefault();
+          if (!isValidEmail($form)) {
+              var error =  'Érvényes e-mail címe szükséges';
+              $resultElement.html(error);
+          } else {
+              $resultElement.html('Feliratkozás&hellip;');
+              submitSubscribeForm($form, $resultElement);
+          }
+      });
+  }
 
-    ajaxMailChimpForm($('#mc-embedded-subscribe-form'), $('#mce-responses'));
-
-
-    $('#csiki').on('click', function(e) {
-      e.preventDefault();
-       $('.topacc').foundation('toggle', $('#thetopcart'));
-    });
-
-    $('.filterblock--colors li a').each( function( i, val ) {
-     $(this).parent().addClass($.slugi($(this).text())) ;
-    });
+  ajaxMailChimpForm($('#mc-embedded-subscribe-form'), $('#mce-responses'));
 
 
-    //Mérettablazat modal
-    $('.linktosizetable').on('click', function(e) {
-      e.preventDefault();
-      var $modal = $('#sizemodal');
-      $.ajax($(this).attr('href'))
-        .done(function(resp){
-          var cleanTitle = $(resp).find('.pagetitle').eq(0);
-          var cleanCont = $(resp).find('.pagecontent').eq(0);
-          $modal.html('<h2>Mérettáblázat</h2><button class="close-button" data-close aria-label="Close modal" type="button"><span aria-hidden="true">&times;</span></button>').append(cleanCont).foundation('open');
-        });
+  $('.sitecart a').on('click', function(e) {
+    e.preventDefault();
+     $('.topacc').foundation('toggle', $('#thetopcart'));
+  });
 
-    });
-    // var $modal = $('#sizemodal');
-    // $.ajax('/dd/vasarlasi-informaciok/merettablazat/')
-    //   .done(function(resp){
-    //     $modal.html(resp.html).foundation('open');
-    // });
+  $('.filterblock--colors li a').each( function( i, val ) {
+   $(this).parent().addClass($.slugi($(this).text())) ;
+  });
 
-});
+
+  //Mérettablazat modal
+  $('.linktosizetable').on('click', function(e) {
+    e.preventDefault();
+    var $modal = $('#sizemodal');
+    $.ajax($(this).attr('href'))
+      .done(function(resp){
+        var cleanTitle = $(resp).find('.pagetitle').eq(0);
+        var cleanCont = $(resp).find('.pagecontent').eq(0);
+        $modal.html('<h2>Mérettáblázat</h2><button class="close-button" data-close aria-label="Close modal" type="button"><span aria-hidden="true">&times;</span></button>').append(cleanCont).foundation('open');
+      });
+
+  });
+  // var $modal = $('#sizemodal');
+  // $.ajax('/dd/vasarlasi-informaciok/merettablazat/')
+  //   .done(function(resp){
+  //     $modal.html(resp.html).foundation('open');
+  // });
+
+  });
+
+
+
+
+
+})(jQuery); // Fully reference jQuery after this point.
+

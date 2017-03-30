@@ -3,28 +3,32 @@
 namespace Roots\Soil\JqueryCDN;
 
 /**
- * Load jQuery from Google's CDN with a local fallback
+ * Load jQuery from jQuery's CDN with a local fallback
  *
  * You can enable/disable this feature in functions.php (or lib/setup.php if you're using Sage):
  * add_theme_support('soil-jquery-cdn');
  */
 function register_jquery() {
-  if (!is_admin()) {
-    //$jquery_version = $GLOBALS['wp_scripts']->registered['jquery']->ver;
-    $jquery_version = '2.2.3';
+  //$jquery_version = wp_scripts()->registered['jquery']->ver;
+  $jquery_version = '3.2.1';
+  wp_deregister_script('jquery');
 
-    wp_deregister_script('jquery');
+  wp_register_script(
+    'jquery',
+    'https://code.jquery.com/jquery-' . $jquery_version . '.min.js',
+    [],
+    null,
+    false
+  );
 
-    wp_register_script(
-      'jquery',
-      'https://ajax.googleapis.com/ajax/libs/jquery/' . $jquery_version . '/jquery.min.js',
-      [],
-      null,
-      false
-    );
+  add_filter('wp_resource_hints', function ($urls, $relation_type) {
+    if ($relation_type === 'dns-prefetch') {
+      $urls[] = 'code.jquery.com';
+    }
+    return $urls;
+  }, 10, 2);
 
-    add_filter('script_loader_src', __NAMESPACE__ . '\\jquery_local_fallback', 10, 2);
-  }
+  add_filter('script_loader_src', __NAMESPACE__ . '\\jquery_local_fallback', 10, 2);
 }
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\register_jquery', 100);
 
@@ -37,7 +41,7 @@ function jquery_local_fallback($src, $handle = null) {
   static $add_jquery_fallback = false;
 
   if ($add_jquery_fallback) {
-    echo '<script>window.jQuery || document.write(\'<script src="' . $add_jquery_fallback .'"><\/script>\')</script>' . "\n";
+    echo '<script>(window.jQuery && jQuery.noConflict()) || document.write(\'<script src="' . $add_jquery_fallback .'"><\/script>\')</script>' . "\n";
     $add_jquery_fallback = false;
   }
 

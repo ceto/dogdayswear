@@ -9,12 +9,12 @@
       <?php endif; */ ?>
 
       <span class="callnow"><i class="icon icon--facebook"></i> <a href="mailto:hello@dogdayswear.com">hello@dogdayswear.com</a></span> | <span class="callnow"><i class="icon icon--phone"></i> <a href="tel:0036205954060">(+36) 20.595.4060</a></span> | <a href="<?php the_permalink(7); ?>" class="myacc"><i class="icon icon--user"></i> Fiókom</a>
-      <span class="cartindex">
+      <!-- <span class="cartindex">
         <a id="csiki" href="<?php the_permalink(5); ?>"><i class="icon icon--cart"></i>
           <?= dd_carttotal(); ?>
           <?= dd_cartcount(); ?>
         </a>
-      </span>
+      </span> -->
 
     </div>
   </div>

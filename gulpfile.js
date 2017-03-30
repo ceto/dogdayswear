@@ -11,7 +11,7 @@ var imagemin     = require('gulp-imagemin');
 var jshint       = require('gulp-jshint');
 var lazypipe     = require('lazypipe');
 var merge        = require('merge-stream');
-var minifyCss    = require('gulp-minify-css');
+var cssNano      = require('gulp-cssnano');
 var plumber      = require('gulp-plumber');
 var rev          = require('gulp-rev');
 var runSequence  = require('run-sequence');
@@ -103,16 +103,15 @@ var cssTasks = function(filename) {
         'opera 12'
       ]
     })
-    .pipe(minifyCss, {
-      advanced: false,
-      rebase: false
+    .pipe(cssNano, {
+      safe: true
     })
     .pipe(function() {
       return gulpif(enabled.rev, rev());
     })
     .pipe(function() {
       return gulpif(enabled.maps, sourcemaps.write('.', {
-        sourceRoot: '/'
+        sourceRoot: 'assets/styles/'
       }));
     })();
 };
@@ -140,7 +139,7 @@ var jsTasks = function(filename) {
     })
     .pipe(function() {
       return gulpif(enabled.maps, sourcemaps.write('.', {
-        sourceRoot: '/'
+        sourceRoot: 'assets/scripts/'
       }));
     })();
 };
@@ -182,14 +181,6 @@ gulp.task('styles', ['wiredep'], function() {
   return merged
     .pipe(writeToManifest('styles'));
 });
-
-
-// ### Woocommerce Scripts Copy
-gulp.task('wcscripts', function() {
-  return gulp.src('../../plugins/woocommerce/assets/js/**/*')
-    .pipe(gulp.dest(path.source + 'scripts/woocommerce/'));
-});
-
 
 // ### Scripts
 // `gulp scripts` - Runs JSHint then compiles, combines, and optimizes Bower JS
@@ -233,7 +224,7 @@ gulp.task('images', function() {
 // `gulp jshint` - Lints configuration JSON and project JS.
 gulp.task('jshint', function() {
   return gulp.src([
-    'bower.json', 'gulpfile.js', '!assets/scripts/woocommerce/**/*'
+    'bower.json', 'gulpfile.js'
   ].concat(project.js))
     .pipe(jshint())
     .pipe(jshint.reporter('jshint-stylish'))
