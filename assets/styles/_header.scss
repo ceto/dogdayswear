@@ -1,9 +1,13 @@
 .toprow {
   @include clearfix();
-  //background-color: $ultralight-gray;
   font-size: 75%;
   line-height: 1;
   border-bottom: 1px solid $ultralight-gray;
+  padding: 0 .666rem;
+  @include breakpoint(xlarge) {
+    padding: 0 1.25rem;
+
+  }
 }
 
 .callnow {
@@ -99,22 +103,28 @@
   color: $primary-color;
 }
 .siteheader {
-  padding: .5rem 0;
+  @include clearfix();
+  position: relative;
+  line-height: 1;
+  border-bottom: 1px solid $ultralight-gray;
+  padding: 0 .666rem;
+  @include breakpoint(xlarge) {
+    padding: 0 1.25rem;
 
-  @include breakpoint(tablet) {
-    border-bottom: 1px solid $ultralight-gray;
   }
 }
 
 
 
 .sitelogo {
-  display: inline-block;
+  float:left;
+  display: block;
   overflow: hidden;
 
   width: 7.125rem;
   height: 2rem;
-  margin: 0 0;
+  margin: .666rem 1.25rem 0 0;
+
 
   white-space: nowrap;
   text-indent: 200%;
@@ -123,40 +133,28 @@
   background-repeat: no-repeat;
   background-position: left center;
   background-size: auto 100%;
-  @include breakpoint(medium) {
-    background-image: url('../images/logo_2line.svg');
-    width: 14.5rem;
-    height: 2rem;
-    margin: .25rem 0;
-  }
+}
 
-  @include breakpoint(tablet) {
-    //background-image: url('../images/logo_1line.svg');
-    width: 13rem;
-    height: 3.5rem;
-    margin: .5rem 0 0;
-    //background-color: red;
-
-  }
+.sitenav {
+  float:left;
 }
 
 .sitecart {
+  float:right;
   position: relative;
   //background-color: $light-gray;
-  float:right;
-  display: inline-block;
-  padding:.5rem 0;
+  display: block;
+  padding:.4rem 0 .5rem 0;
   font-size: .75rem;
   font-weight: $global-weight-extrabold;
   text-align: center;
-  margin-top: .333rem;
   margin-left: 2.75rem;
   a {
     color:inherit;
   }
   .icon {
     display: block;
-    font-size: 2.5rem;
+    font-size: 2.25rem;
   }
   .badge {
 
