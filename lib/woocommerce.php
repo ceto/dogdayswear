@@ -150,12 +150,10 @@ add_action( 'woocommerce_single_product_summary', 'dd_template_product_descripti
 
 /* Remove Woocommerce User Fields */
 add_filter( 'woocommerce_checkout_fields' , 'dd_override_checkout_fields' );
-add_filter( 'woocommerce_billing_fields' , 'dd_override_billing_fields' );
-add_filter( 'woocommerce_shipping_fields' , 'dd_override_shipping_fields' );
 
 function dd_override_checkout_fields( $fields ) {
   unset($fields['billing']['billing_state']);
-  unset($fields['billing']['billing_country']);
+  //unset($fields['billing']['billing_country']);
   unset($fields['billing']['billing_company']);
   // unset($fields['billing']['billing_address_1']);
   unset($fields['billing']['billing_address_2']);
@@ -163,7 +161,7 @@ function dd_override_checkout_fields( $fields ) {
   // unset($fields['billing']['billing_city']);
   unset($fields['shipping']['shipping_state']);
   // unset($fields['shipping']['shipping_country']);
-  // unset($fields['shipping']['shipping_company']);
+  unset($fields['shipping']['shipping_company']);
   // unset($fields['shipping']['shipping_address_1']);
   unset($fields['shipping']['shipping_address_2']);
   // unset($fields['shipping']['shipping_postcode']);
@@ -171,40 +169,29 @@ function dd_override_checkout_fields( $fields ) {
 
 
   $order = array(
-    'billing_first_name',
     'billing_last_name',
+    'billing_first_name',
     'billing_email',
     'billing_phone',
+    'billing_country',
     'billing_city',
     'billing_postcode',
     'billing_address_1'
   );
+  $fields['billing']['billing_last_name']['class']=['form-row-first'];
+  $fields['billing']['billing_last_name']['clear']=false;
+  $fields['billing']['billing_first_name']['class']=['form-row-last'];
+  $fields['billing']['billing_first_name']['clear']=true;
+  $fields['shipping']['shipping_postcode']['class']=['form-row-wide'];
+  $fields['shipping']['shipping_postcode']['clear']=true;
+
+
   foreach($order as $field) {
         $ordered_fields[$field] = $fields['billing'][$field];
-    }
+  }
 
   $fields['billing'] = $ordered_fields;
 
-  return $fields;
-}
-function dd_override_billing_fields( $fields ) {
-  unset($fields['billing_state']);
-  unset($fields['billing_country']);
-  unset($fields['billing_company']);
-  // unset($fields['billing_address_1']);
-  unset($fields['billing_address_2']);
-  // unset($fields['billing_postcode']);
-  // unset($fields['billing_city']);
-  return $fields;
-}
-function dd_override_shipping_fields( $fields ) {
-  unset($fields['shipping_state']);
-  unset($fields['shipping_country']);
-  unset($fields['shipping_company']);
-  // unset($fields['shipping_address_1']);
-  unset($fields['shipping_address_2']);
-  // unset($fields['shipping_postcode']);
-  // unset($fields['shipping_city']);
   return $fields;
 }
 /* End - Remove Woocommerce User Fields */
@@ -263,22 +250,6 @@ function dd_utanvet_content($order,  $is_admin_email ) {
   }
 }
 
-
-
-
-
-// add_filter( 'woocommerce_package_rates', 'dd_hide_shipping_when_free_is_available', 10, 2 );
-// function dd_hide_shipping_when_free_is_available( $rates, $package ) {
-//     if ( isset( $rates['free_shipping'] ) ) {
-//       unset( $rates['flat_rate'] );
-//       $local_pickup           = $rates['local_pickup'];
-//       $free_shipping          = $rates['free_shipping'];
-//       $rates                  = array();
-//       $rates['free_shipping'] = $free_shipping;
-//       $rates['local_pickup'] = $local_pickup;
-//   }
-//   return $rates;
-// }
 
 
 /**

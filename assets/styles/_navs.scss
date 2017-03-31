@@ -157,9 +157,16 @@
   }
   > li:not(.menu-text) {
     display: inline-block;
+    &:not(:last-child):after {
+        content:'|';
+        margin: 0 0 0 .125em;
+        color: inherit;
+        //font-weight: $global-weight-bold;
+    }
+
     > a {
       //text-transform: uppercase;
-      font-weight: $global-weight-bold;
+      font-weight: $global-weight-normal;
       display: inline-block;
       padding: 0.7em .333em;
       &:hover, &:focus {
