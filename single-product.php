@@ -16,8 +16,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <main class="main" role="main">
   <div class="productbefore">
-    <div class="row container">
-      <div class="columns">
+<!--     <div class="row container">
+      <div class="columns"> -->
+        <nav class="prevnextnav">
+          <ul>
+            <li><?php previous_post_link( '%link', __('Previous', 'dd'), true, '', 'product_cat' ); ?></li>
+            <li><?php next_post_link( '%link', __('Next', 'dd'), true, '', 'product_cat' ); ?></li>
+          </ul>
+        </nav>
         <?php
           /**
            * woocommerce_before_main_content hook.
@@ -27,8 +33,9 @@ if ( ! defined( 'ABSPATH' ) ) {
            */
           do_action( 'woocommerce_before_main_content' );
         ?>
-      </div>
-    </div>
+
+<!--       </div>
+    </div> -->
   </div>
 
 	<?php while ( have_posts() ) : the_post(); ?>

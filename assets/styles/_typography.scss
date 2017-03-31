@@ -99,12 +99,46 @@ tbody th, tfoot th {
 }
 
 .breadcrumbs {
-  //font-weight: $global-weight-bold;
+  font-weight: $global-weight-bold;
+  margin-bottom: 0;
   li {
     margin-bottom: 0;
+    &:not(:last-child):after {
+      content:'\232a';
+      margin: 0 0 0 .5em;
+      color: inherit;
+    }
+    &:first-child {
+      display: none;
+    }
   }
 }
 
+.prevnextnav {
+  font-size: .75rem;
+  font-weight: $global-weight-bold;
+  color: $breadcrumbs-item-color;
+  ul {
+    list-style-type: none;
+    margin:0 0;
+    padding:0;
+  }
+  li {
+    display: inline;
+    margin:0;
+    &:not(:last-child):after {
+        content:'|';
+        margin: 0 .25em 0 .5em;
+        color: inherit;
+    }
+  }
+  a {
+    color:inherit;
+    &:hover, &:focus {
+      text-decoration: underline;
+    }
+  }
+}
 
 .reveal {
   .pagecontent {

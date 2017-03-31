@@ -66,7 +66,7 @@ function woocommerce_support() {
 add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
 
 
-/*** Featured Prod List Mods (Remove UL & LI tags)****/
+/*** Home Featured Prod List Mods (Remove UL & LI tags)****/
 
 function dd_woocommerce_before_widget_product_list() { return ''; }
 function dd_woocommerce_after_widget_product_list() { return ''; }
@@ -210,40 +210,6 @@ function dd_override_shipping_fields( $fields ) {
 /* End - Remove Woocommerce User Fields */
 
 
-/* Make Woocommerce Phone Field Not Required  */
-// add_filter( 'woocommerce_billing_fields', 'dd_npr_filter_phone', 10, 1 );
-// function dd_npr_filter_phone( $address_fields ) {
-//   $address_fields['billing_phone']['required'] = false;
-//   return $address_fields;
-// }
-/* End - Make Woocommerce Phone Field Not Required  */
-
-
-
-// add_filter('woocommerce_checkout_fields', 'dd_order_fields');
-
-// function dd_order_fields($fields) {
-
-//     $order = array(
-//         'billing_first_name',
-//         'billing_last_name',
-//         'billing_email',
-//         'billing_phone',
-//         'billing_city',
-//         'billing_postcode',
-//         'billing_address_1'
-
-//     );
-//     foreach($order as $field)
-//     {
-//         $ordered_fields[$field] = $fields['billing'][$field];
-//     }
-
-//     $fields['billing'] = $ordered_fields;
-//     //$fields['shipping'] = $ordered_fields;
-//     return $fields;
-
-// }
 
 /****** Chande Add To Cart Button text *****/
 add_filter( 'woocommerce_product_add_to_cart_text' , 'dd_woocommerce_product_add_to_cart_text' );

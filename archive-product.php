@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 <?php //get_template_part('templates/promorow'); ?>
-<header class="bannerheader">
+<!-- <header class="bannerheader">
 	<div class="row container collapse">
 		<div class="columns">
 			<div class="bannerheader__ill">
@@ -30,7 +30,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</div>
 		</div>
 	</div>
-</header>
+</header> -->
 
 
 <nav class="filternav">

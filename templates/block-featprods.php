@@ -1,3 +1,4 @@
+<?php if (!is_cart() && !is_checkout()) :?>
 <section class="home__featprodsblock">
   <div class="row container fullwidth">
     <div class="columns">
@@ -17,3 +18,4 @@
     </div>
   </div>
 </section>
+<?php endif; ?>
