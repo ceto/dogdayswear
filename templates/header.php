@@ -5,6 +5,9 @@
         <?= dd_cartcount(); ?>
       </a>
     </div>
+    <div class="siteacc">
+      <a href="<?php the_permalink(7); ?>"><i class="icon icon--user"></i></a>
+    </div>
     <nav class="sitenav">
       <?php wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'menu menu--sitemenu']); ?>
     </nav>

@@ -1,17 +1,26 @@
 .toprow {
   @include clearfix();
+  font-weight: $global-weight-extrabold;
   font-size: 75%;
   line-height: 1;
   border-bottom: 1px solid $ultralight-gray;
-  padding: 0 .666rem;
+  padding: .5rem .666rem;
   @include breakpoint(xlarge) {
-    padding: 0 1.25rem;
+    padding: .5rem 1.25rem;
 
   }
 }
 
+
+.toprow__first {
+  float:left;
+}
+
+.toprow__sec {
+  float:right;
+}
 .callnow {
-  padding:.5rem 0;
+  padding:.0 0;
   //float:left;
   display: inline-block;
   .icon {
@@ -20,7 +29,6 @@
     margin-right: .125em;
   }
   a {
-    font-weight: $global-weight-extrabold;
     color:$secondary-color;
     &:hover, &:focus {
       color:inherit;
@@ -28,54 +36,12 @@
 
   }
 }
-.myacc {
-  padding:.5rem 0;
-  display: inline-block;
-  font-weight: $global-weight-bold;
-  color:$secondary-color;
-  &:hover, &:focus {
-    color:$secondary-color;
-  }
-  .icon {
-    display: inline-block;
-    transform: translateY(.1em);
-  }
 
-
-
-}
-
-.cartindex a {
-  padding:.5rem .875rem .5rem .666rem;
-  padding:.5rem 0 .5rem 0;
-  display: inline-block;
-  float: right;
-
-  color:$secondary-color;
-  .icon {
-    margin-left: .5em;
-    display: inline-block;
-    transform: scale(2);
-  }
-  &:hover, &:focus {
-    //background-color: $light-gray;
-    color: $primary-color;
-  }
-  .total {
-    display: inline-block;
-    font-weight: $global-weight-extrabold;
-    margin-left: .5em;
-  }
-  .badge {
-    //position: absolute;
-    font-size: .5rem;
-    min-width: 1.6333em;
-    font-weight: $global-weight-extrabold;
-    //top:0;
-    transform:translateY(-.125em);
-    margin-left: .125em;
-
-  }
+.helpdropdown {
+  padding:0;
+  right: 0 !important;
+  top: 1.875rem !important;
+  left: auto !important;
 }
 
 
@@ -139,7 +105,7 @@
   float: left;
 }
 
-.sitecart {
+.sitecart, .siteacc {
   float:right;
   position: relative;
   //background-color: $light-gray;
@@ -148,7 +114,7 @@
   font-size: .75rem;
   font-weight: $global-weight-extrabold;
   text-align: center;
-  margin-left: 2.75rem;
+  margin-left: 1.5rem;
   a {
     color:inherit;
   }
@@ -164,6 +130,7 @@
     top:.25rem;
   }
 }
+
 .bannerheader {
   background-color: #000;
   //border-top: 1px solid #000;
