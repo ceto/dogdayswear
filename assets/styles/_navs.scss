@@ -13,6 +13,11 @@
   }
 }
 
+.shopnav {
+  @include clearfix();
+  float:right;
+}
+
 .menu {
   > li:not(.menu-text) {
     @include breakpoint(medium) {
@@ -21,20 +26,53 @@
     > a {
       font-weight: $global-weight-bold;
       color:$body-font-color;
-      &:hover, &:focus {
-        color:$primary-color;
-      }
     }
 
   }
 }
 
-.shopnav {
-  @include clearfix();
-  float:right;
+.menu--mobilemenu {
+  margin-bottom: 3rem;
+  li {
+    margin:0;
+    a {
+      display: block;
+      padding:.875em .5rem .875em 1.75rem;
+      line-height: 1;
+      text-transform: uppercase;
+      color:inherit;
+      font-weight: $global-weight-bold;
+      border-bottom: 1px solid $ultralight-gray;
+      &:hover, &:focus {
+        color: inherit;
+        color: inherit;
+        background-color: $ultralight-gray;
+        border-color: $light-gray;
+      }
+    }
+    > ul {
+      list-style-type: none;
+      margin:0;
+      padding:0 0 1.5rem;
+      a {
+        font-size: .875rem;
+        //padding-left: 2rem;
+        text-transform: none;
+      }
+    }
+  }
 }
 
-//egyelőre kilövöm a dropdown menut
+
+.menu--mobilemenu--small {
+  li {
+    a {
+      font-size: .875rem;
+      text-transform: none;
+    }
+  }
+}
+
 .menu.menu--sitemenu {
   > li {
     display: block;

@@ -345,6 +345,10 @@ $('document').ready(function($){
   ajaxMailChimpForm($('#mc-embedded-subscribe-form'), $('#mce-responses'));
 
 
+  $('.sitetoggler a').on('click', function(e) {
+     $('.topacc').foundation('up', $('#thetopcart'));
+  });
+
   $('.sitecart a').on('click', function(e) {
     e.preventDefault();
      $('.topacc').foundation('toggle', $('#thetopcart'));

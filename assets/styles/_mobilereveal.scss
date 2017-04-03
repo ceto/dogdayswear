@@ -1,0 +1,36 @@
+.mobilereveal {
+  padding:2rem 0 0;
+  max-width: 300px;
+  top: 3.125rem !important;
+  height: calc(100vh - 3.125rem);
+  min-height: calc(100vh - 3.125rem);
+  margin:0;
+}
+
+.mobilenav {
+  h3 {
+    line-height: 1;
+    font-size: .75rem;
+    text-transform: uppercase;
+    font-weight: $global-weight-extrabold;
+    padding:0 0 0 1rem;
+    margin:0 0 .75rem;
+  }
+}
+
+.reveal__footer {
+  font-weight: $global-weight-extrabold;
+  padding: 0 1rem 2rem;
+  text-align: center;
+  font-size: .75rem;
+  a {
+    color: $dark-gray;
+    &:hover, &:focus {
+      color:$body-font-color;
+    }
+  }
+
+}
+
+.reveal-overlay {
+}

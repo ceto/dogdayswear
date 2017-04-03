@@ -1,10 +1,14 @@
 .toprow {
   @include clearfix();
+  display: none;
   font-weight: $global-weight-extrabold;
   font-size: 75%;
   line-height: 1;
   border-bottom: 1px solid $ultralight-gray;
   padding: .5rem .666rem;
+  @include breakpoint(tablet) {
+    display: block;
+  }
   @include breakpoint(xlarge) {
     padding: .5rem 1.25rem;
 
@@ -71,9 +75,14 @@
 .siteheader {
   @include clearfix();
   position: relative;
+  z-index: $reveal-zindex+1;
   line-height: 1;
   border-bottom: 1px solid $ultralight-gray;
   padding: 0 .666rem;
+  background-color: $white;
+  @include breakpoint(tablet) {
+    z-index: 1;
+  }
   @include breakpoint(xlarge) {
     padding: 0 1.25rem;
 
@@ -102,11 +111,14 @@
 }
 
 .sitenav {
+  display: none;
   float: left;
+  @include breakpoint(tablet) {
+    display: block;
+  }
 }
 
-.sitecart, .siteacc {
-  float:right;
+.sitetoggler, .sitecart, .siteacc {
   position: relative;
   //background-color: $light-gray;
   display: block;
@@ -129,6 +141,25 @@
     left: .1666rem;
     top:.25rem;
   }
+}
+.sitetoggler {
+  position: relative;
+  z-index: $reveal-zindex+1;
+  float:left;
+  padding: 0;
+  margin-left: -.666rem;
+  margin-right: .25rem;
+  a {
+    display: block;
+    padding:.4rem .666rem .5rem;
+  }
+  @include breakpoint(tablet) {
+    display: none;
+  }
+}
+
+.sitecart, .siteacc {
+  float: right;
 }
 
 .bannerheader {

@@ -25,6 +25,7 @@ use Roots\Sage\Wrapper;
     <?php if (!is_checkout()) :?>
       <?php get_template_part('templates/footer'); ?>
     <?php endif; ?>
+    <?php get_template_part('templates/mobile','reveal'); ?>
 
 
 

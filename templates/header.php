@@ -1,7 +1,10 @@
 <header class="siteheader">
+    <div class="sitetoggler">
+      <a href="#mobilereveal" data-toggle="mobilereveal"><i class="icon icon--arrow-down-circle"></i></a>
+    </div>
     <a class="sitelogo" href="<?= esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
     <div class="sitecart">
-      <a href="<?php the_permalink(5); ?>"><i class="icon icon--cart"></i>
+      <a href="<?php the_permalink(5); ?>" data-close="mobilereveal"><i class="icon icon--cart"></i>
         <?= dd_cartcount(); ?>
       </a>
     </div>
