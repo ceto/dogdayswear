@@ -4,10 +4,7 @@
     <span class="callnow"><i class="icon icon--facebook"></i> <a href="mailto:hello@dogdayswear.com">hello@dogdayswear.com</a></span> | <span class="callnow"><i class="icon icon--phone"></i> <a href="tel:0036205954060">(+36) 20.595.4060</a></span>
   </div>
   <div class="toprow__sec">
-    <span class="callnow"><a href="#" data-toggle="help-dropdown"><?= __('Help','dd') ?> <i class="icon icon--chevron-down"></i></a></span>
-    <div class="dropdown-pane helpdropdown small bottom" id="help-dropdown" data-dropdown data-hover="true" data-hover-pane="true">
-       <?php wp_nav_menu(['theme_location' => 'shop_navigation', 'menu_class' => 'menu menu--help vertical']); ?>
-    </div>
+    <span class="callnow"><a href="#" data-toggle="help-dropdown"><?= __('Info & Help','dd') ?> <i class="icon icon--chevron-down"></i></a></span>
   </div>
 </aside>
 

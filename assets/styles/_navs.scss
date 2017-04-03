@@ -72,6 +72,17 @@
     }
   }
 }
+.menu--mobilemenu--tiny {
+  margin-bottom: 0;
+  li {
+    a {
+      padding: .875em  1.666rem;
+      font-size: .875rem;
+      text-transform: none;
+      border-bottom: none;
+    }
+  }
+}
 
 .menu.menu--sitemenu {
   > li {
