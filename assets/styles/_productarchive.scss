@@ -1,9 +1,25 @@
 /******* Filter NAv *****/
 .filternav {
+  margin-top: 2rem;
   border-bottom: 1px solid $ultralight-gray;
-  //border-top: 1px solid $light-gray;
+  border-top: 1px solid $ultralight-gray;
   //background-color: $ultralight-gray;
-  text-align: right;
+  text-align: left;
+  padding: 0 .666rem;
+  @include breakpoint(xlarge) {
+    padding: 0 1.25rem;
+  }
+}
+.filternav__title {
+  float:left;
+  margin:0;
+  padding:1.25rem .5rem 1rem;
+  font-size: .875rem;
+  color:inherit;
+  font-weight: $global-weight-extrabold;
+  background-color: $light-gray;
+  display: inline-block;
+  display: none;
 }
 .filterblock {
 
@@ -44,6 +60,7 @@
 }
 
 .filterblock--size {
+  float:right;
   ul li a {
     display: block;
     text-align: center;
@@ -64,7 +81,7 @@
   }
 }
 .colvariant--tiny {
-  margin:0 0 .5rem .5rem;
+  margin:0 .5rem .5rem 0;
   a {
     width:1.75rem;
     height:1.75rem;
@@ -97,9 +114,10 @@
 
 .filterreset {
   display: inline-block;
+  display: none;
   float:none;
   line-height: 1;
-  margin:1.5rem 0 0 3%;
+  margin:1.5rem 0 0 0;
   padding:0 0;
   vertical-align: top;
   color:$dark-gray;

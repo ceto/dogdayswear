@@ -32,10 +32,45 @@ if ( ! defined( 'ABSPATH' ) ) {
 	</div>
 </header> -->
 
+<?php //dynamic_sidebar('sidebar-primary'); ?>
 
-<nav class="filternav">
-	<div class="row container">
-		<div class="columns">
+<main class="main" role="main">
+	<div class="productbefore">
+		<?php
+			/**
+			 * woocommerce_before_main_content hook
+			 *
+			 * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
+			 * @hooked woocommerce_breadcrumb - 20
+			 */
+			do_action( 'woocommerce_before_main_content' );
+		?>
+	</div>
+
+
+	<header class="archiveheader">
+		<div class="row container text-center">
+			<div class="columns large-10 large-centered">
+				<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
+					<h1 class="pagetitle"><?php woocommerce_page_title(); ?></h1>
+				<?php endif; ?>
+        <?php get_template_part('templates/listersubnav' ); ?>
+
+				<?php
+					/**
+					 * woocommerce_archive_description hook
+					 *
+					 * @hooked woocommerce_taxonomy_archive_description - 10
+					 * @hooked woocommerce_product_archive_description - 10
+					 */
+					do_action( 'woocommerce_archive_description' )
+				?>
+
+			</div>
+		</div>
+
+	</header>
+		<nav class="filternav">
 			<?php
 				$filterreset = $_SERVER['REQUEST_URI'];
 				$filterreset = strtok($filterreset, '?');
@@ -75,50 +110,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 			    the_widget('WC_Widget_Layered_Nav', $wcargs, $args);
 
 			?>
-		</div>
-	</div>
-</nav>
+	</nav>
 
-
-<?php //dynamic_sidebar('sidebar-primary'); ?>
-
-<main class="main" role="main">
-	<div class="row container">
-		<div class="columns">
-			<?php
-				/**
-				 * woocommerce_before_main_content hook
-				 *
-				 * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
-				 * @hooked woocommerce_breadcrumb - 20
-				 */
-				do_action( 'woocommerce_before_main_content' );
-			?>
-		</div>
-	</div>
-
-	<header class="archiveheader">
-		<div class="row container text-center">
-			<div class="columns large-8 large-centered">
-				<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
-					<h1 class="pagetitle"><?php woocommerce_page_title(); ?></h1>
-				<?php endif; ?>
-        <?php get_template_part('templates/listersubnav' ); ?>
-
-				<?php
-					/**
-					 * woocommerce_archive_description hook
-					 *
-					 * @hooked woocommerce_taxonomy_archive_description - 10
-					 * @hooked woocommerce_product_archive_description - 10
-					 */
-					do_action( 'woocommerce_archive_description' )
-				?>
-
-			</div>
-		</div>
-
-	</header>
 
 	<?php if ( have_posts() ) : ?>
 	<div class="row container">
