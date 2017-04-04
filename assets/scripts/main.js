@@ -78,6 +78,78 @@
 
   $(document).foundation();
 
+
+
+  /**** SWATCHES ********/
+
+  //Takes a select object and parses it for its values and options
+  function parseSelect(selectObj) {
+    var select = $(selectObj);
+
+    var listObj = new Object();
+    listObj.classNames = 'swatchlist ' + select.attr('id');
+    listObj.originalSelect = 'pa_meret'; //Store our select object reference here
+
+    listObj.items = new Array();
+    select.children('option').each(function () {
+        var _element = $(this);
+        //Discard any empty values
+        if (_element.val() !== "") {
+            var item = {
+                'label': _element.text(),
+                'id': _element.val(),
+            };
+            listObj.items.push(item);
+        }
+    });
+    return listObj;
+  }
+
+  //Creates all the html needed and returns an element
+  function createSwatches(list) {
+      var html;
+      var div = $(document.createElement('div')).addClass('swatch-wrapper');
+      var element = $(document.createElement('ul'));
+      element.addClass(list.classNames);
+      element.attr('data-original-select', list.originalSelect);
+
+      for (var i = 0; i < list.items.length; i++) {
+          var list_item = document.createElement('li');
+          $(list_item).append(document.createElement('a'));
+          $(list_item).children('a').attr('id',list.items[i]['id']);
+          $(list_item).children('a').attr('title', list.items[i]['label']);
+          $(list_item).children('a').text(list.items[i]['label']);
+          element.append(list_item);
+
+          div.append(element);
+          html = div;
+      }
+      return html;
+  }
+
+  function swatchSelected(list_item) {
+    if ($(list_item).attr('id') !== undefined) {
+        var _select = $(list_item).parents('ul').attr('data-original-select');
+        $('#' + _select).val($(list_item).attr('id')).change();
+        $(list_item).parent().addClass('actual').siblings().removeClass('actual');
+    }
+  }
+
+  var selectObj = document.getElementById('pa_meret');
+  $(selectObj).css('position', 'absolute').css('left', '-99999px'); //Remember I don't like hiding elements?
+  var listObject = parseSelect(selectObj);
+  var swatchSelector = createSwatches(listObject);
+
+  //Add our swatchSelector before the select, essentially replaces the select with our new swatch selector while hiding the old one
+  $(selectObj).before(swatchSelector);
+
+  $('.swatch-wrapper').on('click', 'a', function (e) {
+    swatchSelected(this);
+  });
+
+
+  /***** EOF SWATCHES ****/
+
   var $grid = $('.lookbookgrid').isotope({
     itemSelector: '.grid-item',
     percentPosition: true,
@@ -384,11 +456,7 @@ $('document').ready(function($){
       });
 
   });
-  // var $modal = $('#sizemodal');
-  // $.ajax('/dd/vasarlasi-informaciok/merettablazat/')
-  //   .done(function(resp){
-  //     $modal.html(resp.html).foundation('open');
-  // });
+
 
   });
 

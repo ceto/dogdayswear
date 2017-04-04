@@ -113,13 +113,10 @@
   @include clearfix();
 }
 .variations__item {
-  //width:48.75%;
+
   width:100%;
-  max-width: 14rem;
-  float:left;
-  &:nth-of-type(2n) {
-    float:right;
-  }
+
+
 
   select {
     margin-bottom: .25rem;
@@ -241,7 +238,45 @@
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi){ background-image: url('../images/colors/leaf@2x.jpg'); }
 }
 
+.swatch-wrapper {
 
+}
+.swatchlist {
+  margin:0;
+  padding: 0;
+  list-style-type: none;
+  > li {
+  //float:left;
+  display: inline-block;
+  margin:.333rem .333rem .333rem .333rem;
+  a {
+    display: block;
+    width:2.5rem;
+    height:2.5rem;
+    overflow: hidden;
+    border:1px solid $medium-gray;
+
+    padding:2px;
+    background-color: $ultralight-gray;
+    font-size: 1.125rem;
+    line-height: 2.25rem;
+    color:$dark-gray;
+    text-align: center;
+    &:hover, &:focus {
+      border-color: $secondary-color;
+      color: $secondary-color;
+    }
+    @include breakpoint(xlarge) {
+      //width:3.666rem;
+      //height:3.666rem;
+    }
+  }
+  &.actual a {
+    border-color: $primary-color;
+  }
+
+}
+}
 
 
 .woocommerce-variation-availability {
