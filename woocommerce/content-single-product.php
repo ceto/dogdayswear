@@ -52,7 +52,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 						 * @hooked woocommerce_show_product_images - 20
 						 */
 						do_action( 'woocommerce_before_single_product_summary' );
-
 					?>
 				</div>
 				<div class="columns medium-5 large-6">
@@ -96,7 +95,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<meta itemprop="url" content="<?php the_permalink(); ?>" />
 
 	<footer class="productfooter">
-	<?php do_action( 'woocommerce_after_single_product' ); ?>
+		<?php do_action( 'woocommerce_after_single_product' ); ?>
 	</footer>
 </div><!-- #product-<?php the_ID(); ?> -->
 

@@ -58,6 +58,15 @@ li {
   margin-bottom: .5em
 }
 
+.sectitle {
+  //text-align: center;
+  font-size: .875rem;
+  font-weight: $global-weight-bold;
+  color:$dark-gray;
+  //border-bottom: 1px solid $light-gray;
+  //padding: 0 0 .5em 0;
+  margin: 0 0 0;
+}
 .blocktitle {
   @include breakpoint(medium) {
     font-size: 3rem;

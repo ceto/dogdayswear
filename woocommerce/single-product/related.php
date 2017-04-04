@@ -43,14 +43,11 @@ $woocommerce_loop['columns'] = $columns;
 if ( $products->have_posts() ) : ?>
 
 	<aside class="productrelated">
-		<div class="row container">
-			<div class="columns">
-				<h2 class="cartitle">
+				<h2 class="sectitle">
 					<?php // _e( 'Related Products', 'woocommerce' ); ?>
 					<?php _e( 'You may also like&hellip;', 'woocommerce' ) ?>
 				</h2>
-			</div>
-		</div>
+
     <div class="row container fullwidth">
       <div class="columns">
         <div class="prod-carousel owl-carousel">

@@ -27,3 +27,14 @@
     }
   }
 }
+
+
+/* fade */
+.owl-fade-out {
+  animation: fadeOut .2s both ease !important;
+  animation-delay: .3s !important;
+}
+.owl-fade-in {
+  animation: fadeIn .2s both ease !important;
+  animation-delay: .3s !important;
+}

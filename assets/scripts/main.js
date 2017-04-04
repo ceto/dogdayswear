@@ -127,23 +127,35 @@ $('document').ready(function($){
     //$.ajax( $fragment_refresh );
   });
 
-  /*** Thumbnail Carousel on Single product Page ***/
-  var prodthumbsOwl = $('.prodthumbs');
 
-  prodthumbsOwl.owlCarousel({
+  /*** Thumbnail Carousel on Catalog Item ***/
+  $('.catalogthumbs').owlCarousel({
+    pagination: false,
+    navigation : false,
+    singleItem : true,
+    transitionStyle : 'fade'
+  });
+
+  $('.prcard__thumb').on('mouseenter', '.catalogthumbs', function(event) {
+    $(this).data('owlCarousel').next();
+  }).on('mouseleave', '.catalogthumbs', function(event) {
+    $(this).data('owlCarousel').prev();
+  });
+
+
+  /*** Thumbnail Carousel on Single product Page ***/
+  $('.prodthumbs').owlCarousel({
     pagination:false,
     navigation : false,
 
-    items : 4, //10 items above 1000px browser width
-    itemsDesktop : [1024,3], //5 items between 1000px and 901px
-    itemsDesktopSmall : [768,3], // betweem 900px and 601px
-    itemsTablet: [480,3], //2 items between 480 and 0
+    items : 6, //10 items above 1000px browser width
+    itemsDesktop : [1024,6], //5 items between 1000px and 901px
+    itemsDesktopSmall : [768,6], // betweem 900px and 601px
+    itemsTablet: [480,5], //2 items between 480 and 0
     itemsMobile : false // itemsMobile disabled - inherit from itemsTablet option
   });
 
-  var prodOwl = $('.prod-carousel');
-
-  prodOwl.owlCarousel({
+  $('.prod-carousel').owlCarousel({
     pagination:false,
     navigation : false,
 
@@ -205,6 +217,7 @@ $('document').ready(function($){
   $('.woocommerce-main-image').zoom({
       url: $('.woocommerce-main-image').attr('href'),
       magnify: 0.75,
+      touch: false
    });
 
   $('.prodthumbs .item a').on('click', function(e) {

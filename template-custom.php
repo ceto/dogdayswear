@@ -21,7 +21,7 @@
         <div class="columns tablet-3">
           <?php get_template_part('templates/sidebar','page'); ?>
         </div>
-        <div class="columns tablet-9 xlarge-8">
+        <div class="columns tablet-9">
           <header class="sidedhead">
             <h1 class="pagetitle"><?= Titles\title(); ?></h1>
           </header>

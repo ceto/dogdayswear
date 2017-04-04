@@ -23,11 +23,17 @@ $args = apply_filters( 'woocommerce_related_products_args', array(
   'posts_per_page'       => 0,
   'orderby'              => 'name',
   'order'                => 'ASC',
-  'meta_key'             => '_sku',
-  'meta_value'           => $actclmeta,
-  'meta_compare'          => 'LIKE'
-  //'post__in'             => $related,
-  //'post__not_in'         => array( $product->id )
+  'meta_query' => array(
+    array(
+        'key' => '_sku',
+        'value' => $actclmeta,
+        'compare' => 'LIKE'
+    ),
+    array(
+        'key' => '_stock_status',
+        'value' => 'instock'
+    )
+  )
 ) );
 
 $relproducts = new WP_Query( $args );

@@ -76,6 +76,12 @@ add_filter( 'woocommerce_after_widget_product_list', 'dd_woocommerce_after_widge
 
 
 /*** Product Loop Item Mods *****/
+/**
+  * woocommerce_before_shop_loop_item_title hook
+  *
+  * @hooked woocommerce_show_product_loop_sale_flash - 10
+  * @hooked woocommerce_template_loop_product_thumbnail - 10
+  */
 
 // Akciós label átrakva az név után elé
 remove_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_show_product_loop_sale_flash', 10);
@@ -113,11 +119,11 @@ add_action( 'woocommerce_before_single_product', 'woocommerce_show_product_sale_
  * @hooked woocommerce_template_single_sharing - 50
  */
 
-remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 5);
-add_action( 'woocommerce_before_single_product', 'woocommerce_template_single_title', 10 );
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10);
+add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 7 );
 
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20);
-add_action( 'woocommerce_before_single_product', 'woocommerce_template_single_excerpt', 15 );
+add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 6 );
 
 remove_action( 'woocommerce_before_single_product', 'wc_print_notices', 10);
 add_action( 'woocommerce_before_main_content', 'wc_print_notices', 25 );
@@ -125,25 +131,35 @@ add_action( 'woocommerce_before_main_content', 'wc_print_notices', 25 );
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15);
 add_action( 'woocommerce_after_single_product', 'woocommerce_upsell_display', 15);
 
-remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20);
-add_action( 'woocommerce_after_single_product', 'woocommerce_output_related_products', 20);
+//remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20);
+//add_action( 'woocommerce_after_single_product', 'woocommerce_output_related_products', 20);
 
+
+
+/** productaddinfo block
+ * woocommerce_after_single_product_summary hook
+ *
+ * @hooked woocommerce_output_product_data_tabs - 10
+ * @hooked woocommerce_upsell_display - 15
+ * @hooked woocommerce_output_related_products - 20
+ */
 
 /****** Remove some tabs on product Page ****/
-
 add_filter( 'woocommerce_product_tabs', 'dd_remove_product_tabs', 98 );
 function dd_remove_product_tabs( $tabs ) {
     unset( $tabs['description'] );        // Remove the description tab
     //unset( $tabs['reviews'] );      // Remove the reviews tab
-    unset( $tabs['additional_information'] );   // Remove the additional information tab
+    //unset( $tabs['additional_information'] );   // Remove the additional information tab
     return $tabs;
 }
+remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10);
+
 
 /*** Move long description under to prod summary ***/
 function dd_template_product_description() {
   wc_get_template( 'single-product/tabs/description.php' );
 }
-add_action( 'woocommerce_single_product_summary', 'dd_template_product_description', 5 );
+add_action( 'woocommerce_single_product_summary', 'dd_template_product_description', 7 );
 
 
 

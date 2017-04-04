@@ -20,5 +20,6 @@ global $post;
 <?php /* if ( $heading ): ?>
   <h2><?php echo $heading; ?></h2>
 <?php endif; */ ?>
-
-<?php the_content(); ?>
+<div class="productlongdesc">
+  <?php the_content(); ?>
+</div>
