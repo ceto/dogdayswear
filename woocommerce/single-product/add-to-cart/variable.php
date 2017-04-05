@@ -30,9 +30,12 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 		<p class="stock out-of-stock"><?php _e( 'This product is currently out of stock and unavailable.', 'woocommerce' ); ?></p>
 	<?php else : ?>
 
-		<?php wc_get_template_part( 'single-product/add-to-cart/color', 'variations' ); ?>
 
 		<div class="variations">
+			<div class="variations__item">
+				<?php wc_get_template_part( 'single-product/add-to-cart/color', 'variations' ); ?>
+			</div>
+
 			<?php foreach ( $attributes as $attribute_name => $options ) : ?>
 				<div class="variations__item">
 					<label for="<?php echo sanitize_title( $attribute_name ); ?>"><?php echo wc_attribute_label( $attribute_name ); ?></label>
@@ -50,7 +53,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 				<?php woocommerce_quantity_input( array( 'input_value' => isset( $_POST['quantity'] ) ? wc_stock_amount( $_POST['quantity'] ) : 1 ) ); ?>
 			</div> -->
 		</div>
-		<p><small><a class="linktosizetable" href="<?= get_the_permalink(554) ?> "><?= __('Mérettáblázat','dd'); ?></a></small></p>
+		<p class="sizehelper"><a class="linktosizetable" href="<?= get_the_permalink(554) ?> "><?= __('Mérettáblázat','dd'); ?></a></p>
 			<div class="reveal" id="sizemodal" data-reveal>
 			  <h2>Mérettáblázat</h2>
 			  <button class="close-button" data-close aria-label="Close modal" type="button">

@@ -40,10 +40,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		</header>
 
-		<section class="productessence ps">
+		<section id="productessence" class="productessence">
 
 			<div class="row container">
-				<div class="columns medium-7 large-6">
+				<div class="columns medium-7 tablet-7 large-7 xlarge-7">
 					<?php
 						/**
 						 * woocommerce_before_single_product_summary hook
@@ -54,27 +54,29 @@ if ( ! defined( 'ABSPATH' ) ) {
 						do_action( 'woocommerce_before_single_product_summary' );
 					?>
 				</div>
-				<div class="columns medium-5 large-6">
-					<div class="productsummary">
-						<?php
-							/**
-							 * woocommerce_single_product_summary hook
-							 *
-							 * @hooked woocommerce_template_single_title - 5
-							 * @hooked woocommerce_template_single_rating - 10
-							 * @hooked woocommerce_template_single_price - 10
-							 * @hooked woocommerce_template_single_excerpt - 20
-							 * @hooked woocommerce_template_single_add_to_cart - 30
-							 * @hooked woocommerce_template_single_meta - 40
-							 * @hooked woocommerce_template_single_sharing - 50
-							 */
-							do_action( 'woocommerce_single_product_summary' );
-						?>
-					</div><!-- .productsummary -->
+				<div class="columns medium-5 tablet-5 large-5 xlarge-5" data-sticky-container>
+					<div class="sticky" data-sticky data-top-anchor="productessence:top" data-btm-anchor="productessence:bottom" data-margin-top="5" adata-margin-bottom="15" data-sticky-on="tablet" data-check-every="0">
+						<div class="productsummary">
+							<?php
+								/**
+								 * woocommerce_single_product_summary hook
+								 *
+								 * @hooked woocommerce_template_single_title - 5
+								 * @hooked woocommerce_template_single_rating - 10
+								 * @hooked woocommerce_template_single_price - 10
+								 * @hooked woocommerce_template_single_excerpt - 20
+								 * @hooked woocommerce_template_single_add_to_cart - 30
+								 * @hooked woocommerce_template_single_meta - 40
+								 * @hooked woocommerce_template_single_sharing - 50
+								 */
+								do_action( 'woocommerce_single_product_summary' );
+							?>
+						</div><!-- .productsummary -->
+					</div>
 				</div>
 			</div>
 		</section>
-		<section class="productaddinfo">
+		<section id="productaddinfo" class="productaddinfo">
 			<div class="row container">
 				<div class="columns">
 					<?php

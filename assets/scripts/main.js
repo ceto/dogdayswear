@@ -90,7 +90,7 @@
     listObj.classNames = 'swatchlist ' + select.attr('id');
     listObj.originalSelect = 'pa_meret'; //Store our select object reference here
 
-    listObj.items = new Array();
+    listObj.items = [];
     select.children('option').each(function () {
         var _element = $(this);
         //Discard any empty values
@@ -98,6 +98,8 @@
             var item = {
                 'label': _element.text(),
                 'id': _element.val(),
+                'disabled': _element[0].hasAttribute('disabled'),
+                'selected': (_element.val()===select.val())
             };
             listObj.items.push(item);
         }
@@ -116,9 +118,15 @@
       for (var i = 0; i < list.items.length; i++) {
           var list_item = document.createElement('li');
           $(list_item).append(document.createElement('a'));
-          $(list_item).children('a').attr('id',list.items[i]['id']);
-          $(list_item).children('a').attr('title', list.items[i]['label']);
-          $(list_item).children('a').text(list.items[i]['label']);
+          $(list_item).children('a').attr('id',list.items[i].id);
+          $(list_item).children('a').attr('title', list.items[i].label);
+          $(list_item).children('a').text(list.items[i].label);
+          if (list.items[i].disabled) {
+            $(list_item).addClass('disabled');
+          }
+          if (list.items[i].selected) {
+            $(list_item).addClass('actual');
+          }
           element.append(list_item);
 
           div.append(element);
@@ -136,16 +144,21 @@
   }
 
   var selectObj = document.getElementById('pa_meret');
-  $(selectObj).css('position', 'absolute').css('left', '-99999px'); //Remember I don't like hiding elements?
-  var listObject = parseSelect(selectObj);
-  var swatchSelector = createSwatches(listObject);
+  //$(selectObj).css('position', 'absolute').css('left', '-99999px'); //Remember I don't like hiding elements?
 
-  //Add our swatchSelector before the select, essentially replaces the select with our new swatch selector while hiding the old one
-  $(selectObj).before(swatchSelector);
+  setTimeout(function(){
+      var listObject = parseSelect(selectObj);
+      var swatchSelector = createSwatches(listObject);
+      $(selectObj).before(swatchSelector);
+      $('.swatch-wrapper').on('click', 'a', function (e) {
+        if (!$(this).parent().hasClass('disabled')) {
+          swatchSelected(this);
+        }
+      });
 
-  $('.swatch-wrapper').on('click', 'a', function (e) {
-    swatchSelected(this);
-  });
+  }, 1000);
+
+
 
 
   /***** EOF SWATCHES ****/

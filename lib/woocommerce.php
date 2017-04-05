@@ -105,7 +105,7 @@ add_action( 'woocommerce_shop_loop_item_title', 'woocommerce_show_product_loop_s
  * @hooked woocommerce_show_product_images - 20
  */
 remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_sale_flash', 10);
-add_action( 'woocommerce_before_single_product', 'woocommerce_show_product_sale_flash', 20 );
+add_action( 'woocommerce_single_product_summary', 'woocommerce_show_product_sale_flash', 4 );
 
 /**
  * woocommerce_single_product_summary hook
@@ -160,6 +160,19 @@ function dd_template_product_description() {
   wc_get_template( 'single-product/tabs/description.php' );
 }
 add_action( 'woocommerce_single_product_summary', 'dd_template_product_description', 7 );
+
+
+
+
+
+
+
+add_filter( 'woocommerce_variation_is_active', 'dd_grey_out_variations_when_out_of_stock', 10, 2 );
+function dd_grey_out_variations_when_out_of_stock( $grey_out, $variation ) {
+    if ( ! $variation->is_in_stock() )
+        return false;
+    return true;
+}
 
 
 
