@@ -125,8 +125,8 @@ add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_p
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20);
 add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 6 );
 
-remove_action( 'woocommerce_before_single_product', 'wc_print_notices', 10);
-add_action( 'woocommerce_before_main_content', 'wc_print_notices', 25 );
+//remove_action( 'woocommerce_before_single_product', 'wc_print_notices', 10);
+//add_action( 'woocommerce_before_main_content', 'wc_print_notices', 25 );
 
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15);
 add_action( 'woocommerce_after_single_product', 'woocommerce_upsell_display', 15);

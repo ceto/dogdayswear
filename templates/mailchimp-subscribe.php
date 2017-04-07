@@ -1,4 +1,4 @@
-<aside class="ps ps--kispad darkblock csimpi">
+<aside class="ps ps--kispad csimpi">
   <div class="row container">
     <div class="columns medium-8 medium-centered large-12">
       <div class="row">

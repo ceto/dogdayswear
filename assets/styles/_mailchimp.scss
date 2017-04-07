@@ -1,6 +1,7 @@
 .csimpi {
-  border-top:1px solid rgba(#000,1);
-  border-bottom:1px solid rgba(#000,.25);
+  background-color:$ultralight-gray;
+  border-top: 1px solid $light-gray;
+  border-bottom:1px solid $light-gray;
   h2 {
     margin-bottom: .0875em;
     font-size: 1.5rem;
