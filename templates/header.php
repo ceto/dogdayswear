@@ -1,4 +1,5 @@
-<header class="siteheader">
+<div data-sticky-container>
+  <header id="siteheader" class="siteheader sticky" data-sticky data-margin-top="0" data-top-anchor="document:top" data-data-sticky-on="small" data-check-every="0">
     <div class="sitetoggler">
       <a href="#mobilereveal" data-toggle="mobilereveal"><i class="icon icon--arrow-down-circle"></i></a>
     </div>
@@ -14,6 +15,5 @@
     <nav class="sitenav">
       <?php wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'menu menu--sitemenu']); ?>
     </nav>
-
-</header>
-
+  </header>
+</div>

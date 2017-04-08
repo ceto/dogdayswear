@@ -1,11 +1,16 @@
 /******* Filter NAv *****/
 .filternav {
-  margin-top: 2rem;
+  //margin-top: 2rem;
   border-bottom: 1px solid $ultralight-gray;
-  border-top: 1px solid $ultralight-gray;
+  //border-top: 1px solid $ultralight-gray;
   //background-color: $ultralight-gray;
+  background-color: rgba($white,.97);
   text-align: left;
   padding: 0 .666rem;
+  width: 100%;
+  &.is-stuck {
+    box-shadow: 0 0 .25rem 0 rgba(#000,.05);
+  }
   @include breakpoint(xlarge) {
     padding: 0 1.25rem;
   }

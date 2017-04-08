@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 <?php //get_template_part('templates/promorow'); ?>
-<!-- <header class="bannerheader">
+<header class="bannerheader">
 	<div class="row container collapse">
 		<div class="columns">
 			<div class="bannerheader__ill">
@@ -30,11 +30,54 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</div>
 		</div>
 	</div>
-</header> -->
+</header>
 
 <?php //dynamic_sidebar('sidebar-primary'); ?>
 
 <main class="main" role="main">
+	<div data-sticky-container>
+		<nav id="filternav" class="filternav">
+				<?php
+					$filterreset = $_SERVER['REQUEST_URI'];
+					$filterreset = strtok($filterreset, '?');
+					$cre = "/filter_szin=[\d]*[%2C]*[,]*[\d]*[&]*/";
+					$sre = "/filter_meret=[\d]*[%2C]*[,]*[\d]*[&]*/";
+					$colorreseturl=preg_replace($cre,'',$_SERVER['REQUEST_URI']);
+					$sizereseturl=preg_replace($sre,'',$_SERVER['REQUEST_URI']);
+				?>
+				<a href="<?= $colorreseturl; ?>" class="filterreset">Összes szín</a>
+				<?php
+				    $args = array(
+	            'before_widget' => '<div class="filterblock filterblock--colors %1$s">',
+	            'after_widget' => '</div>',
+	          	'before_title'  => '<h3 class="filterblock__title">',
+	    				'after_title'   => '</h3>'
+	          );
+				    $wcargs =array (
+				    	'title' => __('Szín','dd'),
+				      'attribute' => 'szin',
+				      'query_type' => 'or'
+				    );
+				    the_widget('WC_Widget_Layered_Nav', $wcargs, $args);
+				  ?>
+				  <a href="<?= $sizereseturl; ?>" class="filterreset">Minden méret</a>
+				  <?php
+				    $args = array(
+	            'before_widget' => '<div class="filterblock filterblock--size %1$s">',
+	            'after_widget' => '</div>',
+	          	'before_title'  => '<h3 class="filterblock__title">',
+	    				'after_title'   => '</h3>'
+	          );
+				    $wcargs =array (
+				    	'title' => __('Méret','dd'),
+				      'attribute' => 'meret',
+				      'query_type' => 'and'
+				    );
+				    the_widget('WC_Widget_Layered_Nav', $wcargs, $args);
+
+				?>
+		</nav>
+	</div>
 	<div class="productbefore">
 		<?php
 			/**
@@ -70,47 +113,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		</div>
 
 	</header>
-		<nav class="filternav">
-			<?php
-				$filterreset = $_SERVER['REQUEST_URI'];
-				$filterreset = strtok($filterreset, '?');
-				$cre = "/filter_szin=[\d]*[%2C]*[,]*[\d]*[&]*/";
-				$sre = "/filter_meret=[\d]*[%2C]*[,]*[\d]*[&]*/";
-				$colorreseturl=preg_replace($cre,'',$_SERVER['REQUEST_URI']);
-				$sizereseturl=preg_replace($sre,'',$_SERVER['REQUEST_URI']);
-			?>
-			<a href="<?= $colorreseturl; ?>" class="filterreset">Összes szín</a>
-			<?php
-			    $args = array(
-            'before_widget' => '<div class="filterblock filterblock--colors %1$s">',
-            'after_widget' => '</div>',
-          	'before_title'  => '<h3 class="filterblock__title">',
-    				'after_title'   => '</h3>'
-          );
-			    $wcargs =array (
-			    	'title' => __('Szín','dd'),
-			      'attribute' => 'szin',
-			      'query_type' => 'or'
-			    );
-			    the_widget('WC_Widget_Layered_Nav', $wcargs, $args);
-			  ?>
-			  <a href="<?= $sizereseturl; ?>" class="filterreset">Minden méret</a>
-			  <?php
-			    $args = array(
-            'before_widget' => '<div class="filterblock filterblock--size %1$s">',
-            'after_widget' => '</div>',
-          	'before_title'  => '<h3 class="filterblock__title">',
-    				'after_title'   => '</h3>'
-          );
-			    $wcargs =array (
-			    	'title' => __('Méret','dd'),
-			      'attribute' => 'meret',
-			      'query_type' => 'and'
-			    );
-			    the_widget('WC_Widget_Layered_Nav', $wcargs, $args);
 
-			?>
-	</nav>
 
 
 	<?php if ( have_posts() ) : ?>

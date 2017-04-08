@@ -40,6 +40,11 @@ function setup() {
     'side_navigation' => __('Sidebar Navigation on Pages', 'sage')
   ]);
 
+  register_nav_menus([
+    'footer_navigation' => __('Footer Navigation', 'sage')
+  ]);
+
+
   // Enable post thumbnails
   // http://codex.wordpress.org/Post_Thumbnails
   // http://codex.wordpress.org/Function_Reference/set_post_thumbnail_size

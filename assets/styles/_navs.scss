@@ -64,6 +64,7 @@
 }
 
 
+
 .menu--mobilemenu--small {
   li {
     a {
@@ -84,6 +85,19 @@
   }
 }
 
+.menu.menu--footermenu {
+  > li {
+    > a {
+      font-size: .75rem;
+      padding: .333em  0;
+      //color:$dark-gray;
+      //text-transform: uppercase;
+      &:hover, &:focus {
+        text-decoration: underline;
+      }
+    }
+  }
+}
 .menu.menu--sitemenu {
   > li {
     display: block;
@@ -117,7 +131,8 @@
       width:100vw;
       border-top:1px solid $light-gray;
       border-bottom:1px solid $light-gray;
-      background-color: $ultralight-gray;
+      background-color: rgba($white,.97);
+      box-shadow: 0 .125rem .25rem -.125rem rgba(#000,.05);
 
       > li {
         display: inline-block;
@@ -131,7 +146,7 @@
           font-weight: $global-weight-bold;
           padding: .875em .875em;
           &:hover, &:focus {
-            background-color: $light-gray;
+            background-color: $ultralight-gray;
           }
         }
 

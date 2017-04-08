@@ -3,13 +3,14 @@
 }
 
 .sitefooter {
-  padding: 4rem 0 2rem;
+  padding: 4rem 0 0;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   //background-image: url('../images/footer_bg.jpg');
   //background-color: $ultralight-gray;
 }
+
 
 .bottomblock {
   position: relative;
@@ -73,7 +74,13 @@ img.flogo {
     }
   }
 }
-
+.footernav {
+  h3 {
+    font-size: 1rem;
+    font-weight: $global-weight-bold;
+    text-transform: uppercase;
+  }
+}
 .copyright {
   font-size: .75rem;
 }
@@ -86,5 +93,24 @@ img.flogo {
     &:hover, &:focus {
       color:$white;
     }
+  }
+}
+
+
+.sitefooter__mini {
+  @include clearfix();
+  background-color: $ultralight-gray;
+  border-top: 1px solid $light-gray;
+  padding:1rem 0;
+  @include breakpoint('tablet') {
+    padding:0;
+  }
+
+  p {
+    margin:1rem 0;
+  }
+  .foneline {
+    height:1.25rem;
+    margin:1rem 0 0;
   }
 }

@@ -79,12 +79,16 @@
 }
 .siteheader {
   @include clearfix();
+  width: 100%;
   position: relative;
   z-index: $reveal-zindex+1;
   line-height: 1;
   border-bottom: 1px solid $ultralight-gray;
   padding: 0 .666rem;
-  background-color: $white;
+  background-color: rgba($white,.97);
+  &.is-stuck {
+    box-shadow: 0 0 .25rem 0 rgba(#000,.05);
+  }
   @include breakpoint(tablet) {
     z-index: 1;
   }
@@ -92,6 +96,8 @@
     padding: 0 1.25rem;
 
   }
+
+
 }
 
 
@@ -103,7 +109,7 @@
 
   width: 7.125rem;
   height: 2rem;
-  margin: .666rem 1.25rem 0 0;
+  margin: .5666rem 1.25rem 0 0;
 
 
   white-space: nowrap;
