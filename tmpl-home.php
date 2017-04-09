@@ -5,7 +5,7 @@
 ?>
 <header class="hero hero--home" role="banner" data-magellan data-threshold="0">
   <div class="row container">
-    <div class="columns medium-10 medium-centered large-centered large-10 xlarge-8 xxlarge-6">
+    <div class="columns medium-10 medium-centered">
       <div class="hero__content">
           <h1 class="hero__title">Jóga és sportruházat a legizzasztóbb mozgásformákhoz.</h1>
           <a href="<?= get_permalink( woocommerce_get_page_id( 'shop' ) )?>" class="hero__more button">Shop</a>

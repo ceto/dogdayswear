@@ -44,7 +44,8 @@
 }
 
 .hero--home {
-  background-image: url('../images/hero.jpg');
+  background-image: url('../images/hero2.jpg');
+  background-position: left center;
 }
 
 .hero__more {
@@ -53,10 +54,11 @@
 }
 
 .hero__title {
-  color:$white;
+  color:$body-font-color;
   //font-weight: $global-weight-bold;
   margin-top: 0;
   //text-transform: uppercase;
+  text-shadow: 0 0 .125rem rgba(#fff, .75);
   @include breakpoint(medium) {
     font-size: 2.5rem;
   }
