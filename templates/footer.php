@@ -44,7 +44,7 @@
         </div>
         <div class="columns tablet-12 large-3">
           <?php get_template_part('templates/mailchimp','subscribe-small' ); ?>
-                  <img class="fslogan" src="<?= get_stylesheet_directory_uri(); ?>/dist/images/slogan_2line-footer.svg" alt="Don't fear the sweat">
+          <img class="fslogan" src="<?= get_stylesheet_directory_uri(); ?>/dist/images/slogan_2line-footer.svg" alt="Don't fear the sweat">
         </div>
       </div>
     </div>
