@@ -68,8 +68,12 @@ body {
 }
 
 .lightblock {
-  background-color: #eaeaea;
+  background-color: $ultralight-gray;
 }
+.whiteblock {
+  background-color: #fff;
+}
+
 .inverseblock {
   background-color: $primary-color;
   color:#fff;
@@ -242,14 +246,14 @@ body {
 }
 
 .imadunk {
-  font-weight:$global-weight-bold;
-  opacity: .666;
+  //font-weight:$global-weight-bold;
+  //opacity: .666;
   margin-top: 1.333rem;
-  font-size: 1.125rem;
+  //font-size: 1.125rem;
   line-height: 1.75;
   margin-bottom: 0;
   @include breakpoint(tablet) {
-    font-size: 1.25rem;
+    //font-size: 1.25rem;
     margin-top: 2%;
     margin-left: 2rem;
   }

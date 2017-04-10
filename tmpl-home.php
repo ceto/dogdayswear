@@ -17,10 +17,13 @@
 <?php get_template_part('templates/promorow'); ?>
 
 <main id="main" class="main" role="main" data-magellan-target="main">
-  <section class="ps inverseblock">
+
+  <?php get_template_part('templates/block', 'featprods' ); ?>
+
+  <section class="ps whiteblock home__dontfearblock">
     <div class="row container">
       <div class="columns medium-4 large-4">
-        <img class="slog2" src="<?= get_stylesheet_directory_uri(); ?>/dist/images/slogan_2line.svg" alt="Don't fear the sweat">
+        <img class="slog2" src="<?= get_stylesheet_directory_uri(); ?>/dist/images/slogan_2line-footer.svg" alt="Don't fear the sweat">
       </div>
       <div class="columns medium-8 large-8">
           <div class="imadunk"><?= apply_filters('the_content', get_post_meta( get_the_ID(), 'home_dontfear', TRUE ) ); ?></div>
@@ -29,7 +32,7 @@
   </section>
 
 
-  <section class="featblock">
+  <section class="featblock whiteblock">
     <div class="row container">
       <div class="columns medium-4 large-6">
         <figure class="featblock__ill">
@@ -47,9 +50,8 @@
     </div>
   </section>
 
-  <?php get_template_part('templates/block', 'featprods' ); ?>
 
-  <section class="ps grayblock looksec">
+  <section class="ps whiteblock looksec">
     <div class="row container">
       <div class="columns medium-6 medium-centered text-center">
         <h2 class="blocktitle">Galéria</h2>
@@ -84,7 +86,7 @@
 
 
 
-  <section class="featblock featblock--taska ainverseblock">
+  <section class="featblock featblock--taska whiteblock">
     <div class="row container">
       <div class="columns medium-4 large-6">
         <figure class="featblock__ill">

@@ -1,9 +1,9 @@
 <?php //get_template_part('templates/mailchimp','subscribe' ); ?>
-<footer class="sitefooter">
+<footer class="sitefooter whiteblock">
   <?php if (!is_checkout()) :?>
     <div class="sitefooter__great">
       <div class="row container">
-        <div class="columns tablet-6">
+        <div class="columns tablet-8 large-6">
           <div class="row">
             <div class="columns small-6">
               <nav class="footernav">
@@ -19,9 +19,9 @@
             </div>
           </div>
         </div>
-        <div class="columns tablet-6 large-3">
+        <div class="columns tablet-4 large-3">
           <div class="row">
-              <div class="columns small-6 large-12">
+              <div class="columns small-6 tablet-12">
                 <nav class="footernav">
                   <h3><? _e('Contact','dd') ?></h3>
                   <ul class="menu menu--footermenu vertical">
@@ -31,7 +31,7 @@
                   </ul>
                 </nav>
               </div>
-              <div class="columns small-6 large-12">
+              <div class="columns small-6 tablet-12">
                 <nav class="footernav">
                   <h3><? _e('You can find us','dd') ?></h3>
                   <ul class="menu menu--footermenu vertical">
