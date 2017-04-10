@@ -22,9 +22,8 @@ use Roots\Sage\Wrapper;
         <?php include Wrapper\sidebar_path(); ?>
       <?php endif; */ ?>
     </div><!-- /.document -->
-    <?php if (!is_checkout()) :?>
-      <?php get_template_part('templates/footer'); ?>
-    <?php endif; ?>
+    <?php get_template_part('templates/footer'); ?>
+
     <?php get_template_part('templates/mobile','reveal'); ?>
 
 

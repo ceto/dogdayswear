@@ -259,6 +259,7 @@
     background-clip: content-box;
     font-size: 0;
     color:transparent;
+    cursor: pointer;
     &:hover, &:focus {
       border-color: $secondary-color;
     }

@@ -51,7 +51,7 @@ if ( $relproducts->have_posts() ) : ?>
           $cl = array_shift( wc_get_product_terms( get_the_id(), 'pa_szin', array( 'fields' => 'names' ) ) );
         ?>
         <li class="colvariant colvariant--<?= sanitize_title($cl); ?><?= ($product->id==get_the_id())?' actual':''; ?>">
-          <a href="<?php the_permalink(); ?>"><? echo $cl; ?></a>
+          <a href="<?php the_permalink(); ?>" title="<?= $cl; ?>" data-tooltip aria-haspopup="true" tabindex="1" data-v-offset="7" class="has-tooltip"><? echo $cl; ?></a>
         </li>
      <?php endwhile; // end of the loop. ?>
     </ul>

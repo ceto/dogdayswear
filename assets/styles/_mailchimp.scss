@@ -1,16 +1,21 @@
 .csimpi {
-  background-color:$ultralight-gray;
-  border-top: 1px solid $light-gray;
-  border-bottom:1px solid $light-gray;
+  margin-bottom: 2rem;
   h2 {
-    margin-bottom: .0875em;
-    font-size: 1.5rem;
-    @include breakpoint(medium) {
-      font-size: 1.875rem;
-    }
+    font-size: .875rem;
+    margin-bottom: 1.5em;
+    font-weight: $global-weight-bold;
+    text-transform: uppercase;
+    //color: inherit;
+    color:$secondary-color;
   }
   p {
     margin-bottom: 0;
+    font-size: .75rem;
+    font-weight: $global-weight-bold;
+    a {
+      //color: inherit;
+      //text-decoration: underline;
+    }
   }
 
   form {
@@ -21,17 +26,27 @@
     //background-color: transparent;
     //border-color: $primary-color;
     //color:$white;
+    &:focus + .button {
+      background-color: $primary-color !important;
+    }
+  }
+  .button {
+    padding-left: 20%;
+    padding-right: 20%;
+    //background-color: $medium-gray;
+    //border: 1px solid $light-gray !important;
+    //color:$medium-gray !important;
   }
   .input-group {
     margin-bottom: 0;
+    max-width: 25rem;
   }
   .input-group-button {
-    padding-left: .5rem;
+    //padding-left: .5rem;
   }
   .mce-responses {
-    padding-top: .5rem;
-    text-align: left;
-    font-size: .875rem;
+    padding: .5rem 0 .25rem;
+    font-size: .75rem;
     line-height: 1.4;
   }
   .response {
