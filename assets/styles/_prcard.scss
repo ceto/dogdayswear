@@ -1,6 +1,11 @@
 .prcard {
   text-align: center;
 }
+.prcard__thumb {
+  a {
+    display: block;
+  }
+}
 .prcard__content {
   padding:1rem .5rem;
 

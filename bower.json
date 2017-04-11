@@ -8,11 +8,11 @@
   "private": true,
   "dependencies": {
     "foundation-sites": "~6.3.1",
-    "owl-carousel": "~1.3.2",
     "magnific-popup": "~1.0.1",
     "isotope": "~2.2.2",
     "imagesloaded": "~4.1.0",
-    "jquery-zoom": "^1.7.15"
+    "jquery-zoom": "^1.7.15",
+    "owl.carousel": "^2.2.1"
   },
   "overrides": {
     "foundation-sites": {
@@ -21,9 +21,10 @@
         "./dist/js/foundation.js"
       ]
     },
-    "owl-carousel": {
+    "owl.carousel": {
       "main": [
-        "./owl-carousel/owl.carousel.js"
+        "dist/owl.carousel.js",
+        "src/scss/owl.carousel.scss"
       ]
     },
     "magnific-popup": {

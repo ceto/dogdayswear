@@ -214,41 +214,59 @@ $('document').ready(function($){
 
 
   /*** Thumbnail Carousel on Catalog Item ***/
+  function catcallback(event) {
+    $('.prcard__thumb').on('mouseenter', '.catalogthumbs', function(ev) {
+      $(this).trigger('next.owl.carousel');
+    }).on('mouseleave', '.catalogthumbs', function(event) {
+      $(this).trigger('prev.owl.carousel');
+    });
+  }
+
   $('.catalogthumbs').owlCarousel({
-    pagination: false,
-    navigation : false,
-    singleItem : true,
+    //nav : true,
+    items:1,
+    //loop:true,
+    onInitialized: catcallback,
+    smartSpeed: 0,
     transitionStyle : 'fade'
   });
 
-  $('.prcard__thumb').on('mouseenter', '.catalogthumbs', function(event) {
-    $(this).data('owlCarousel').next();
-  }).on('mouseleave', '.catalogthumbs', function(event) {
-    $(this).data('owlCarousel').prev();
-  });
 
 
   /*** Thumbnail Carousel on Single product Page ***/
-  $('.prodthumbs').owlCarousel({
-    pagination:false,
-    navigation : false,
-
-    items : 6, //10 items above 1000px browser width
-    itemsDesktop : [1024,6], //5 items between 1000px and 901px
-    itemsDesktopSmall : [768,6], // betweem 900px and 601px
-    itemsTablet: [480,5], //2 items between 480 and 0
-    itemsMobile : false // itemsMobile disabled - inherit from itemsTablet option
-  });
 
   $('.prod-carousel').owlCarousel({
-    pagination:false,
-    navigation : false,
-
-    items : 6, //10 items above 1000px browser width
-    itemsDesktop : [1280,5], //5 items between 1000px and 901px
-    itemsDesktopSmall : [1024,4], // betweem 900px and 601px
-    itemsTablet: [768,3], //2 items between 480 and 0
-    itemsMobile : [480,2] // itemsMobile disabled - inherit from itemsTablet option
+    nav: true,
+    responsive:{
+        0:{
+            items:2,
+            margin:10,
+        },
+        550:{
+            items:3,
+            margin:15,
+        },
+        768:{
+            items:4,
+            margin:15,
+            stagePadding:15
+        },
+        1024:{
+            items:5,
+            margin:15,
+            stagePadding:15
+        },
+        1200:{
+            items:6,
+            margin:20,
+            stagePadding:20
+        },
+        1600:{
+            items:6,
+            margin:30,
+            stagePadding:30
+        }
+    }
   });
 
 
@@ -305,8 +323,10 @@ $('document').ready(function($){
       touch: false
    });
 
-  $('.prodthumbs .item a').on('click', function(e) {
+  $('.prodthumbs__item a').on('click', function(e) {
    e.preventDefault();
+   $('.prodthumbs__item a').removeClass('is-active');
+   $(this).addClass('is-active');
    $('.woocommerce-main-image').trigger('zoom.destroy');
    $('.woocommerce-main-image').css('min-height', $('.woocommerce-main-image .attachment-shop_single').height());
    $('.woocommerce-main-image').attr('href', $(this).attr('href') );
@@ -315,8 +335,9 @@ $('document').ready(function($){
       url: $('.woocommerce-main-image').attr('href'),
       magnify: 0.75
    });
-
+   //$('.woocommerce-main-image').css('min-height', 'auto');
    setTimeout(function() { $('.woocommerce-main-image').css('min-height', 'auto'); } , 2000);
+
   });
 
   /*** CONTACT FORM ******/

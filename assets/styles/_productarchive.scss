@@ -160,11 +160,6 @@
 .productsquare {
   position: relative;
   overflow: hidden;
-
-  .owl-carousel & {
-    border-left:.5rem solid #fff;
-    border-right:.5rem solid #fff;
-  }
 }
 
 .productsquare {
@@ -213,6 +208,7 @@
   }
 
   img {
+    display: block;
     transition: all .2s ease-in;
   }
 
