@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 if ( ! empty( $breadcrumb ) ) : ?>
-<nav aria-label="You are here:" role="navigation">
+<nav class="breadnav" aria-label="You are here:" role="navigation">
 	<ul class="breadcrumbs">
 		<?php
 			foreach ( $breadcrumb as $key => $crumb ) {

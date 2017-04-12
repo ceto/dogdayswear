@@ -2,27 +2,54 @@ body {
 
 }
 .row.container {
-  @include breakpoint(medium) {
-    padding-left: 6%;
-    padding-right: 6%;
+  @media screen and (min-width: 30em) {
+    padding-left: 10%;
+    padding-right: 10%;
     &  & {
       padding-left: 0;
       padding-right: 0;
     }
   }
-
+  @include breakpoint(medium) {
+    padding-left: 0;
+    padding-right: 0;
+    &  & {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  @include breakpoint(tablet) {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
   @include breakpoint(large) {
     padding-left: 8%;
     padding-right: 8%;
   }
-
+  @include breakpoint(xlarge) {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
 }
+
 .row.container.collapse {
+  @media screen and (min-width: 30em) {
+    padding-left: 0;
+    padding-right: 0;
+  }
   @include breakpoint(medium) {
     padding-left: 0;
     padding-right: 0;
   }
+  @include breakpoint(tablet) {
+    padding-left: 0;
+    padding-right: 0;
+  }
   @include breakpoint(large) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  @include breakpoint(xlarge) {
     padding-left: 0;
     padding-right: 0;
   }

@@ -97,7 +97,7 @@ add_action( 'woocommerce_shop_loop_item_title', 'woocommerce_show_product_loop_s
  * @hooked woocommerce_breadcrumb - 20
  */
 
-
+add_action( 'dd_mobilenoti', 'woocommerce_breadcrumb', 10 );
 /**
  * woocommerce_before_single_product_summary hook
  *
@@ -326,3 +326,4 @@ function custom_fix_thumbnail() {
   return $src;
   }
 }
+

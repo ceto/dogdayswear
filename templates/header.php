@@ -1,5 +1,6 @@
+<div id="stickhere"></div>
 <div data-sticky-container>
-  <header id="siteheader" class="siteheader sticky" data-sticky data-margin-top="0" data-top-anchor="document:top" data-data-sticky-on="small" data-check-every="0">
+  <header id="siteheader" class="siteheader sticky" data-sticky data-margin-top="0" data-sticky-on="small" data-check-every="0" data-top-anchor="stickhere:top">
     <div class="sitetoggler">
       <a href="#mobilereveal" data-toggle="mobilereveal"><i class="icon icon--arrow-down-circle"></i></a>
     </div>

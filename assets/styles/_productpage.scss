@@ -1,6 +1,10 @@
 .productbefore {
   @include clearfix();
   padding:1rem .666rem;
+  display: none;
+  @include breakpoint(tablet) {
+    display: block;
+  }
   @include breakpoint(xlarge) {
     padding: 1rem 1.25rem;
   }
@@ -8,9 +12,12 @@
   .panel {
     //text-align: left;
   }
-  .nav[role=navigation] {
-    //display: inline-block;
-    float:left;
+  .breadnav {
+    display: none;
+    @include breakpoint(tablet) {
+      display: block;
+      float:left;
+    }
   }
 
   .prevnextnav {
@@ -19,15 +26,20 @@
   }
 }
 .productheader {
-  padding:1rem 0 2rem;
-  .callout {
-    &:last-of-type() {
-      margin-bottom: 0;
-    }
+  //padding:1rem 0 2rem;
+  min-height: .625rem;
+  @include breakpoint(tablet) {
+    min-height: 0;
   }
+  @include breakpoint(large) {
+    min-height: 2rem;
+  }
+  .callout {
+    margin:.625rem 0;
+  }
+
 }
 .productessence {
-  padding-top: 0;
   margin-bottom: 5rem;
   @include breakpoint(tablet) {
     //padding-top:2rem;
@@ -36,9 +48,9 @@
 .productimages {
   position: relative;
   margin-bottom: 1rem;
-  margin-left: 11.666%;
+  //margin-left: 11.666%;
   @include breakpoint(medium) {
-    margin-left: 0;
+    //margin-left: 0;
   }
 }
 .woocommerce-main-image {
@@ -47,11 +59,15 @@
 }
 .prodthumbswrap {
   position: absolute;
-  right:100%;
-  top:0;
-  bottom:0;
+  left:.5rem;
+  top:.5rem;
   width:13.333%;
   display: block;
+  @include breakpoint(tablet) {
+    left::auto;
+    right:100%;
+    top:0;
+  }
   .sticky.is-stuck {
     width:100%;
   }
@@ -71,6 +87,7 @@
     }
     a {
       display: block;
+          background-color: #fff;
       padding:2px;
       border:1px solid $ultralight-gray;
       outline: none;
@@ -119,28 +136,37 @@
 }
 
 .producttitle {
-  font-size: 1.333rem;
+  //font-weight: $global-weight-bold;
+  font-size: 1rem;
   .label + & {
     //display: inline;
+  }
+  @include breakpoint(xlarge) {
+    font-size: 1.25rem;
   }
 }
 .productshortdesc {
   font-weight: $global-weight-bold;
-  font-size: .875rem;
+  font-size: .75rem;
   margin: 0 auto;
-  //max-width: 75%;
+  @include breakpoint(xlarge) {
+    font-size: .875rem;
+  }
   p {
     margin-bottom: 0;
   }
 }
 .productlongdesc {
   margin: 0 0;
-  font-size: .875rem;
+  font-size: .75rem;
   border-top: 1px solid $ultralight-gray;
 
 
   //border-bottom: 1px solid $ultralight-gray;
   padding: 1.5rem 0 .5rem;
+  @include breakpoint(xlarge) {
+    font-size: .875rem;
+  }
   @supports (hyphens: auto) {
     text-align: justify;
     hyphens: auto;

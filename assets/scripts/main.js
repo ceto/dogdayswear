@@ -236,7 +236,7 @@ $('document').ready(function($){
   /*** Thumbnail Carousel on Single product Page ***/
 
   $('.prod-carousel').owlCarousel({
-    nav: true,
+    nav: false,
     responsive:{
         0:{
             items:2,

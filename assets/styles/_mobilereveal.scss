@@ -1,13 +1,17 @@
 .mobilereveal {
-  padding:2rem 0 0;
+  padding:1rem 0 0;
   max-width: 300px;
   top: 3.125rem !important;
   height: calc(100vh - 3.125rem);
   min-height: calc(100vh - 3.125rem);
   margin:0;
+  .breadnav {
+    margin:0 0 0 1rem
+  }
 }
 
 .mobilenav {
+  margin:1rem 0;
   h3 {
     line-height: 1;
     font-size: .75rem;

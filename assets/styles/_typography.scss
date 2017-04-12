@@ -116,12 +116,9 @@ tbody th, tfoot th {
   li {
     margin-bottom: 0;
     &:not(:last-child):after {
-      content:'\232a';
-      margin: 0 0 0 .5em;
-      color: inherit;
-    }
-    &:first-child {
-      display: none;
+      //content:'\232a';
+      //margin: 0 0 0 .5em;
+      //color: inherit;
     }
   }
 }
