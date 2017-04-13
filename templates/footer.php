@@ -25,9 +25,9 @@
                 <nav class="footernav">
                   <h3><? _e('Contact','dd') ?></h3>
                   <ul class="menu menu--footermenu vertical">
-                    <li><a class="direct" href="<?php the_permalink(143); ?>"><i class="icon icon--play"></i><? _e('Ask a question','dd')?></a></li>
-                    <li><a class="tel" href="tel:+36205954060"><i class="icon icon--telephone"></i>06.20.595.4060</a></li>
-                    <li><a class="email" href="mailto:hello@dogdayswear.com"><i class="icon icon--play"></i>hello@dogdayswear.com</a></li>
+                    <li><a class="direct" href="<?php the_permalink(143); ?>"><? _e('Ask a question','dd')?></a></li>
+                    <li><a class="tel" href="tel:+36205954060">06.20.595.4060</a></li>
+                    <li><a class="email" href="mailto:hello@dogdayswear.com">hello@dogdayswear.com</a></li>
                   </ul>
                 </nav>
               </div>

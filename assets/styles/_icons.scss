@@ -24,64 +24,122 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+
+.icon--triangle-up:before {
+  content: "\e90f";
+}
+.icon--triangle-down:before {
+  content: "\e910";
+}
+.icon--triangle-left:before {
+  content: "\e911";
+}
+.icon--triangle-right:before {
+  content: "\e912";
+}
 .icon--arrow-down:before {
-    content: "\e900";
+  content: "\e900";
 }
 .icon--arrow-up:before {
-    content: "\e901";
+  content: "\e901";
+}
+.icon--arrow-left:before {
+  content: "\e913";
+}
+.icon--arrow-right:before {
+  content: "\e914";
 }
 .icon--chevron-down:before {
-    content: "\e902";
+  content: "\e902";
 }
 .icon--chevron-left:before {
-    content: "\e903";
+  content: "\e903";
 }
 .icon--chevron-right:before {
-    content: "\e904";
+  content: "\e904";
 }
 .icon--chevron-up:before {
-    content: "\e905";
+  content: "\e905";
 }
-.icon--facebook:before {
-    content: "\e906";
+.icon--facebook-circled:before {
+  content: "\e906";
 }
-.icon--instagram:before {
-    content: "\e907";
+.icon--instagram-circled:before {
+  content: "\e907";
 }
 .icon--telephone:before {
-    content: "\e908";
+  content: "\e908";
 }
 .icon--play:before {
-    content: "\e909";
+  content: "\e909";
 }
 .icon--pause:before {
-    content: "\e90a";
+  content: "\e90a";
 }
 .icon--stop:before {
-    content: "\e90b";
+  content: "\e90b";
 }
 .icon--arrow-down-circle:before {
-    content: "\e90c";
+  content: "\e90c";
 }
 .icon--play-triangle:before {
-    content: "\e90d";
+  content: "\e90d";
 }
 .icon--radio-unchecked:before {
-    content: "\e90e";
+  content: "\e915";
 }
 .icon--radio-checked:before {
-    content: "\e90f";
+  content: "\e916";
 }
 .icon--cart:before {
-    content: "\e910";
+  content: "\e917";
 }
 .icon--user:before {
-    content: "\e911";
+  content: "\e918";
 }
 .icon--phone:before {
-    content: "\e913";
+  content: "\e919";
 }
 .icon--times:before {
-    content: "\e912";
+  content: "\e91a";
+}
+.icon--shoppingcart:before {
+  content: "\e91b";
+}
+.icon--bag:before {
+  content: "\e90e";
+}
+.icon--profile:before {
+  content: "\e91c";
+}
+.icon--close:before {
+  content: "\e91d";
+}
+.icon--hamburger:before {
+  content: "\e91e";
+}
+.icon--search:before {
+  content: "\e91f";
+}
+.icon--zoom-in:before {
+  content: "\e920";
+}
+.icon--envelope:before {
+  content: "\e921";
+}
+.icon--phone2:before {
+  content: "\e922";
+}
+.icon--orderform:before {
+  content: "\e923";
+}
+.icon--hambi:before {
+  content: "\e924";
+}
+.icon--facebook:before {
+  content: "\e925";
+}
+.icon--instagram:before {
+  content: "\e926";
 }
 

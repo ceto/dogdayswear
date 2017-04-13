@@ -162,7 +162,8 @@ $('document').ready(function($){
   /*** Thumbnail Carousel on Single product Page ***/
 
   $('.prod-carousel').owlCarousel({
-    nav: false,
+    nav: true,
+    navText: ['<i class="icon icon--chevron-left"></i>', '<i class="icon icon--chevron-right"></i>'],
     responsive:{
         0:{
             items:2,
