@@ -9,8 +9,9 @@ namespace Roots\Soil\JqueryCDN;
  * add_theme_support('soil-jquery-cdn');
  */
 function register_jquery() {
-  //$jquery_version = wp_scripts()->registered['jquery']->ver;
+  $jquery_version = wp_scripts()->registered['jquery']->ver;
   $jquery_version = '3.2.1';
+
   wp_deregister_script('jquery');
 
   wp_register_script(

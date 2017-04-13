@@ -39,9 +39,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</div>
 
 		</header>
-
+		<div id="sticksummaryhere"></div>
 		<section id="productessence" class="productessence">
-
 			<div class="row container">
 				<div class="columns medium-6">
 					<?php
@@ -55,7 +54,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					?>
 				</div>
 				<div class="columns medium-6" data-sticky-container>
-					<div class="sticky" data-sticky data-top-anchor="productessence:top" data-btm-anchor="productessence:bottom" data-margin-top="4" data-sticky-on="large" data-check-every="0">
+					<div class="sticky" data-sticky-on="large" data-sticky data-anchor="productessence" data-margin-top="4"  data-check-every="0">
 						<div class="productsummary">
 							<?php
 								/**
