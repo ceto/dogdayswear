@@ -221,6 +221,7 @@
   }
   > li:not(.menu-text) {
     display: inline-block;
+    margin-bottom: 0;
     &:not(:last-child):after {
         content:'|';
         margin: 0 0 0 .125em;

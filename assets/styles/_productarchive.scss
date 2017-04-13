@@ -1,5 +1,13 @@
+.shoparchivetitle {
+  text-transform: uppercase;
+  color:inherit;
+  font-weight: $global-weight-normal;
+  margin-bottom: 0;
+}
+
 /******* Filter NAv *****/
 .filternav {
+  @include clearfix();
   //margin-top: 2rem;
   border-bottom: 1px solid $ultralight-gray;
   //border-top: 1px solid $ultralight-gray;

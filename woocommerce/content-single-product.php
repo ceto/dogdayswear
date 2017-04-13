@@ -54,7 +54,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					?>
 				</div>
 				<div class="columns medium-6" data-sticky-container>
-					<div class="sticky" data-sticky-on="large" data-sticky data-anchor="productessence" data-margin-top="4"  data-check-every="0">
+					<div class="sticky" data-sticky-on="large" data-sticky data-anchor="productessence" data-margin-top="4" data-check-every="0">
 						<div class="productsummary">
 							<?php
 								/**

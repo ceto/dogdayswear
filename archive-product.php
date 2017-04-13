@@ -95,7 +95,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<div class="row container text-center">
 			<div class="columns large-10 large-centered">
 				<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
-					<h1 class="pagetitle"><?php woocommerce_page_title(); ?></h1>
+					<h1 class="shoparchivetitle"><?php woocommerce_page_title(); ?></h1>
 				<?php endif; ?>
         <?php get_template_part('templates/listersubnav' ); ?>
 

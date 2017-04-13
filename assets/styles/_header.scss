@@ -4,7 +4,6 @@
   font-weight: $global-weight-extrabold;
   font-size: 75%;
   line-height: 1;
-  border-bottom: 1px solid $ultralight-gray;
   padding: .5rem .666rem;
   @include breakpoint(tablet) {
     display: block;
@@ -77,12 +76,22 @@
   margin-top: .75rem;
   color: $primary-color;
 }
+
+#headsticker {
+  height:3px;
+  width:100%;
+  @include breakpoint(medium) {
+    border-top: 1px solid $ultralight-gray;
+    height:1px;
+  }
+}
 .siteheader {
   @include clearfix();
   width: 100%;
   position: relative;
   z-index: $reveal-zindex+1;
   line-height: 1;
+
   border-bottom: 1px solid $ultralight-gray;
   padding: 0 .666rem;
   background-color: rgba($white,.97);
@@ -256,8 +265,11 @@
   color:inherit;
 }
 .archiveheader {
-  padding: 2.5rem 0 1.5rem;
+  padding: 2.5rem 0 2.5rem;
   @include breakpoint(tablet) {
     //padding: 6vw 0 1.5rem;
+  }
+  p{
+    margin:1rem 0 0;
   }
 }
