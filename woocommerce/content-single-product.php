@@ -53,8 +53,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 						do_action( 'woocommerce_before_single_product_summary' );
 					?>
 				</div>
-				<div class="columns medium-6" data-sticky-container>
-					<div class="sticky" data-sticky-on="large" data-sticky data-anchor="productessence" data-margin-top="4" data-check-every="0">
+				<div class="columns medium-6">
 						<div class="productsummary">
 							<?php
 								/**
@@ -71,7 +70,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 								do_action( 'woocommerce_single_product_summary' );
 							?>
 						</div><!-- .productsummary -->
-					</div>
 				</div>
 			</div>
 		</section>

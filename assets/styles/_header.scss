@@ -85,11 +85,30 @@
     height:1px;
   }
 }
+
+.siteheadplaceholder {
+  height: 3.2rem;
+  width: 100%;
+  //overflow: visible;
+}
+.siteheadwrap {
+  position: relative;
+  z-index: $reveal-zindex+1;
+  left:0;
+  top: 0;
+  width:inherit;
+  height:inherit;
+  //overflow: visible;
+  //background-color: red;
+  &.is-fixed {
+    position: fixed;
+    transform: translateZ(0);
+  }
+}
 .siteheader {
   @include clearfix();
   width: 100%;
   position: relative;
-  z-index: $reveal-zindex+1;
   line-height: 1;
 
   border-bottom: 1px solid $ultralight-gray;
@@ -146,7 +165,7 @@
   font-size: .75rem;
   font-weight: $global-weight-extrabold;
   text-align: center;
-  margin-left: 1.5rem;
+  margin-left: .875rem;
   a {
     color:inherit;
   }
@@ -157,9 +176,10 @@
   .badge {
 
     position: absolute;
-    z-index: -1;
-    left: .1666rem;
-    top:.25rem;
+    left: .3875rem;
+    top:1.25rem;
+    min-width: 1.5em;
+    padding:.333em .25em .25em;
   }
 }
 .sitetoggler {
@@ -180,6 +200,12 @@
 
 .sitecart, .siteacc {
   float: right;
+}
+
+.thetopcart {
+    //border-top:1px solid $light-gray;
+    border-bottom:1px solid $light-gray;
+    box-shadow: 0 0 .125rem 0 rgba(#000,.1);
 }
 
 .bannerheader {

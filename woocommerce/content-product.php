@@ -24,56 +24,62 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	return;
 }
 ?>
-<div <?php post_class( 'column' ); ?>>
-	<div class="productsquare">
+<div class="column">
+<div <?php post_class( 'prcard' ); ?> >
+	<?php
+		/**
+		* woocommerce_before_shop_loop_item hook.
+		*
+		* @hooked woocommerce_template_loop_product_link_open - 10
+		*/
+		//do_action( 'woocommerce_before_shop_loop_item' );
+	?>
+	<figure class="prcard__thumb">
+		<?php wc_get_template_part( 'loop/pcard', 'thumbnails' );?>
 		<?php
-			/**
-			* woocommerce_before_shop_loop_item hook.
-			*
-			* @hooked woocommerce_template_loop_product_link_open - 10
-			*/
-			//do_action( 'woocommerce_before_shop_loop_item' );
-		?>
-		<a class="productsquare__imagelink" href="<?php the_permalink(); ?>">
-			<?php
 				/**
 				* woocommerce_before_shop_loop_item_title hook
 				*
 				* @hooked woocommerce_show_product_loop_sale_flash - 10
 				* @hooked woocommerce_template_loop_product_thumbnail - 10
 				*/
-				do_action( 'woocommerce_before_shop_loop_item_title' );
+				//do_action( 'woocommerce_before_shop_loop_item_title' );
 			?>
-		</a>
+	</figure>
+
+
+<div class="prcard__content">
+		<!-- <span class="label">Akció!</span> -->
 		<?php
 			/**
-			* woocommerce_after_shop_loop_item hook.
+			* woocommerce_shop_loop_item_title hook
 			*
-			* @hooked woocommerce_template_loop_product_link_close - 5
-			* @hooked woocommerce_template_loop_add_to_cart - 10
+			* @hooked woocommerce_template_loop_product_title - 10
 			*/
-			//do_action( 'woocommerce_after_shop_loop_item' );
+			do_action( 'woocommerce_shop_loop_item_title' );
 		?>
-		<div class="productsquare__infolayer">
-			<div class="productsquare__infolayer__data">
-				<?php
-					/**
-					* woocommerce_shop_loop_item_title hook
-					*
-					* @hooked woocommerce_template_loop_product_title - 10
-					*/
-					do_action( 'woocommerce_shop_loop_item_title' );
-					/**
-					* woocommerce_after_shop_loop_item_title hook
-					*
-					* @hooked woocommerce_template_loop_rating - 5
-					* @hooked woocommerce_template_loop_price - 10
-					*/
-					do_action( 'woocommerce_after_shop_loop_item_title' );
-				?>
-				<?php wc_get_template_part( 'loop/add-to-cart'); ?>
-			</div>
-		</div>
+		<?php
+			/**
+			* woocommerce_after_shop_loop_item_title hook
+			*
+			* @hooked woocommerce_template_loop_rating - 5
+			* @hooked woocommerce_template_loop_price - 10
+			*/
+			do_action( 'woocommerce_after_shop_loop_item_title' );
+		?>
 
+		<?php //wc_get_template_part( 'loop/add-to-cart'); ?>
 	</div>
+
+	<?php
+		/**
+		* woocommerce_after_shop_loop_item hook.
+		*
+		* @hooked woocommerce_template_loop_product_link_close - 5
+		* @hooked woocommerce_template_loop_add_to_cart - 10
+		*/
+		//do_action( 'woocommerce_after_shop_loop_item' );
+	?>
+	</div>
+
 </div>

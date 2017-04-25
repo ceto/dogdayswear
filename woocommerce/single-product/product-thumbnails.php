@@ -34,8 +34,7 @@ if ( $attachment_ids ) {
 	$columns 	= apply_filters( 'woocommerce_product_thumbnails_columns', 3 );
 	?>
 	<div class="prodthumbswrap">
-	<div data-sticky-container>
-	<div class="sticky" data-sticky data-sticky-on="tablet" data-anchor="productimages" data-margin-top="4" data-check-every="0">
+
 	<ul class="prodthumbs <?php echo 'prodthumbs--columns-' . $columns; ?>"><?php
 
 		foreach ( $attachment_ids as $attachment_id ) {
@@ -74,8 +73,6 @@ if ( $attachment_ids ) {
 		}
 
 	?></ul>
-	</div>
-	</div>
 	</div>
 	<?php
 }
