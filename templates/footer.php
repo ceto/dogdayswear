@@ -33,7 +33,7 @@
               </div>
               <div class="columns small-6 tablet-12">
                 <nav class="footernav">
-                  <h3><? _e('You can find us','dd') ?></h3>
+                  <h3><? _e('Follow us','dd') ?></h3>
                   <ul class="menu menu--footermenu vertical">
                     <li><a class="face" target="_blank" href="https://www.facebook.com/dogdaysyogawear/"><i class="icon icon--facebook"></i>Facebook</a></li>
                     <li><a class="insta" target="_blank" href="https://www.instagram.com/dogdaysyogawear/"><i class="icon icon--instagram"></i>Instagram</a></li>
@@ -55,7 +55,7 @@
         <img class="foneline" src="<?= get_stylesheet_directory_uri(); ?>/dist/images/dogdaysyogawear.svg" alt="Dogdays Yoga Wear">
       </div>
       <div class="columns tablet-8 text-center tablet-text-right">
-        <p class="copyright">&copy; <?= date('Y') ?> <strong>DogDays Yoga Wear</strong> &middot; All rights reserved &middot; Site by <a href="http://hydrogene.hu"><strong>HYDROGENE</strong></a></p>
+        <p class="copyright">&copy; <?= date('Y') ?> <strong>DogDays Yoga Wear</strong> &middot; All rights reserved &middot; Site by <a href="http://hydrogene.hu/referencia/sportruhazati-arculat-es-webaruhaz/"><strong>HYDROGENE</strong></a></p>
       </div>
     </div>
   </div>
