@@ -394,7 +394,7 @@ $('document').ready(function($){
   var siteheadwrap = document.getElementById('siteheadwrap');
   window.addEventListener('scroll', function(){
       var siteheadplaceholder = document.getElementById('siteheadplaceholder');
-      var elTop = siteheadplaceholder.getBoundingClientRect().top
+      var elTop = siteheadplaceholder.getBoundingClientRect().top;
       //console.log(document.body.getBoundingClientRect().top);
       if (document.body.getBoundingClientRect().top+elTop < 0){
           siteheadwrap.classList.add('is-fixed');
