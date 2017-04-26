@@ -19,6 +19,7 @@ html, body {
 .tooltip {
   font-weight: $global-weight-extrabold;
   text-transform: uppercase;
+  max-width: 16rem;
 }
 .button {
   text-transform: uppercase;

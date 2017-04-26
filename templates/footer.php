@@ -47,6 +47,15 @@
           <img class="fslogan" src="<?= get_stylesheet_directory_uri(); ?>/dist/images/slogan_2line-footer.svg" alt="Don't fear the sweat">
         </div>
       </div>
+      <div class="row container">
+        <div class="columns">
+          <a class="fbarionlink" href="https://www.barion.com/hu/tajekoztato-biztonsagos-online-fizetesrol" target="_blank" title="Az online fizetést a Barion Payment Zrt. biztosítja, MNB engedély száma: H-EN-I-1064/2013">
+            <span data-tooltip aria-haspopup="true" class="has-tip right" data-disable-hover="false" tabindex="1" title="A kényelmes és biztonságos online fizetést a Barion Payment Zrt. biztosítja, MNB engedély száma: H-EN-I-1064/2013 Bankkártya adatai áruházunkhoz nem jutnak el.">
+              <img class="fbarion" width="216" src="<?= get_stylesheet_directory_uri(); ?>/dist/images/barion-card-payment-banner.png" alt="Az online fizetést a Barion Payment Zrt. biztosítja, MNB engedély száma: H-EN-I-1064/2013">
+            </span>
+          </a>
+        </div>
+      </div>
     </div>
   <?php endif; ?>
   <div class="sitefooter__mini">

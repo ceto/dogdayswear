@@ -126,3 +126,18 @@ img.fslogan {
     margin:1rem 0 0;
   }
 }
+
+.fbarionlink {
+
+  img {
+    margin-top: 3rem;
+    @include breakpoint('large') {
+      margin-top:1rem;
+    }
+
+  }
+
+  .has-tip {
+   border-bottom: none;
+  }
+}
