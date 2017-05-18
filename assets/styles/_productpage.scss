@@ -385,6 +385,10 @@
   background-image: url('../images/colors/leaf.jpg');
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi){ background-image: url('../images/colors/leaf@2x.jpg'); }
 }
+.colvariant--lotus a {
+  background-image: url('../images/colors/lotus.jpg');
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi){ background-image: url('../images/colors/lotus@2x.jpg'); }
+}
 
 
 .single_variation_wrap {

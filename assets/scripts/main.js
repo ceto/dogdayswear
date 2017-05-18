@@ -14,7 +14,7 @@
   function parseSelect(selectObj) {
     var select = $(selectObj);
 
-    var listObj = new Object();
+    var listObj = {};
     listObj.classNames = 'swatchlist ' + select.attr('id');
     listObj.originalSelect = 'pa_meret'; //Store our select object reference here
 
