@@ -2,40 +2,52 @@
 /**
  * Order Customer Details
  *
+ * This template can be overridden by copying it to yourtheme/woocommerce/order/order-details-customer.php.
+ *
+ * HOWEVER, on occasion WooCommerce will need to update template files and you
+ * (the theme developer) will need to copy the new files to your theme to
+ * maintain compatibility. We try to do this as little as possible, but it does
+ * happen. When this occurs the version of the template file will be bumped and
+ * the readme will list any important changes.
+ *
+ * @see 	https://docs.woocommerce.com/document/template-structure/
  * @author  WooThemes
  * @package WooCommerce/Templates
- * @version 2.4.0
+ * @version 3.0.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 ?>
+<section class="woocommerce-customer-details">
 <header><h2><?php _e( 'Customer Details', 'woocommerce' ); ?></h2></header>
 
-<table class="shop_table shop_table_responsive customer_details">
-	<?php if ( $order->customer_note ) : ?>
-		<tr>
-			<th><?php _e( 'Note:', 'woocommerce' ); ?></th>
-			<td><?php echo wptexturize( $order->customer_note ); ?></td>
-		</tr>
+<table class="woocommerce-table woocommerce-table--customer-details shop_table customer_details">
+
+	<?php if ( $order->get_customer_note() ) : ?>
+			<tr>
+				<th><?php _e( 'Note:', 'woocommerce' ); ?></th>
+				<td><?php echo wptexturize( $order->get_customer_note() ); ?></td>
+			</tr>
 	<?php endif; ?>
 
-	<?php if ( $order->billing_email ) : ?>
+	<?php if ( $order->get_billing_email() ) : ?>
 		<tr>
 			<th><?php _e( 'Email:', 'woocommerce' ); ?></th>
-			<td><?php echo esc_html( $order->billing_email ); ?></td>
+			<td><?php echo esc_html( $order->get_billing_email() ); ?></td>
 		</tr>
 	<?php endif; ?>
 
-	<?php if ( $order->billing_phone ) : ?>
+	<?php if ( $order->get_billing_phone() ) : ?>
 		<tr>
-			<th><?php _e( 'Telephone:', 'woocommerce' ); ?></th>
-			<td><?php echo esc_html( $order->billing_phone ); ?></td>
+			<th><?php _e( 'Phone:', 'woocommerce' ); ?></th>
+			<td><?php echo esc_html( $order->get_billing_phone() ); ?></td>
 		</tr>
 	<?php endif; ?>
 
 	<?php do_action( 'woocommerce_order_details_after_customer_details', $order ); ?>
+
 </table>
 
 
@@ -43,10 +55,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 <div class="row medium-up-2 adresses">
 	<div class="column">
 		<header class="title">
-			<h3><?php _e( 'Billing Address', 'woocommerce' ); ?></h3>
+			<h3><?php _e( 'Billing address', 'woocommerce' ); ?></h3>
 		</header>
 		<address>
-			<?php echo ( $address = $order->get_formatted_billing_address() ) ? $address : __( 'N/A', 'woocommerce' ); ?>
+				<?php echo ( $address = $order->get_formatted_billing_address() ) ? $address : __( 'N/A', 'woocommerce' ); ?>
 		</address>
 	</div>
 
@@ -54,14 +66,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<div class="column">
 		<header class="title">
-			<h3><?php _e( 'Shipping Address', 'woocommerce' ); ?></h3>
+			<h3><?php _e( 'Shipping address', 'woocommerce' ); ?></h3>
 		</header>
 		<address>
-			<?php echo ( $address = $order->get_formatted_shipping_address() ) ? $address : __( 'N/A', 'woocommerce' ); ?>
+				<?php echo ( $address = $order->get_formatted_shipping_address() ) ? $address : __( 'N/A', 'woocommerce' ); ?>
 		</address>
 	</div><!-- /.column -->
 <?php endif; ?>
 
 </div><!-- /.row -->
 
-
+</section>
