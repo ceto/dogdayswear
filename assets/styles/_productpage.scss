@@ -389,6 +389,18 @@
   background-image: url('../images/colors/lotus.jpg');
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi){ background-image: url('../images/colors/lotus@2x.jpg'); }
 }
+.colvariant--salmon-cubes a {
+  background-image: url('../images/colors/salmoncubes.jpg');
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi){ background-image: url('../images/colors/salmoncubes@2x.jpg'); }
+}
+.colvariant--crystalized a {
+  background-image: url('../images/colors/crystalized.jpg');
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi){ background-image: url('../images/colors/crystalized@2x.jpg'); }
+}
+.colvariant--seahorse a {
+  background-image: url('../images/colors/seahorse.jpg');
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi){ background-image: url('../images/colors/seahorse@2x.jpg'); }
+}
 
 
 .single_variation_wrap {
