@@ -12,6 +12,11 @@ html, body {
   }
 }
 
+img {
+  image-rendering: -webkit-optimize-contrast;
+  //-ms-interpolation-mode: nearest-neighbor;
+}
+
 .label {
   font-weight: $global-weight-extrabold;
   text-transform: uppercase;
