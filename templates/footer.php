@@ -69,4 +69,4 @@
     </div>
   </div>
 </footer>
-<?php //dynamic_sidebar('sidebar-footer'); ?>
+<?php dynamic_sidebar('sidebar-footer'); ?>
