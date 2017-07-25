@@ -57,6 +57,14 @@
         </div>
       </div>
     </div>
+
+    <?php if ( current_user_can( 'manage_options' ) ) : ?>
+    <div class="sitefooter__helper">
+      <div class="row container small-up-2 tablet-up-4">
+        <?php dynamic_sidebar('sidebar-footer'); ?>
+      </div>
+    </div>
+  <?php endif; ?>
   <?php endif; ?>
   <div class="sitefooter__mini">
     <div class="row container">
@@ -69,4 +77,3 @@
     </div>
   </div>
 </footer>
-<?php dynamic_sidebar('sidebar-footer'); ?>
