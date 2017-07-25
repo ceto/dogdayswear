@@ -13,7 +13,7 @@
  * @see 	    https://docs.woocommerce.com/document/template-structure/
  * @author 		WooThemes
  * @package 	WooCommerce/Templates
- * @version     3.0.2
+ * @version     3.1.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -22,29 +22,25 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 global $post, $product;
 
-$attachment_ids = $product->get_gallery_attachment_ids();
+$attachment_ids = $product->get_gallery_image_ids();
 
 if ( has_post_thumbnail() ) {
  $attachment_ids = array_merge( array(get_post_thumbnail_id()) , $attachment_ids );
 }
 
 
-if ( $attachment_ids ) {	?>
+if ( $attachment_ids && has_post_thumbnail()  ) {	?>
 	<div class="prodthumbswrap">
 
 	<ul class="prodthumbs"><?php
 
 		foreach ( $attachment_ids as $attachment_id ) {
-
 			$swapimage = esc_attr( wp_get_attachment_image( $attachment_id, apply_filters( 'single_product_large_thumbnail_size', 'shop_single' ), 0 ));
-
-
 			$full_size_image = wp_get_attachment_image_src( $attachment_id, 'full' );
 			$thumbnail       = wp_get_attachment_image_src( $attachment_id, 'shop_thumbnail' );
-			$image_title     = get_post_field( 'post_excerpt', $attachment_id );
-
 			$attributes = array(
-				'title'                   => $image_title,
+				'title'                   => get_post_field( 'post_title', $attachment_id ),
+				'data-caption'            => get_post_field( 'post_excerpt', $attachment_id ),
 				'data-src'                => $full_size_image[0],
 				'data-large_image'        => $full_size_image[0],
 				'data-large_image_width'  => $full_size_image[1],
