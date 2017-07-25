@@ -55,7 +55,7 @@
     <div class="row container">
       <div class="columns medium-6 medium-centered text-center">
         <h2 class="blocktitle"><?= __('Gallery','sage') ?></h2>
-          <p class="lead"><?= __('Jóga és sportruházat a legizzasztóbb mozgásformákhoz.','sage') ?></p>
+          <p class="lead"><?= __('Mozogj szabadon és magabiztosan, hogy csak magadra koncentrálhass!','sage') ?></p>
           <br>
       </div>
     </div>
