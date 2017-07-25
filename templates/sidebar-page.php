@@ -3,7 +3,7 @@
     <?php if (has_nav_menu('side_navigation')) : ?>
       <section class="column widget">
         <nav class="sidenav">
-          <h3 class="widget__title"><?php _e('Vásárlási információk', 'dd') ?></h3>
+          <h3 class="widget__title"><?php _e('Help', 'sage') ?></h3>
           <?php wp_nav_menu(['theme_location' => 'side_navigation', 'menu_class' => 'menu menu--sidemenu']); ?>
         </nav>
       </section>

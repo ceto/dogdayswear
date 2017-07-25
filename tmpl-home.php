@@ -7,8 +7,8 @@
   <div class="row container">
     <div class="columns medium-10 medium-centered">
       <div class="hero__content">
-          <h1 class="hero__title">Jóga és sportruházat a legizzasztóbb mozgásformákhoz.</h1>
-          <a href="<?= get_permalink( woocommerce_get_page_id( 'shop' ) )?>" class="hero__more button">Shop</a>
+          <h1 class="hero__title"><?= __('Jóga és sportruházat a legizzasztóbb mozgásformákhoz.','sage') ?></h1>
+          <a href="<?= get_permalink( woocommerce_get_page_id( 'shop' ) )?>" class="hero__more button"><?= __('Shop','sage') ?></a>
       </div>
     </div>
   </div>
@@ -54,8 +54,8 @@
   <section class="ps whiteblock looksec">
     <div class="row container">
       <div class="columns medium-6 medium-centered text-center">
-        <h2 class="blocktitle">Galéria</h2>
-          <p class="lead">Mozogj szabadon és magabiztosan, hogy csak magadra koncentrálhass!</p>
+        <h2 class="blocktitle"><?= __('Gallery','sage') ?></h2>
+          <p class="lead"><?= __('Jóga és sportruházat a legizzasztóbb mozgásformákhoz.','sage') ?></p>
           <br>
       </div>
     </div>

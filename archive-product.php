@@ -45,7 +45,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					$colorreseturl=preg_replace($cre,'',$_SERVER['REQUEST_URI']);
 					$sizereseturl=preg_replace($sre,'',$_SERVER['REQUEST_URI']);
 				?>
-				<a href="<?= $colorreseturl; ?>" class="filterreset">Összes szín</a>
+				<a href="<?= $colorreseturl; ?>" class="filterreset"><?= __('All colors','sage') ?></a>
 				<?php
 				    $args = array(
 	            'before_widget' => '<div class="filterblock filterblock--colors %1$s">',
@@ -60,7 +60,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				    );
 				    the_widget('WC_Widget_Layered_Nav', $wcargs, $args);
 				  ?>
-				  <a href="<?= $sizereseturl; ?>" class="filterreset">Minden méret</a>
+				  <a href="<?= $sizereseturl; ?>" class="filterreset"><?= __('All sizes','sage') ?></a>
 				  <?php
 				    $args = array(
 	            'before_widget' => '<div class="filterblock filterblock--size %1$s">',

@@ -1,5 +1,5 @@
 <aside class="csimpi">
-    <label for="mce-EMAIL"><h2>Iratkozz fel hírlevelünkre!</h2></label>
+    <label for="mce-EMAIL"><h2><?= __('Subscribe to Our newsletter!','sage') ?></h2></label>
     <!-- Begin MailChimp Signup Form -->
     <div id="mc_embed_signup">
       <form action="//dogdayswear.us12.list-manage.com/subscribe/post-json?u=4392a96715883db49eda0d8bd&amp;id=d5d3bd152a" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
