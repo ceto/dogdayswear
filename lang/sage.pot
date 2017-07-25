@@ -1,40 +1,94 @@
+#, fuzzy
 msgid ""
 msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2017-07-25 15:18+0000\n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: Loco - https://localise.biz/"
 
-#: 404.php:4
+#: 404.php:7
 msgid "Sorry, but the page you were trying to view does not exist."
 msgstr ""
 
-#: base.php:14
-msgid ""
-"You are using an <strong>outdated</strong> browser. Please <a href=\"http://"
-"browsehappy.com/\">upgrade your browser</a> to improve your experience."
+#: archive-product.php:48
+msgid "All colors"
 msgstr ""
 
-#: functions.php:22
+#: archive-product.php:63
+msgid "All sizes"
+msgstr ""
+
+#: functions.php:28
+#, php-format
 msgid "Error locating %s for inclusion"
 msgstr ""
 
-#: index.php:5 search.php:5
+#: index.php:8 search.php:5
 msgid "Sorry, no results were found."
+msgstr ""
+
+#: page.php:10 template-custom.php:30 template-contact.php:34
+#: templates/content-page.php:5 templates/content-single.php:14
+msgid "Pages:"
+msgstr ""
+
+#. Name of the template
+msgid "Info Page with Left Sidebar"
+msgstr ""
+
+#. Name of the template
+msgid "Contact Page with Form & Left Sidebar"
+msgstr ""
+
+#. Name of the template
+msgid "Home Page Template"
+msgstr ""
+
+#: tmpl-home.php:10 tmpl-home.php:58
+msgid "Jóga és sportruházat a legizzasztóbb mozgásformákhoz."
+msgstr ""
+
+#: tmpl-home.php:11
+msgid "Shop"
+msgstr ""
+
+#: tmpl-home.php:57
+msgid "Gallery"
 msgstr ""
 
 #: lib/extras.php:31
 msgid "Continued"
 msgstr ""
 
-#: lib/setup.php:30
+#: lib/setup.php:32
 msgid "Primary Navigation"
 msgstr ""
 
-#: lib/setup.php:57
+#: lib/setup.php:36
+msgid "Shop Related Navigation"
+msgstr ""
+
+#: lib/setup.php:40
+msgid "Sidebar Navigation on Pages"
+msgstr ""
+
+#: lib/setup.php:44
+msgid "Footer Navigation"
+msgstr ""
+
+#: lib/setup.php:75
 msgid "Primary"
 msgstr ""
 
-#: lib/setup.php:66
+#: lib/setup.php:84
 msgid "Footer"
+msgstr ""
+
+#: lib/setup.php:93
+msgid "Page aside"
 msgstr ""
 
 #: lib/titles.php:13
@@ -42,6 +96,7 @@ msgid "Latest Posts"
 msgstr ""
 
 #: lib/titles.php:18
+#, php-format
 msgid "Search Results for %s"
 msgstr ""
 
@@ -49,55 +104,54 @@ msgstr ""
 msgid "Not Found"
 msgstr ""
 
-#: templates/comments.php:9
+#: templates/comments.php:10
+#, php-format
 msgctxt "comments title"
 msgid "One response to &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s responses to &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
 
-#: templates/comments.php:19
+#: templates/comments.php:20
 msgid "&larr; Older comments"
 msgstr ""
 
-#: templates/comments.php:22
+#: templates/comments.php:23
 msgid "Newer comments &rarr;"
 msgstr ""
 
-#: templates/comments.php:31
+#: templates/comments.php:32
 msgid "Comments are closed."
 msgstr ""
 
-#: templates/content-page.php:2 templates/content-single.php:11
-msgid "Pages:"
-msgstr ""
-
-#: templates/entry-meta.php:2
+#: templates/entry-meta.php:3
 msgid "By"
 msgstr ""
 
-#. Theme Name of the plugin/theme
-msgid "Sage Starter Theme"
+#: templates/mailchimp-subscribe-small.php:2
+msgid "Subscribe to Our newsletter!"
 msgstr ""
 
-#. Theme URI of the plugin/theme
-msgid "https://roots.io/sage/"
+#: templates/sidebar-page.php:6
+msgid "Help"
 msgstr ""
 
-#. Description of the plugin/theme
-msgid ""
-"Sage is a WordPress starter theme. <a href=\"https://github.com/roots/sage"
-"\">Contribute on GitHub</a>"
+#. Name of the theme
+msgid "Dog Days Yoga Wear"
 msgstr ""
 
-#. Author of the plugin/theme
-msgid "Roots"
+#. Description of the theme
+msgid "Custom WordPress and Woocommerce theme for DogDays Yoga Wear."
 msgstr ""
 
-#. Author URI of the plugin/theme
-msgid "https://roots.io/"
+#. URI of the theme
+msgid "http://dogdayswear.com/"
 msgstr ""
 
-#. Template Name of the plugin/theme
-msgid "Custom Template"
+#. Author of the theme
+msgid "Gabor Szabo"
+msgstr ""
+
+#. Author URI of the theme
+msgid "http://hydrogene.hu/"
 msgstr ""
