@@ -317,3 +317,21 @@ body {
 .contactwrap {
   padding-bottom: 4rem;
 }
+
+.dropdown-pane {
+  z-index: $reveal-zindex+1;
+    box-shadow: 0 0 0 200vmax rgba(#000,.5);
+}
+
+.dropdown-pane__title {
+  margin:0 0 .5em;
+  color:inherit;
+  font-size: 1rem;
+  font-weight: $global-weight-extrabold;
+}
+.dropdown-pane__subtitle {
+  margin:0;
+   color:inherit;
+  font-size: .75rem;
+  font-weight: $global-weight-extrabold;
+}

@@ -1,4 +1,14 @@
 <?php
+  define('ICL_DONT_LOAD_LANGUAGE_SELECTOR_CSS', true);
+  define('ICL_DONT_LOAD_LANGUAGES_JS', true);
+  define('ICL_DONT_LOAD_NAVIGATION_CSS', true);
+
+
+  function dd_get_customercountrycode() {
+      global $woocommerce;
+      return strtolower($woocommerce->customer->get_country());
+  }
+
   if ( file_exists(  __DIR__ . '/CMB2/init.php' ) ) { require_once  __DIR__ . '/CMB2/init.php'; }
   add_action( 'cmb2_admin_init', 'dd_metaboxes' );
 
@@ -107,5 +117,3 @@ function dd_carttotal() {
   global $woocommerce;
   return '<span class="total">'.$woocommerce->cart->get_cart_total().'</span>';
 }
-
-
