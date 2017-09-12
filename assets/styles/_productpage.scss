@@ -359,7 +359,7 @@
   background-image: url('../images/colors/black.jpg');
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi){ background-image: url('../images/colors/black@2x.jpg'); }
 }
-.colvariant--holy-hands a {
+.colvariant--holy-hands a, .colvariant--hamsa a  {
   background-image: url('../images/colors/holyhands.jpg');
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi){ background-image: url('../images/colors/holyhands@2x.jpg'); }
 }
@@ -400,6 +400,17 @@
 .colvariant--seahorse a {
   background-image: url('../images/colors/seahorse.jpg');
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi){ background-image: url('../images/colors/seahorse@2x.jpg'); }
+}
+.colvariant--bluepalm a {  background-image: url('../images/colors/bluepalm.jpg');
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi){ background-image: url('../images/colors/bluepalm@2x.jpg'); }
+}
+.colvariant--calaveras a {
+  background-image: url('../images/colors/calaveras.jpg');
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi){ background-image: url('../images/colors/calaveras@2x.jpg'); }
+}
+.colvariant--paruparo a {
+  background-image: url('../images/colors/paruparo.jpg');
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi){ background-image: url('../images/colors/paruparo@2x.jpg'); }
 }
 
 
