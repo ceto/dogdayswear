@@ -355,7 +355,7 @@
   background-image: url('../images/colors/cosmos.jpg');
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi){ background-image: url('../images/colors/cosmos@2x.jpg'); }
 }
-.colvariant--fekete a {
+.colvariant--fekete a, .colvariant--black a {
   background-image: url('../images/colors/black.jpg');
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi){ background-image: url('../images/colors/black@2x.jpg'); }
 }
@@ -401,7 +401,7 @@
   background-image: url('../images/colors/seahorse.jpg');
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi){ background-image: url('../images/colors/seahorse@2x.jpg'); }
 }
-.colvariant--bluepalm a {  background-image: url('../images/colors/bluepalm.jpg');
+.colvariant--bluepalm a, .colvariant--blue-palm a {  background-image: url('../images/colors/bluepalm.jpg');
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi){ background-image: url('../images/colors/bluepalm@2x.jpg'); }
 }
 .colvariant--calaveras a {
