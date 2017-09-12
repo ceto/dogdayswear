@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2017-07-25 15:18+0000\n"
+"POT-Creation-Date: 2017-07-26 14:09+0000\n"
 "Language: \n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
@@ -47,7 +47,7 @@ msgstr ""
 msgid "Home Page Template"
 msgstr ""
 
-#: tmpl-home.php:10 tmpl-home.php:58
+#: tmpl-home.php:10
 msgid "Jóga és sportruházat a legizzasztóbb mozgásformákhoz."
 msgstr ""
 
@@ -57,6 +57,10 @@ msgstr ""
 
 #: tmpl-home.php:57
 msgid "Gallery"
+msgstr ""
+
+#: tmpl-home.php:58
+msgid "Mozogj szabadon és magabiztosan, hogy csak magadra koncentrálhass!"
 msgstr ""
 
 #: lib/extras.php:31
@@ -130,6 +134,23 @@ msgstr ""
 
 #: templates/mailchimp-subscribe-small.php:2
 msgid "Subscribe to Our newsletter!"
+msgstr ""
+
+#: templates/mobile-reveal.php:23
+msgid "Country & language setup"
+msgstr ""
+
+#: templates/mobile-reveal.php:24
+msgid ""
+"Prices & currencies will be recalculated when you change destination country."
+msgstr ""
+
+#: templates/mobile-reveal.php:25
+msgid "Show content in"
+msgstr ""
+
+#: templates/mobile-reveal.php:27
+msgid "Shipping destination"
 msgstr ""
 
 #: templates/sidebar-page.php:6
