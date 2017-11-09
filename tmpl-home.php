@@ -3,16 +3,25 @@
  * Template Name: Home Page Template
  */
 ?>
-<header class="hero hero--home" role="banner" data-magellan data-threshold="0">
+
+<?php
+  $slides = get_post_meta( get_the_ID(), 'homepage_hero', true );
+  $i=0;
+  foreach ( (array) $slides as $key => $slide ) : ?>
+<header class="hero hero--home" role="banner" data-magellan data-threshold="0" style="background-image: url('<?= $slide['si_image']; ?>')">
   <div class="row container">
     <div class="columns medium-10 medium-centered">
       <div class="hero__content">
-          <h1 class="hero__title"><?= __('Jóga és sportruházat a legizzasztóbb mozgásformákhoz.','sage') ?></h1>
-          <a href="<?= get_permalink( woocommerce_get_page_id( 'shop' ) )?>" class="hero__more button"><?= __('Shop','sage') ?></a>
+          <h1 class="hero__title"><?= $slide['si_title'] ?></h1>
+          <a href="<?= $slide['si_btnurl'] ?>" class="hero__more button"><?= $slide['si_btntext'] ?></a>
       </div>
     </div>
   </div>
 </header>
+<?php
+  if (++$i >= 1) { break; }
+  endforeach;
+?>
 
 <?php get_template_part('templates/promorow'); ?>
 

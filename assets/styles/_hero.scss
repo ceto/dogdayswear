@@ -3,16 +3,14 @@
 
   background-color: $body-font-color;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center bottom;
   background-size: cover;
-  //background-attachment: fixed;
-  //min-height: 30rem;
 
   @include breakpoint(medium) {
     height: 100vh;
-    height:calc(100vh - 8.5rem);
+    height:calc(100vh - 12.5rem);
     min-height: 35rem;
-    max-height: 49rem;
+    max-height: 47rem;
   }
 
   @include breakpoint(tablet) {

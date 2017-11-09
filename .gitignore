@@ -4,6 +4,7 @@ dist
 bower_components
 node_modules
 npm-debug.log
+dploy.yaml
 
 # .gitignore for jekyllized projects
 
