@@ -427,6 +427,15 @@
   background-image: url('../images/colors/paruparo.jpg');
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi){ background-image: url('../images/colors/paruparo@2x.jpg'); }
 }
+.colvariant--pixel a {
+    background-image: url('../images/colors/pixel.jpg');
+    @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi){ background-image: url('../images/colors/pixel@2x.jpg'); }
+}
+
+.colvariant--skully a {
+    background-image: url('../images/colors/skully.jpg');
+    @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi){ background-image: url('../images/colors/skully@2x.jpg'); }
+}
 
 
 .single_variation_wrap {
