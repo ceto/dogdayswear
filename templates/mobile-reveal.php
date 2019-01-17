@@ -9,7 +9,7 @@
     <?php wp_nav_menu(['theme_location' => 'shop_navigation', 'menu_class' => 'menu menu--mobilemenu menu--mobilemenu--small vertical', 'items_wrap' => '<ul id="%1$s" data-accordion-menu class="%2$s">%3$s</ul>']); ?>
   </nav>
   <footer class="reveal__footer">
-    <a href="mailto:hello@dogdayswear.com">hello@dogdayswear.com</a></span><br><a href="tel:0036205954060">(+36) 20.595.4060</a>
+    <a href="mailto:hello@dogdayswear.com">hello@dogdayswear.com</a></span><br><a href="tel:+36308598291">(+36) 30.859.8291</a>
   </footer>
 </div>
 
